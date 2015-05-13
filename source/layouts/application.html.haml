@@ -14,7 +14,14 @@
     %link{href:"//cdn-images.mailchimp.com/embedcode/classic-081711.css", rel:"stylesheet", type:"text/css"}
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
   %body{class: page_classes}
-    = yield
+    .container
+      %header
+        %a.logo{href: "/"}
+      %main
+        = yield
+      %footer
+        %span
+          Copyright © 2014-2015 Creative Mind - Michal Taszycki
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -24,3 +31,4 @@
 
       ga('create', 'UA-55867441-1', 'auto');
       ga('send', 'pageview');
+    = yield_content(:javascript)
