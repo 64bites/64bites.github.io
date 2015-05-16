@@ -16,6 +16,10 @@ body {
     text-align: center;
   }
 }
+ul.pros {
+  list-style-type: disc;
+  padding: 1em 2em;
+}
 body {
   & > .container {
     @include outer-container;
