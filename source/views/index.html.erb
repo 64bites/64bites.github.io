@@ -1,53 +1,42 @@
 ---
 title: 64 Bites - Short and Sweet Commodore 64 Programming Screencasts
 ---
-<div id="wistia_cb7m9szjlt" class="wistia_embed" style="width:730px;height:456px;">&nbsp;</div>
+<section class="pitch">
+  <div class="author">
+    <%= image_tag "avatar.jpg", class: "avatar" %>
+    <span>by <a href="https://twitter.com/mehowte">Michał Taszycki</a></span>
+  </div>
+  <div class="features">
+    <h1>The easiest way to start programming Commodore&nbsp;64</h1>
+  <p>It launches in <strong>June</strong>. When you sign up you'll get:</p>
+  <ul class="pros">
+    <li>short but intense episode <strong>each week</strong>,</li>
+    <li><strong>full transcript</strong> of the episode,</li>
+    <li><strong>show notes</strong>,</li>
+    <li><strong>source code</strong>.</li>
+  </ul>
+  On top of that you'll get access to <strong>all</strong> previously released <strong>episodes</strong> to watch online or download <strong>DRM free</strong>.</p>
+  </div>
+</section>
 
-<h1>64 Bites is the easiest way to start programming Commodore 64</h1>
-<p>It launches in <strong>June</strong>. When you sign up you'll get:</p>
-<ul class="pros">
-  <li>short but intense episode <strong>each week</strong>,</li>
-  <li><strong>full transcript</strong> of the episode,</li>
-  <li><strong>show notes</strong>,</li>
-  <li><strong>source code</strong>.</li>
-</ul>
-On top of that you'll get access to <strong>all</strong> previously released <strong>episodes</strong> to watch online or download <strong>DRM free</strong>.</p>
+<section class="trailer">
+  <h2>See the trailer!</h2>
+<%= partial "views/wistia_video", locals: { wistia_id: "cb7m9szjlt", kissmetrics_data: "Prelaunch Video" } %>
+</section>
 
-  <!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="//64bites.us2.list-manage.com/subscribe/post?u=424cb3a08158b944b14a88995&amp;id=6db0572242" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-      <h2>Get free episodes!</h2>
-      <p>Leave your email below and you'll be the first to know when the project launches. I'm going to send you few episodes for free as well.</p>
-<div class="mc-field-group">
-  <label for="mce-EMAIL">Email (required)
-</label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">First Name </label>
-	<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_424cb3a08158b944b14a88995_6db0572242" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="I want free episodes!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<!--End mc_embed_signup-->
-<% content_for(:css) do %>
-  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"></link>
+<section class="featured-episodes featured-<%= featured_episodes.count%>">
+  <h2>Watch an Episode Now!</h2>
+  <% featured_episodes.each do |episode| %>
+    <% link_to episode_path(episode), class: "featured-episode" do %>
+    <%= image_tag episode.poster_path %>
+    <h4><%= episode.formatted_title %></h4>
+    <%= image_tag "play-icon.png", class: "play-icon" %>
 <% end %>
-<% content_for(:javascript) do %>
-  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-  <script>
-  wistiaEmbed = Wistia.embed("cb7m9szjlt", {
-    videoFoam: true
-    });
-  loadKMTrackableVideo(wistiaEmbed, "Prelaunch Video");
-  </script>
-  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[2]='MMERGE2';ftypes[2]='url';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <% end %>
+</section>
+
+<section class="signup">
+  <h2>Get more free episodes!</h2>
+  <p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>
+<%= partial "views/mailchimp_signup_form" %>
+</section>

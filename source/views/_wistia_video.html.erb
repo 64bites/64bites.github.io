@@ -1,0 +1,10 @@
+<div id="wistia_<%= wistia_id %>" class="wistia_embed" style="width:730px;height:456px;">&nbsp;</div>
+<% content_for(:javascript) do %>
+  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
+  <script>
+  wistiaEmbed = Wistia.embed("<%= wistia_id %>", {
+    videoFoam: true
+    });
+loadKMTrackableVideo(wistiaEmbed, "<%= kissmetrics_data %>");
+  </script>
+<% end %>

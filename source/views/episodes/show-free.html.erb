@@ -1,0 +1,14 @@
+---
+title: 64 bites - Free Episode
+---
+
+<section class="episode">
+  <h2>Episode <%= episode.formatted_title %></h2>
+  <p><%= episode.description %></p>
+<%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: "Free Episode #{episode.formatted_title}" } %>
+</section>
+<section class="signup">
+  <h2>Get more free episodes!</h2>
+  <p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>
+<%= partial "views/mailchimp_signup_form" %>
+</section>

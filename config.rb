@@ -1,4 +1,5 @@
 require "extensions/views"
+require "source/models/catalog"
 
 activate :views
 activate :directory_indexes
@@ -25,6 +26,12 @@ activate :deploy do |deploy|
   deploy.branch   = 'master'
 end
 
+CATALOG = Catalog.new
+FEATURED_EPISODES = CATALOG.free_episodes.select do |episode|
+  [2].include? episode.number
+end
+
+
 helpers do
   def nav_link(link_text, page_url, options = {})
     options[:class] ||= ""
@@ -36,4 +43,21 @@ helpers do
     options[:class] << " active" if page_url == current_url
     link_to(link_text, page_url, options)
   end
+
+  def episode_path(episode)
+    "/episodes/#{episode.slug}.html"
+  end
+
+  def featured_episodes
+    FEATURED_EPISODES
+  end
 end
+
+
+CATALOG.all_episodes.each do |episode|
+  template = episode.free? ? "/views/episodes/show-free.html" : "/views/episodes/show-paid.html" 
+  puts episode_path(episode)
+  proxy episode_path(episode), template, :locals => { :episode => episode }
+end
+
+

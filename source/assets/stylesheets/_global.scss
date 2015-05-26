@@ -20,6 +20,13 @@ ul.pros {
   list-style-type: disc;
   padding: 1em 2em;
 }
+h1 {
+  font-size: 2.3em;
+}
+h2 {
+  font-size: 1.5em;
+}
+
 body {
   & > .container {
     @include outer-container;
@@ -28,6 +35,62 @@ body {
       @include shift(1);
     }
   }
+  main > section {
+    margin-bottom: 3em;
+  }
+  .pitch {
+    margin-bottom: 3em;
+    @include outer-container;
+    .author {
+      @include span-columns(3);
+      > img {
+        margin-top: 2em;
+        border-radius: 50%;
+      }
+      span {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .features {
+      @include span-columns(9);
+    }
+  }
+  .featured-episodes {
+    @include outer-container;
+    &.featured-3 > .featured-episode{
+      @include span-columns(4);
+    }
+    &.featured-2 > .featured-episode {
+      @include span-columns(6);
+    }
+    &.featured-1 > .featured-episode {
+      @include span-columns(6);
+      @include shift(3);
+    }
+    .featured-episode {
+      position: relative;
+      &:hover {
+        .play-icon {
+          opacity: 1;
+        }
+      }
+      h4 {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .play-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+      transition: opacity 0.5s ease;
+    }
+  }
+
   #mc_embed_signup{
     clear:left; font:14px Helvetica,Arial,sans-serif; 
     form {
