@@ -55,7 +55,7 @@ end
 
 
 CATALOG.all_episodes.each do |episode|
-  template = episode.free? ? "/views/episodes/show-free.html" : "/views/episodes/show-paid.html" 
+  template = "/views/templates/episodes/show-free.html"
   puts episode_path(episode)
   proxy episode_path(episode), template, :locals => { :episode => episode }
 end

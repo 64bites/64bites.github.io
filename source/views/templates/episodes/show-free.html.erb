@@ -1,7 +1,7 @@
 ---
 title: 64 bites - Free Episode
 ---
-
+<% if defined?(episode) %>
 <section class="episode">
   <h2>Episode <%= episode.formatted_title %></h2>
   <p><%= episode.description %></p>
@@ -12,3 +12,4 @@ title: 64 bites - Free Episode
   <p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>
 <%= partial "views/mailchimp_signup_form" %>
 </section>
+<% end %>
