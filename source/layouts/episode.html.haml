@@ -8,7 +8,7 @@
     = stylesheet_link_tag "application"
     = favicon_tag 'favicon.ico'
     %meta{:property => "og:image", :content => image_url(episode.poster_path)}
-    %meta{:property => "og:url", :content => episode_url(episode)}
+    %meta{:property => "og:url", :content => episode_url(episode) + "/"}
     %meta{:property => "og:title", :content => "64 Bites - Episode #{episode.formatted_title}"}
     %meta{:property => "og:type", :content => "video.episode"}
     %meta{:property => "og:description", :content => episode.description}
