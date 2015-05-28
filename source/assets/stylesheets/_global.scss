@@ -144,4 +144,92 @@ body {
   }
 }
 
+.bubble 
+{
+position: relative;
+padding: 1em 0;
+background: #FFFFFF;
+border-radius: 22px;
+border: #4B473D solid 4px;
+margin-bottom:1.5em;
+}
 
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 20px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+margin-left: -20px;
+bottom: -15px;
+left: 55px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 18px 23px 0;
+border-color: #4B473D transparent;
+display: block;
+width: 0;
+z-index: 0;
+margin-left: -23px;
+bottom: -22px;
+left: 55px;
+}
+
+.testimonials {
+  .row {
+    @include outer-container;
+  }
+}
+
+.testimonial {
+  @include span-columns(6);
+  & blockquote:before, & blockquote:after {
+    content: "\201C";     
+    position: absolute;     
+    font-size: 80px;     
+    line-height: 1;     
+    color: #999;     
+    font-style: normal; 
+  } 
+  & blockquote:before {     
+    top: 0;     
+    left: 10px; 
+  } 
+  & blockquote:after {     
+    content: "\201D";     
+    right: 10px;     
+    bottom: -0.5em; 
+  }
+  .author {
+    position: relative;
+    margin-bottom: 1em;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .credentials {
+    margin-top: 1em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 120px;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    min-height: 100px;
+    vertical-align: middle;
+  }
+}
