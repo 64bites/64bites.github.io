@@ -2,19 +2,23 @@ require_relative 'episode'
 
 class Catalog
 
-  def initialize(episodes_data)
+  def initialize(episodes_data, featured_episodes_data)
     @episodes_data = episodes_data
+    @featured_episodes_data = featured_episodes_data
   end
 
   def free_episodes
     all_episodes.select(&:free?)
   end
 
+  def featured_episodes
+    free_episodes.select do |episode|
+      featured_episodes_data.include? episode.number
+    end
+  end 
+
   def all_episodes
     episodes_data.map do |episode_slug, episode_data|
-      puts "BEKON"
-      p episode_slug
-      p episode_data
       episode = Episode.new(
         decode_number(episode_slug),
         episode_data["title"],
@@ -25,13 +29,12 @@ class Catalog
         episode_data["description"],
         episode_slug
       )
-      p episode
       episode
     end
   end
 
   private
-  attr_reader :episodes_data
+  attr_reader :episodes_data, :featured_episodes_data
   
   def decode_number(episode_slug)
     episode_slug.split("-").first.to_i 

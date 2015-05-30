@@ -58,11 +58,7 @@ activate :deploy do |deploy|
   deploy.branch   = 'master'
 end
 
-CATALOG = Catalog.new(data.episodes)
-FEATURED_EPISODES = CATALOG.free_episodes.select do |episode|
-  [2].include? episode.number
-end
-
+CATALOG = Catalog.new(data.episodes, data.featured_episodes)
 
 helpers do
   def nav_link(link_text, page_url, options = {})
@@ -81,8 +77,9 @@ helpers do
   end
 
   def featured_episodes
-    FEATURED_EPISODES
+    CATALOG.featured_episodes
   end
+  
   def host_with_port
     [host, optional_port].compact.join(':')
   end
