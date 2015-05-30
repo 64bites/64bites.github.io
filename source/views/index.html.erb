@@ -25,7 +25,7 @@ title: 64 Bites - Short and Sweet Commodore 64 Programming Screencasts
 </section>
 
 <section class="featured-episodes featured-<%= featured_episodes.count%>">
-  <h2>Watch an Episode Now!</h2>
+  <h2>Watch a few episodes now!</h2>
   <% featured_episodes.each do |episode| %>
     <% link_to episode_path(episode), class: "featured-episode" do %>
     <%= image_tag episode.poster_path %>
