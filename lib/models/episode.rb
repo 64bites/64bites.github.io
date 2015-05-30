@@ -1,7 +1,8 @@
 class Episode
-  attr_reader :number, :title, :publication_time, :wistia_id, :description
-  def initialize(number, title, is_free, is_published, publication_time, wistia_id, description)
+  attr_reader :number, :title, :publication_time, :wistia_id, :description, :slug
+  def initialize(number, title, is_free, is_published, publication_time, wistia_id, description, slug=nil)
     @number, @title, @is_free, @is_published, @publication_time, @wistia_id, @description = number, title, is_free, is_published, publication_time, wistia_id, description
+    @slug = slug || build_slug
   end
 
   def free?
@@ -10,10 +11,6 @@ class Episode
   
   def published?
     @is_published
-  end
-
-  def slug
-    "#{formatted_number}-#{title_slug}"
   end
 
   def poster_path
@@ -26,6 +23,12 @@ class Episode
 
   def formatted_title
     "##{formatted_number} - #{title}"
+  end
+
+  private
+
+  def build_slug
+    "#{formatted_number}-#{title_slug}"
   end
 
   def title_slug
@@ -54,3 +57,4 @@ class Episode
     ret
   end
 end
+

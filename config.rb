@@ -1,5 +1,5 @@
 require "extensions/views"
-require "source/models/catalog"
+require "lib/models/catalog"
 
 activate :views
 activate :directory_indexes
@@ -58,7 +58,7 @@ activate :deploy do |deploy|
   deploy.branch   = 'master'
 end
 
-CATALOG = Catalog.new
+CATALOG = Catalog.new(data.episodes)
 FEATURED_EPISODES = CATALOG.free_episodes.select do |episode|
   [2].include? episode.number
 end
