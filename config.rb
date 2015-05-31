@@ -123,7 +123,6 @@ end
 
 CATALOG.all_episodes.each do |episode|
   template = "/views/templates/episodes/show-free.html"
-  puts episode_path(episode)
   proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode'
 end
 

@@ -1,6 +1,9 @@
 body {
   background-color: #FBE6C8;
   color: #5D594E;
+  header {
+    margin-bottom: 2em;
+  }
   header > a.logo {
     display:block;
     margin: 4em 0;
@@ -143,10 +146,55 @@ body {
 
   }
 }
+.navigation-bar {
+  border-top: 1px dotted lighten(#5D594E, 0.5);
+  border-bottom: 1px dotted lighten(#5D594E, 0.5);
+  ul {
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+  
+  > li {
+    display: inline-block;
+    &:first-child:before {
+        content: "";
+      }
+    &:before {
+      content: "|";
+      margin:0 1em;
+    }
+  }
 
+  .active {
+    font-weight: bold;
+  }
+}
+}
 .article {
+  position: relative;
   .thumbnail {
     float: left;
     margin-right: 15px;
+    width: 320px;
   }
 }
+.episode {
+  @include outer-container;
+  .poster {
+    position: relative;
+    @include span-columns(4);
+    .play-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  .info {
+    @include span-columns(8);
+  }
+}
+

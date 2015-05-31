@@ -21,8 +21,7 @@
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
   %body{class: page_classes}
     .container
-      %header
-        %a.logo{href: "/"}
+      = partial "layouts/header"
       %main
         %h1= current_article.title
         = yield
