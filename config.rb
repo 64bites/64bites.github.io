@@ -101,7 +101,7 @@ helpers do
   end
 
   def image_url(source)
-    page_url(image_path(source))
+    page_url("/assets/images/" + source.to_s)
   end
 
   def episode_url(episode)
