@@ -23,7 +23,7 @@ activate :blog do |blog|
 
   blog.tag_template = "blog/tag.html"
   blog.calendar_template = "blog/calendar.html"
-
+  blog.publish_future_dated = true
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
