@@ -8,7 +8,7 @@
     = stylesheet_link_tag "application"
     = favicon_tag 'favicon.ico'
     %meta{:property => "og:image", :content => article_thumbnail_url(current_article)}
-    %meta{:property => "og:url", :content => page_url(current_article.url) + "/"}
+    %meta{:property => "og:url", :content => page_url(current_article.url)}
     %meta{:property => "og:title", :content => "64 Bites Blog - #{current_article.title}"}
     %meta{:property => "og:type", :content => "video.episode"}
     %meta{:property => "og:description", :content => current_article.summary(250)}
