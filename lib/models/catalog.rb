@@ -7,6 +7,10 @@ class Catalog
     @featured_episodes_data = featured_episodes_data
   end
 
+  def find_episode(number)
+    all_episodes.select {|episode| episode.number == number }.first
+  end
+  
   def free_episodes
     all_episodes.select(&:free?)
   end

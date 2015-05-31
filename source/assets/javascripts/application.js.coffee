@@ -1,4 +1,4 @@
-//= require_tree .
+#= require_tree .
 
 self.loadKMTrackableVideo = (wistia_object, videoName) ->
   wistia_object.bind "play", ->

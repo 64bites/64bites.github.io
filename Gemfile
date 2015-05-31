@@ -10,3 +10,4 @@ gem "builder", "~> 3.0"
 gem "bourbon"
 gem "neat"
 
+gem "pry"

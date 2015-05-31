@@ -13,8 +13,8 @@ activate :blog do |blog|
   # Matcher for blog source files
   blog.sources = "articles/{id}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  blog.layout = "application"
-  # blog.summary_separator = /(READMORE)/
+  blog.layout = "blog"
+  blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
@@ -76,6 +76,10 @@ helpers do
     "/episodes/#{episode.slug}"
   end
 
+  def episodes_catalog
+    CATALOG
+  end
+  
   def featured_episodes
     CATALOG.featured_episodes
   end
@@ -86,6 +90,14 @@ helpers do
 
   def optional_port
     port unless port.to_i == 80
+  end
+
+  def article_thumbnail_url(article)
+    image_url(article_thumbnail_path(article))
+  end
+
+  def article_thumbnail_path(article)
+    "blog/%.3d/thumbnail.png" % article.data["id"]
   end
 
   def image_url(source)
