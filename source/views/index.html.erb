@@ -7,17 +7,33 @@ title: 64 Bites - Short and Sweet Commodore 64 Programming Screencasts
     <span>by <a href="https://twitter.com/mehowte">Michał Taszycki</a></span>
   </div>
   <div class="features">
-    <h1>The easiest way to start programming Commodore&nbsp;64</h1>
-  <p>It launches in <strong>June</strong>. When you sign up you'll get:</p>
-  <ul class="pros">
-    <li>short but intense episode <strong>each week</strong>,</li>
-    <li><strong>full transcript</strong> of the episode,</li>
-    <li><strong>show notes</strong>,</li>
-    <li><strong>source code</strong>.</li>
-  </ul>
-  On top of that you'll get access to <strong>all</strong> previously released <strong>episodes</strong> to watch online or download <strong>DRM free</strong>.</p>
+    <h1>Have you always wanted to create a C64 game or demo?</h1>
+    <p>Everyone tells you there are plenty of books you can dig through and forums you can follow.<br>If only you had time for that...</p>
+
+    <p>What if I told you there is a better way?</p>
+
+    <h2>The easiest way to start programming Commodore&nbsp;64</h2>
+
+    <p>Imagine that <strong>every week</strong> you make a <strong>small step</strong> toward your goal. You watch a short video, play around with code examples and read show notes.<br>
+    In couple of weeks from now you'll have a solid understanding of a lot of BASIC, assembly and Commodore 64, and will be so much closer to your goal.</p>
+
+    <p>And the best part?</p>
+
+    <p>It will be <strong>effortless</strong>.</p>
+
+    <h2>This is what 64 Bites is all about.</h2>
+
+    <p>I'm reading those books, tutorials and forums so you don't have to. I'm working hard to give you exactly what you need to achieve your goal. </p>
+    <ul class="pros">
+      <li><strong>Each week</strong> you'll get a short, ~5-minute <strong>video</strong> covering a small bit of <strong>BASIC</strong>, <strong>6502/6510 assembly</strong> and the architecture of Commodore 64.</li>
+      <li>Along with the video you'll receive a <strong>complete transcript</strong> of the episode, <strong>source code</strong> examples and additional show notes.</li>
+      <li>You'll also get access to all previously released episodes.</li>
+      <li>You can <strong>watch them online</strong> on any device or <strong>download</strong> for your convenience <strong>DRM free</strong>.</li>
+    </ul>
   </div>
 </section>
+
+<%= partial "views/subscribe_button" %>
 
 <section class="trailer">
   <h2>See the trailer!</h2>
@@ -35,11 +51,12 @@ title: 64 Bites - Short and Sweet Commodore 64 Programming Screencasts
 <% end %>
 </section>
 
-<section class="signup">
-  <h2>Get more free episodes!</h2>
-  <p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>
-<%= partial "views/mailchimp_signup_form" %>
-</section>
+<%= partial "views/subscribe_button" %>
+<%#<section class="signup">%>
+  <%#<h2>Get more free episodes!</h2>%>
+  <%#<p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>%>
+<%#<%= partial "views/mailchimp_signup_form" %>
+<%#</section>%>
 
 <section class="testimonials">
   <h2>See what others are saying!</h2>

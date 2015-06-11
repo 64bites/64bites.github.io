@@ -29,7 +29,27 @@ h1 {
 h2 {
   font-size: 1.5em;
 }
-
+section.buy {
+  @include outer-container;
+  .buy-button {
+    @include span-columns(10);
+    @include shift(1);
+    .button {
+      width: 100%;
+      background-color: #3DA736;
+      font-size: 1.5em;
+      &:hover, &:focus {
+        background-color: darken(#3DA736, 10%);
+      }
+      transition: all 0.3s;
+    }
+    p { text-align: center; }
+    .old-price {
+      text-decoration: line-through;
+      color: darken(white, 15%);
+    }
+  }
+}
 body {
   & > .container {
     @include outer-container;
