@@ -34,7 +34,7 @@ class Catalog
         episode_slug
       )
       episode
-    end
+    end.sort { |a,b| a.number <=> b.number }
   end
 
   private

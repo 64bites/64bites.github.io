@@ -1,0 +1,24 @@
+---
+title: 64 bites - Paid Episode
+---
+<% if defined?(episode) %>
+<section class="episode">
+  <h2>Episode <%= episode.formatted_title %> <small>subscribers only</small></h2>
+  <p><%= episode.description %></p>
+  <div class="poster">
+    <%= image_tag(episode.poster_path, class: "thumbnail") %>
+  </div>
+</section>
+<section class="subscriber-only">
+  <h2>This episode is available only for subscribers</h2>
+  <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
+  <ul class="pros">
+    <li><strong>HD version</strong> of this episode</li>
+    <li><strong>full transcript</strong>, show notes and source code</li> 
+    <li><strong>All</strong> previously <strong>released episodes</strong></li>
+  </ul>
+  All episodes of 64 Bites are available for <strong>online HD streaming</strong>. 
+  You can also download them <strong>DRM free</strong>.
+</section>
+<%= partial "views/subscribe_button" %>
+<% end %>

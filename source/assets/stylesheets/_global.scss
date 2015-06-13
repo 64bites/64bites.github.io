@@ -198,7 +198,8 @@ body {
     width: 320px;
   }
 }
-.episode {
+.episodes {
+ & > .episode {
   @include outer-container;
   .poster {
     position: relative;
@@ -216,6 +217,7 @@ body {
   .info {
     @include span-columns(8);
   }
+}
 }
 .bubble 
 {
