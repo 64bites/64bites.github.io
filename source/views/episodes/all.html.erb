@@ -1,9 +1,9 @@
 <div class="episodes">
   <% episodes_catalog.all_episodes.each_with_index do |episode| %>
     <% if episode.free? %>
-      <%= partial 'views/episodes/free_episode', locals: {episode: episode} %>
+      <%= partial 'views/free_episode', locals: {episode: episode} %>
     <% else %>
-      <%= partial 'views/episodes/paid_episode', locals: {episode: episode} %>
+      <%= partial 'views/paid_episode', locals: {episode: episode} %>
     <% end %>
   <% end %>
 </div>
