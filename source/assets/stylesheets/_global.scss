@@ -19,7 +19,7 @@ body {
     text-align: center;
   }
 }
-ul.pros {
+body.blog ul, ul.pros {
   list-style-type: disc;
   padding: 1em 2em;
 }
@@ -197,6 +197,9 @@ body {
     margin-right: 15px;
     width: 320px;
   }
+  clear: both;
+  padding-bottom: 3.5em;
+  min-height: 200px;
 }
 .episodes {
  & > .episode {

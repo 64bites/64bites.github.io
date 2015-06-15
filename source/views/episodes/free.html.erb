@@ -1,3 +1,4 @@
+<%= partial "views/subscribe_button" %>
 <div class="episodes">
   <% episodes_catalog.free_episodes.each_with_index do |episode| %>
     <%= partial 'views/free_episode', locals: {episode: episode} %>
