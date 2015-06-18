@@ -1,0 +1,90 @@
+---
+title: My Very First Computer Program
+date: 2015-06-17
+published: true
+tags: 64 Bites, episodes, screencasts, commodore 64, 6502, BASIC
+id: 3
+---
+
+<% episode2 = episodes_catalog.find_episode(2) %>
+<% episode3 = episodes_catalog.find_episode(3) %>
+<% episode6 = episodes_catalog.find_episode(6) %>
+The first program I've ever written had only two lines:
+
+<pre><code class="ruby">
+10 PRINT "COMMODORE 64"
+20 GOTO 10
+</code></pre>
+Once I've run it. My life changed forever...
+
+READMORE
+
+## Long time ago...
+
+When I was in primary school. I used to play games on my friend's Commodore 64. We used to put the cassette in, press play on tape and wait patiently for 5-20 minutes untill the game loaded.
+
+Or not...
+
+In that case, we needed to rewind the tape and repeat the whole process. 
+
+Fun times.
+
+Some time later, I've got my own C64 from my grandpa. 
+However, as soon as I turned it on, I've discovered that my friend owned a Final III cartridge that I didn't have. It meant that instead of seeing familiar window-based GUI, I've seen only the blinking cursor under the word <%= link_to "READY", episode_path(episode2) %>. 
+
+![sdfsdf](blog/003/final-3-ready.gif)
+
+This in turn meant, that I was unable to load any games.
+
+The horror!
+
+Fortunately, with a help of a more computer savvy friend and a manual, I've learnt how to use the LOAD and RUN commands. But the blinking cursor was somehow inviting me to do more with it. I knew that you could actually do more than play games on a C64. I just didn't know how.
+
+
+## Typing in programs
+
+I started digging deeper into the manual and I've found a part about writing programs. Soon, I've typed the following two lines.
+
+<pre><code class="ruby">
+10 PRINT "COMMODORE 64"
+20 GOTO 10
+</code></pre>
+
+As soon as I've run it, the computer started printing it's name endlessly.
+![sdfsdf](blog/003/program-result.png)
+
+Now it doesn't seem like a big achievement. But for me it was mesmerising.
+
+**I wrote my first program.**
+
+I didn't stop there. After reading manual, I've learnt about IF statements, FOR loops and I was somewhat able to write a few simple programs.
+But the examples in the manual were kind of boring. Without an access to the Internet (that was Poland in early nineties) and literally no books about programming C64 in the library, the only place I could find any resources on programming were slowly dying computer magazines.
+
+In each of them you could find a program or two to type in on your computer. 
+
+![sdfsdf](blog/003/bajtek-listing.jpg)
+
+Sometimes they were written in pure basic so you could actually learn something from it. But others were a machine language programs encoded in enourmous <%= link_to "DATA sequences", episode_path(episode6) %>, like the one below.
+
+![sdfsdf](blog/003/bajtek-listing-data.jpg)
+
+Imagine typing this monstrosity.
+
+Not hardcore enough? Then imagine you haven't learned yet, that you can save this program on a tape, and you press reset by accident at the line 240.
+
+Yes, my early programming experiences involved a lot of crying in frustration.
+
+But I still remember this time fondly. I didn't exactly knew what I was doing. But everytime I typed a long program and it finally worked, I felt like some kind of a magician.
+
+## Commodore 64 lives!
+
+Those experiences were directly responsible for my becoming a professional software developer. Although I couldn't believe at first that C does not need it's lines numbered like <%= link_to "BASIC does", episode_path(episode3) %>. Even though computers were not so magical anymore, once I've learned how they work.
+
+
+I went back to C64 few years ago to finally master the 6502 assembly and to create a game, a demo and learn mysterious hacks that made this computer so fun to program. Now, everything is much simpler to learn than when I was a kid, but it's still as fun as it was before.
+
+Seeing a subroutine called from an interrupt for a first time, was the same kind of magical experience for me. But that's a story for another article...
+
+<hr>
+## Psst... Interested in learning programming C64 in the most effortless way?
+<%= partial "views/subscribe_button" %>
