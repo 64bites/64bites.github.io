@@ -43,7 +43,7 @@ section.buy {
       }
       transition: all 0.3s;
     }
-    .old-price {
+    .button .old-price {
       text-decoration: line-through;
       color: darken(white, 15%);
     }
@@ -52,7 +52,7 @@ section.buy {
 }
 .old-price {
   text-decoration: line-through;
-  color: lighten(#5D594E, 15%);
+  color: #5D594E;
 }
 body {
   & > .container {
