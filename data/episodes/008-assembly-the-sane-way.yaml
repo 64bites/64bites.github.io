@@ -2,7 +2,7 @@
   title: Assembly - The Sane Way
   is_free: false
   is_published: true
-  publication_time: 
+  publication_time: 2015-07-15
   wistia_id:
   description: 
     In this episode we will learn an easier way to write the assembly. Instead of using machine language monitor like animals, we can use modern development environments that work on every platform. With a text editor, a cross-assembler and an emulator we can compile and run our programs with a single button press. 
