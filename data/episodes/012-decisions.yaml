@@ -1,0 +1,8 @@
+---
+  title: Decisions
+  is_free: false
+  is_published: true
+  publication_time: 2015-08-12
+  wistia_id:
+  description: 
+    Did you know you can use the carry flag to signify an overflow in unsigned integer operations. But wait, there's more. We also have other flags like V, or N and we can use  them to make decisions in our programs.
