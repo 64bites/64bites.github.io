@@ -8,6 +8,19 @@ title: 64 bites - Free Episode
 <%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: "Free Episode #{episode.formatted_title}" } %>
 </section>
 <section class="signup">
+  <h2>Get All Episodes Now!</h2>
+  <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
+  <ul class="pros">
+    <li><strong>HD version</strong> of this episode</li>
+    <li><strong>full transcript</strong>, show notes and source code</li> 
+    <li>additional <strong>exercises</strong> to solve and practice</li>
+    <li><strong>All</strong> previously <strong>released episodes</strong></li>
+  </ul>
+  All episodes of 64 Bites are available for <strong>online HD streaming</strong>. 
+  You can also download them <strong>DRM free</strong>.
+</section>
+<%= partial "views/subscribe_button" %>
+<section class="signup">
   <h2>Get more free episodes!</h2>
   <p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>
 <%= partial "views/mailchimp_signup_form" %>
