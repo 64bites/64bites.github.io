@@ -1,0 +1,67 @@
+<h1>64spec <small>- Commodore 64 Testing Framework</small></h1>
+
+<p>64spec is a testing framework for KickAssembler. It is designed to make testing the 6502/6510 assembly enjoyable.</p> 
+
+<h2>Download</h2>
+
+<p>1. Get the latest version of 64spec.asm file from the <a href="https://github.com/64bites/64spec/releases/">releases page</a>.</p>
+
+<p>2. That's it. Yes, it's only one file!</p>
+
+<h2>Installation</h2>
+<h3>Recommended way</h3>
+
+<p>1. Create a dir for libraries that your KickAssembler projects use.</p>
+<p>2. Get the <a href="https://github.com/64bites/64spec/releases/">latest version of the 64spec.asm file</a> and put it in this dir along with other libraries. </p>
+<p>3. Import it in your spec files as <code>.import source "64spec.asm"</code></p>
+<p>4. Make sure to pass option <code>-libbdir <path-to-your-libraries-dir></code> when compiling with KickAssembler.</p>
+
+<h3>If you just want to try it out</h3>
+
+<p>1. Get the <a href="https://github.com/64bites/64spec/releases/">latest version of the 64spec.asm file</a> and put it in the same directory as your spec files.</p>
+<p>2. Import it in your spec files as <code>.import source "64spec.asm"</code></p>
+
+<h2> Quick Start</h2>
+
+<h4> 1. Create file example_spec.asm</h4>
+
+<pre><code class="asm">
+.import source "64spec.asm"
+
+sfspec: :init_spec()
+  
+  // TODO: Add assertions here
+
+  :finish_spec()
+</code></pre>
+
+<%= image_tag "64spec/qs01-empty.png" %>
+
+<h4>2. Add first failing assertion.</h4>
+
+<pre><code class="asm">
+.import source "64spec.asm"
+
+sfspec: :init_spec()
+  
+  :assert_a_equal #42
+
+  :finish_spec()
+</code></pre>
+
+<%= image_tag "64spec/qs02-fail.png" %>
+
+<h4>3. Make it pass</h4>
+
+<pre><code class="asm">
+.import source "64spec.asm"
+
+sfspec: :init_spec()
+
+  lda #42
+  :assert_a_equal #42
+  
+  :finish_spec()
+</code></pre>
+
+<%= image_tag "64spec/qs03-pass.png" %>
