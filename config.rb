@@ -5,10 +5,11 @@ activate :views
 activate :directory_indexes
 # Time.zone = "UTC"
 
-activate :imageoptim do |imageoptim| 
-  imageoptim.svgo = false
-  imageoptim.manifest = true
-end
+#activate :imageoptim do |imageoptim| 
+  #imageoptim.svgo = false
+  #imageoptim.manifest = true
+  #imageoptim.allow_lossy = true
+#end
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
