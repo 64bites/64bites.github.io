@@ -5,6 +5,11 @@ activate :views
 activate :directory_indexes
 # Time.zone = "UTC"
 
+activate :imageoptim do |imageoptim| 
+  imageoptim.svgo = false
+  imageoptim.manifest = true
+end
+
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   blog.prefix = "blog"
@@ -50,6 +55,9 @@ end
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
+  activate :minify_css
+  activate :minify_javascript
+  activate :minify_html
 end
 
 activate :deploy do |deploy|
