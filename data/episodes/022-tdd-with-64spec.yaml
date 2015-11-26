@@ -1,8 +1,8 @@
 ---
   title: TDD with 64spec
-  is_free: false
+  is_free: true
   is_published: true
   publication_time: 2015-10-22
-  wistia_id:
+  wistia_id: bef1t378xg
   description: 
     64spec is an open-source testing framework for Commodore 64. It is heavily inspired by an rspec library that Ruby developers use for testing their programs. Today we will see how to use it to learn assembly and generate living documentation.
