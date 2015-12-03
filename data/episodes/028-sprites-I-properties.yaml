@@ -1,0 +1,8 @@
+---
+  title: Sprites I Properties
+  is_free: false
+  is_published: true
+  publication_time: 2015-12-02
+  wistia_id:
+  description: 
+    VIC-II the graphical chip of Commodore 64 can display eight movable bitmaps, also known as sprites. It is a feature designed specifically to use in games. Sprites can be controlled by the set of registers that are mapped directly onto the memory starting at the hexadecimal address $d000...
