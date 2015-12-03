@@ -7,6 +7,10 @@ thumbnail: 64spec/qs03-pass.png
 
 <p>64spec is a one-file testing framework for KickAssembler. It is designed to make testing the 6502/6510 assembly enjoyable.</p> 
 
+<h2>Video Introduction</h2>
+<% episode = episodes_catalog.find_episode(22) %>
+<%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: "Free Episode #{episode.formatted_title}" } %>
+
 <h2>Download</h2>
 
 <p>1. Get the latest version of 64spec.asm file from the <a href="https://github.com/64bites/64spec/releases/">releases page</a>.</p>
