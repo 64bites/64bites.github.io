@@ -1,0 +1,10 @@
+---
+title: "64Bites - Season"
+---
+<% if defined?(season) %>
+  <section class="season">
+    <h2><%= season.formatted_title %></h2>
+  </section>
+  <p><%= season.formatted_price %></p>
+  <%= image_tag(season.poster_path, class: "thumbnail") %>
+<% end %>

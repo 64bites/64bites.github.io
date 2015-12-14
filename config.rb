@@ -67,7 +67,7 @@ activate :deploy do |deploy|
   deploy.branch   = 'master'
 end
 
-CATALOG = Catalog.new(data.episodes, data.featured_episodes)
+CATALOG = Catalog.new(data.episodes, data.featured_episodes, data.seasons)
 
 helpers do
   def nav_link(link_text, page_url, options = {})
@@ -84,6 +84,11 @@ helpers do
   def episode_path(episode)
     "/episodes/#{episode.slug}"
   end
+
+  def season_path(season)
+    "/seasons/#{season.slug}"
+  end
+
 
   def episodes_catalog
     CATALOG
@@ -117,6 +122,11 @@ helpers do
     page_url(episode_path(episode))
   end
 
+  def season_url(season)
+    page_url(season_path(season))
+  end
+
+
   def page_url(page_path)
     protocol + host_with_port + page_path
   end
@@ -134,5 +144,15 @@ CATALOG.all_episodes.each do |episode|
   template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
   proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode', ignore: true
 end
+
+CATALOG.past_seasons.each do |season|
+  proxy season_path(season) + ".html", "/views/templates/seasons/past.html", :locals => { :season => season }, layout: 'season', ignore: true
+end
+
+CATALOG.current_season.tap do |season|
+  proxy season_path(season) + ".html", "/views/templates/seasons/current.html", :locals => { :season => season }, layout: 'season', ignore: true
+end
+
+
 
 

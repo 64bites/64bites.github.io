@@ -1,10 +1,12 @@
 require_relative 'episode'
+require_relative 'season'
 
 class Catalog
 
-  def initialize(episodes_data, featured_episodes_data)
+  def initialize(episodes_data, featured_episodes_data, seasons_data)
     @episodes_data = episodes_data
     @featured_episodes_data = featured_episodes_data
+    @seasons_data = seasons_data
   end
 
   def find_episode(number)
@@ -37,8 +39,34 @@ class Catalog
     end.sort { |a,b| a.number <=> b.number }.reverse
   end
 
+  def find_season(number)
+    all_seasons.select {|season| season.number == number }
+  end
+
+  def current_season
+    all_seasons.select(&:current?).first
+  end
+
+  def past_seasons
+    all_seasons.reject(&:current?)
+  end
+  
+  def all_seasons
+    current_season_index = seasons_data.count - 1
+    seasons_data.map.with_index do |(season_slug, season_data), index|
+      season = Season.new(
+        index == current_season_index,
+        decode_number(season_slug),
+        season_data["title"],
+        season_slug,
+        season_data["price_in_dollars"]
+      )
+      season
+    end.sort { |a,b| a.number <=> b.number }.reverse
+  end
+
   private
-  attr_reader :episodes_data, :featured_episodes_data
+  attr_reader :episodes_data, :featured_episodes_data, :seasons_data
   
   def decode_number(episode_slug)
     episode_slug.split("-").first.to_i 
