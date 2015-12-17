@@ -20,6 +20,10 @@ module Season
       false
     end
 
+    def formatted_name
+      "Season #{number}"
+    end
+
     def formatted_title
       "Season #{number} - #{title}"
     end

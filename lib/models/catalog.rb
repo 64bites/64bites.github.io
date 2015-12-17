@@ -59,7 +59,8 @@ class Catalog
         decode_number(season_slug),
         season_data["title"],
         season_slug,
-        season_data["price_in_dollars"]
+        season_data["price_in_dollars"],
+        season_data["gumroad_product_id"]
       )
       season
     end.sort { |a,b| a.number <=> b.number }.reverse

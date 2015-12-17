@@ -1,21 +1,17 @@
+require_relative '../price'
+
 module Season
   class Base
-    def initialize(number, title, slug, price_in_dollars)
+    def initialize(number, title, slug, price_in_dollars, gumroad_product_id)
       @number, @title = number, title
       @slug = slug
       @price_in_dollars = price_in_dollars
+      @gumroad_product_id = gumroad_product_id
+      @price = Price.new(price_in_dollars)
     end
 
-    attr_reader :number, :slug
+    attr_reader :number, :slug, :gumroad_product_id, :price
 
-
-    def formatted_price
-      if price_in_dollars.to_int == price_in_dollars
-        "$%.0f" % price_in_dollars
-      else
-        "$%.2f" % price_in_dollars
-      end
-    end
 
     def poster_path
       "seasons/#{formatted_number}.png"

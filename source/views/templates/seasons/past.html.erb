@@ -5,6 +5,6 @@ title: "64Bites - Season"
   <section class="season">
     <h2><%= season.formatted_title %></h2>
   </section>
-  <p><%= season.formatted_price %></p>
+  <p><%= season.price.formatted %></p>
   <%= image_tag(season.poster_path, class: "thumbnail") %>
 <% end %>

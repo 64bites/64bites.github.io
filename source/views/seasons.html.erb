@@ -1,0 +1,15 @@
+Here be seasons
+<div class="seasons">
+  <% episodes_catalog.past_seasons.each_with_index do |season, index| %>
+    <div class="season" id="season-<%= season.number %>" >
+      <h2><%= season.formatted_title %></h2>
+      <%= image_tag(season.poster_path, class: "thumbnail") %>
+      <%= link_to "Read more »", season_path(season) %>
+      <a class="button" href="https://gum.co/<%= season.gumroad_product_id %>">Buy <%= season.formatted_name %></a>
+    </div>
+  <% end %>
+</div>
+
+<% content_for(:javascript) do %>
+<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<% end %>
