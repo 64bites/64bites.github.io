@@ -10,23 +10,23 @@ thumbnail: episodes/014.png
     <h2>Someday you WILL write a game or a demo!</h2>
     <p>Too bad your daily job sucks most of your time, so there is not much left for your hobby.</p>
 
-    <p>You have NO TIME for listening long boring lectures, trying understand outdated tutorials and begging for help on forums.</p>
+    <p>You have <strong>no time</strong> for listening long boring lectures, trying understand outdated tutorials and begging for help on forums.</p>
 
-    <p>But someday you will have time for that...</p>
+    <p>But someday you will have time to learn enough to create that game and demo...</p>
 
-    <p>Someday you will write a game or a demo...</p>
+    <h2>What if you could learn something 5 minutes from NOW?</h2>
 
-    <h2>What if you could learn something new in 5 minutes?</h2>
-
-    <p>Imagine that 5 minutes from now <strong>you will know</strong> how to define Sprite Bitmaps in Assembly.</p>
+    <p>Imagine that in the next 5 minutes from now <strong>you will know</strong> how to define Sprite Bitmaps in Assembly.</p>
 
     <p>Ready?</p>
 
     <p>Watch this video:</p>
-    <% sprite_episode = episodes_catalog.find_episode(22) %>
-    
+
+    <% sprite_episode = episodes_catalog.find_episode(29) %>
     <%= partial "views/wistia_video", locals: { wistia_id: sprite_episode.wistia_id, kissmetrics_data: "Free Episode #{sprite_episode.formatted_title}" } %>
 
+    <p>Now imagine you can have videos like this one, delivered to your inbox every week.</p>
+    
     <p>Imagine that <strong>every week</strong> you make a <strong>small step</strong> toward your goal. You watch a short video, play around with code examples and read show notes.<br>
     In couple of weeks from now you'll have a solid understanding of a lot of BASIC, assembly and Commodore 64, and will be so much closer to your goal.</p>
 
