@@ -3,72 +3,58 @@ title: 64 Bites - Short and Sweet Commodore 64 Programming Screencasts
 summary: The easiest way to start programming Commodore&nbsp;64
 thumbnail: episodes/014.png
 ---
-<section>
+<section class="pitch">
   <div class="features">
     <h1>The easiest way to start programming Commodore&nbsp;64</h1>
     <p class="lead" style="font-size: 150%;">Life is too short for reading twenty-year-old books.<br>Learn BASIC and Assembly with bite-sized video tutorials.</p> 
-    <h2>Someday you WILL write a game or a demo!</h2>
-    <p>Too bad your daily job sucks most of your time, so there is not much left for your hobby.</p>
+    <h2>Always wanted to write a game or a demo?</h2>
+    <p>Too bad your <strong>daily job sucks most of your time</strong>, so there is not much left for your hobby.</p>
 
-    <p>You have <strong>no time</strong> for listening long boring lectures, trying understand outdated tutorials and begging for help on forums.</p>
+    <p>You can't afford to waste it on reading <strong>twenty-year-old-books</strong>, trying to understand <strong>outdated tutorials</strong>, or begging for help on <strong>hostile forums</strong>.</p> 
 
-    <p>But someday you will have time to learn enough to create that game and demo...</p>
+  </section>
+  <section class="featured-episodes featured-<%= featured_episodes.count%>">
+    <h2>What if you could learn something new in just 5 minutes?</h2>
+    <p>Ready? Then watch <strong>any</strong> of those videos <strong>now</strong>:</p>
+    <% featured_episodes.each do |episode| %>
+      <div class="featured-episode">
+        <%= partial "views/wistia_responsive_popup", locals: {episode: episode} %>
+        <h4><%= episode.formatted_title %></h4>
+      </div>
+    <% end %>
+  </section>
 
-    <h2>What if you could learn something 5 minutes from NOW?</h2>
+  <section class="pitch">
+    <h2>Short, condensed lesson every week</h2>
 
-    <p>Imagine that in the next 5 minutes from now <strong>you will know</strong> how to define Sprite Bitmaps in Assembly.</p>
-
-    <p>Ready?</p>
-
-    <p>Watch this video:</p>
-
-    <% sprite_episode = episodes_catalog.find_episode(29) %>
-    <%= partial "views/wistia_video", locals: { wistia_id: sprite_episode.wistia_id, kissmetrics_data: "Free Episode #{sprite_episode.formatted_title}" } %>
-
-    <p>Now imagine you can have videos like this one, delivered to your inbox every week.</p>
-    
-    <p>Imagine that <strong>every week</strong> you make a <strong>small step</strong> toward your goal. You watch a short video, play around with code examples and read show notes.<br>
-    In couple of weeks from now you'll have a solid understanding of a lot of BASIC, assembly and Commodore 64, and will be so much closer to your goal.</p>
-
-    <p>And the best part?</p>
-
-    <p>It will be <strong>effortless</strong>.</p>
-
-    <h2>This is what 64 Bites is all about.</h2>
-
-    <p>I'm reading those books, tutorials and forums so you don't have to. I'm working hard to give you exactly what you need to achieve your goal. </p>
+    <p>Now imagine that:</p>
     <ul class="pros">
-      <li><strong>Each week</strong> you'll get a short, ~5-minute <strong>video</strong> covering a small bit of <strong>BASIC</strong>, <strong>6502/6510 assembly</strong> and the architecture of Commodore 64.</li>
-      <li>Along with the video you'll receive a <strong>complete transcript</strong> of the episode, <strong>source code</strong> examples and additional show notes.</li>
-      <li>You can <strong>watch episodes online</strong> on any device or <strong>download</strong> for your convenience <strong>DRM free</strong>.</li>
+      <li><strong>Every week</strong>, the video is delivered <strong>straight to your inbox.</strong></li>
+      <li>You can <strong>watch</strong> each episode <strong>online on any device</strong>,</li>
+      <li>or <strong>download</strong> for your convenience <strong>DRM free</strong>.</li>
     </ul>
-  </div>
+    <p>And each video comes with:</p>
+    <ul class="pros">
+      <li>detailed <strong>complete transcript</strong> of the episode,</li>
+      <li>plenty of source code <strong>examples</strong> to follow along,</li>
+      <li>additional <strong>exercises</strong> to solve on your own,</li>
+    </ul>
+    On top of that you will get </strong>
+  <ul class="pros">
+    <li>access to private and <strong>inclusive forum</strong>, where you can ask for help.</li>
+    <li>all episodes released in the current season</li>
+  </ul>
+  
+    <h2>Continuous progress with no effort</h2>
+
+    <p>With the 64 Bites Subscription you will <strong>level up consistently</strong>.</p>
+    <p>Every week <strong>you will learn</strong> a new thing and <strong>advance</strong> toward your goal without much effort.</p>
+
+    <%= image_tag("subscription-poster.png", class: "poster") %>
 </section>
 
 <%= partial "views/subscribe_button" %>
 
-<section class="trailer">
-  <h2>See the trailer!</h2>
-<%= partial "views/wistia_video", locals: { wistia_id: "0vwl7x06x8", kissmetrics_data: "Launch Video" } %>
-</section>
-
-<section class="featured-episodes featured-<%= featured_episodes.count%>">
-  <h2>Watch a few episodes now!</h2>
-  <% featured_episodes.each do |episode| %>
-    <% link_to episode_path(episode), class: "featured-episode" do %>
-    <%= image_tag episode.poster_path %>
-    <h4><%= episode.formatted_title %></h4>
-    <%= image_tag "play-icon.png", class: "play-icon" %>
-<% end %>
-<% end %>
-</section>
-
-<%= partial "views/subscribe_button" %>
-<%#<section class="signup">%>
-  <%#<h2>Get more free episodes!</h2>%>
-  <%#<p>Leave your email below and you'll be the first to know when the project launches and the first to watch new free episodes.</p>%>
-<%#<%= partial "views/mailchimp_signup_form" %>
-<%#</section>%>
 
 <section class="testimonials">
   <h2>See what others are saying!</h2>
@@ -94,5 +80,20 @@ thumbnail: episodes/014.png
 <section class="signup">
   <h2>Get free episodes & articles right to your inbox!</h2>
   <p>Leave your email below and you'll be the first to watch new free episodes and read new articles.</p>
-<%= partial "views/mailchimp_signup_form" %>
+  <%= partial "views/mailchimp_signup_form" %>
 </section>
+<section id="seasons" class="seasons">
+  <h2>Binge Watch Past Episodes</h2>
+  <% episodes_catalog.past_seasons.each do |season| %>
+    <div class="season">
+      <%= image_tag(season.poster_path, class: "poster") %>
+      <div class="info">
+        <%= partial "views/buy_season_button", locals: {season: season} %>
+      </div>
+    </div>
+  <% end %>
+</section>
+<% content_for(:javascript) do %>
+  <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us2.list-manage.com","uuid":"424cb3a08158b944b14a88995","lid":"6db0572242"}) })</script>
+<% end %>

@@ -19,7 +19,7 @@ body {
     text-align: center;
   }
 }
-body.blog ul, ul.pros {
+body.blog ul, ul.pros, ul.cons {
   list-style-type: disc;
   padding: 1em 2em;
 }
@@ -194,6 +194,20 @@ body {
   }
 }
 }
+
+section.seasons {
+  .season {
+    /*@include outer-container;*/
+    margin: 1em 0;
+    .poster {
+      /*@include span-columns(6);*/
+    }
+    .info {
+      /*@include span-columns(6);*/
+    }
+  }
+}
+
 .article {
   position: relative;
   .thumbnail {
