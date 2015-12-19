@@ -3,6 +3,7 @@ require_relative 'season'
 
 class Catalog
 
+  EPISODES_PER_SEASON = 9
   def initialize(episodes_data, featured_episodes_data, seasons_data)
     @episodes_data = episodes_data
     @featured_episodes_data = featured_episodes_data
@@ -11,6 +12,18 @@ class Catalog
 
   def find_episode(number)
     all_episodes.select {|episode| episode.number == number }.first
+  end
+
+  def find_season_by_episode(episode)
+    season_number = (episode.number - 1).div(EPISODES_PER_SEASON) + 1
+    find_season(season_number)    
+  end
+
+  def all_episodes_in_season(season)
+    last_episode_number = season.number * EPISODES_PER_SEASON
+    first_episode_number = last_episode_number - EPISODES_PER_SEASON + 1
+    episodes_range = first_episode_number..last_episode_number
+    all_episodes.select { |episode| episodes_range.include?(episode.number) }
   end
   
   def free_episodes
@@ -40,7 +53,7 @@ class Catalog
   end
 
   def find_season(number)
-    all_seasons.select {|season| season.number == number }
+    all_seasons.find {|season| season.number == number }
   end
 
   def current_season

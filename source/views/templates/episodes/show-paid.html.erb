@@ -2,29 +2,57 @@
 title: 64 bites - Paid Episode
 ---
 <% if defined?(episode) %>
-<section class="episode">
-  <h2>Episode <%= episode.formatted_title %> <small>subscribers only</small></h2>
-  <p><%= episode.description %></p>
-  <div class="poster">
-    <%= image_tag(episode.poster_path, class: "thumbnail") %>
-  </div>
+  <% season = episodes_catalog.find_season_by_episode(episode) %>
+  <section class="episode">
+    <h2>Episode <%= episode.formatted_title %> <small>subscribers only</small></h2>
+    <p><%= episode.description %></p>
+    <div class="poster">
+      <%= image_tag(episode.poster_path, class: "thumbnail") %>
+    </div>
+  </section>
+  <section class="signup">
+  <h2>Get free episodes and articles!</h2>
+  <p>Leave your email below and you'll be the first to watch new free episodes.</p>
+  <%= partial "views/mailchimp_signup_form" %>
 </section>
-<section class="subscriber-only">
-  <h2>This episode is available only for subscribers</h2>
-  <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
+
+  <% if season.current? %>
+  <section class="signup">
+    <h2>This video belongs to the <%= link_to "Current Season", season_path(season) %></h2>
+    <% link_to season_path(season) do %>
+      <%= image_tag(season.poster_path, class: "thumbnail") %>
+    <% end %>
+    <h2>Watch Remaining Episodes Now!</h2>
+    <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
+    <ul class="pros">
+      <li><strong>HD version</strong> of this episode</li>
+      <li><strong>full transcript</strong>, show notes and source code</li> 
+      <li><strong>additional exercises</strong> to solve and practice</li>
+      <li><strong>All episodes released</strong> in this season.</li>
+    </ul>
+    All videos of are available for <strong>online HD streaming</strong>. 
+    You can also download them <strong>DRM free</strong>.
+
+    <p>On top of that you'll receive a <strong>new video every week</strong> straight to your inbox.</p>
+  </section>
+  <%= partial "views/subscribe_button" %>
+<% else %>
+  <h2>This video belongs to the <%= link_to "Season #{ season.number }", season_path(season) %></h2>
+  <% link_to season_path(season) do %>
+    <%= image_tag(season.poster_path, class: "thumbnail") %>
+  <% end %>
+  <h2>Watch 8 Remaining Episodes Now!</h2>
+  <p>You are a few clicks away from getting:</p>
   <ul class="pros">
     <li><strong>HD version</strong> of this episode</li>
     <li><strong>full transcript</strong>, show notes and source code</li> 
-    <li>additional <strong>exercises</strong> to solve and practice</li>
-    <li><strong>All</strong> previously <strong>released episodes</strong></li>
+    <li><strong>additional exercises</strong> to solve and practice</li>
+    <li><strong>All episodes released</strong> in this season.</li>
   </ul>
-  All episodes of 64 Bites are available for <strong>online HD streaming</strong>. 
-  You can also download them <strong>DRM free</strong>.
-</section>
-<%= partial "views/subscribe_button" %>
-<section class="signup">
-  <h2>Get more free episodes!</h2>
-  <p>Leave your email below and you'll be the first to watch new free episodes.</p>
-<%= partial "views/mailchimp_signup_form" %>
-</section>
+  <p>All videos of are available for <strong>online HD streaming</strong>. 
+  You can also download them <strong>DRM free</strong>.</p>
+
+  <%= partial "views/buy_season_button", locals: {season: season} %>
+<% end %>
+
 <% end %>

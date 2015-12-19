@@ -3,7 +3,7 @@ require_relative 'season/base'
 module Season
   class Current < Base
     def formatted_title
-      "Season #{number}"
+      "Current Season"
     end
 
     def current?

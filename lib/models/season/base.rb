@@ -10,7 +10,7 @@ module Season
       @price = Price.new(price_in_dollars)
     end
 
-    attr_reader :number, :slug, :gumroad_product_id, :price
+    attr_reader :title, :number, :slug, :gumroad_product_id, :price
 
 
     def poster_path
@@ -27,6 +27,6 @@ module Season
 
     protected
 
-    attr_reader :title, :price_in_dollars
+    attr_reader :price_in_dollars
   end
 end

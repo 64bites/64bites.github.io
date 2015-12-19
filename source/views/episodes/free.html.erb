@@ -1,7 +1,11 @@
-<%= partial "views/subscribe_button" %>
-<div class="episodes">
+<section class="episodes">
+  <h1>All released free episodes</h1>
   <% episodes_catalog.free_episodes.each_with_index do |episode| %>
     <%= partial 'views/free_episode', locals: {episode: episode} %>
   <% end %>
-</div>
-
+</section>
+<section class="signup">
+  <h2>Get more free videos straight to your inbox!</h2>
+  <p>Leave your email below and you'll be the first to watch new free episodes and read new articles.</p>
+  <%= partial "views/mailchimp_signup_form" %>
+</section>

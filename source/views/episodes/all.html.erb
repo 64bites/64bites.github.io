@@ -1,5 +1,5 @@
-<%= partial "views/subscribe_button" %>
-<div class="episodes">
+<section class="episodes">
+  <h1>All released episodes</h1>
   <% episodes_catalog.all_episodes.each_with_index do |episode| %>
     <% if episode.free? %>
       <%= partial 'views/free_episode', locals: {episode: episode} %>
@@ -7,4 +7,4 @@
       <%= partial 'views/paid_episode', locals: {episode: episode} %>
     <% end %>
   <% end %>
-</div>
+</section>
