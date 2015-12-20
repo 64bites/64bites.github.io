@@ -59,4 +59,3 @@
     = partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0}
     = yield_content(:javascript)
     = partial "layouts/gumroad_script"
-    = partial "layouts/mailchimp_popup"
