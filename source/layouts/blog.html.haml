@@ -19,6 +19,7 @@
     %link{href:"//cdn-images.mailchimp.com/embedcode/classic-081711.css", rel:"stylesheet", type:"text/css"}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
+    = partial "layouts/sumo_me"
   %body{class: page_classes}
     .container
       = partial "layouts/header"
