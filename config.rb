@@ -1,5 +1,6 @@
 require "extensions/views"
 require "lib/models/catalog"
+require "lib/models/convertkit_form"
 
 activate :views
 activate :directory_indexes
@@ -87,6 +88,15 @@ helpers do
 
   def season_path(season)
     "/seasons/#{season.slug}"
+  end
+
+
+  def render_convertkit_js_form(form_name)
+    partial("views/convertkit_js_signup_form", locals: {convertkit_form: ConvertkitForm.find(form_name, data.convertkit_forms) })
+  end
+
+  def render_convertkit_custom_form(form_name)
+    partial("views/convertkit_custom_signup_form", locals: {convertkit_form: ConvertkitForm.find(form_name, data.convertkit_forms) })
   end
 
 

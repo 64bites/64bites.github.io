@@ -21,7 +21,7 @@ thumbnail: episodes/014.png
         <%= partial "views/wistia_responsive_popup", locals: {episode: episode} %>
         <h4><%= episode.formatted_title %></h4>
       </div>
-    <% end %>kkk
+    <% end %>
   </section>
 
   <section class="pitch">
@@ -78,9 +78,7 @@ thumbnail: episodes/014.png
   <% end %>
 </section>
 <section class="signup">
-  <h2>Get free episodes & articles right to your inbox!</h2>
-  <p>Leave your email below and you'll be the first to watch new free episodes and read new articles.</p>
-  <%= partial "views/mailchimp_signup_form" %>
+  <%= render_convertkit_custom_form("default") %>
 </section>
 <section id="seasons" class="seasons">
   <h2>Binge Watch Past Episodes</h2>
