@@ -11,7 +11,7 @@
 
 ## You WILL learn following in Assembly:
 
-* How to print Strings in during compilation and at runtime
+* How to print Strings during compilation and at runtime
 * Compare handling null-terminated strings used in C with Pascal-like length-prepended strings
 * Use KERNAL - the operating system of C64 to print strings easily with CHROUT routine
 * Master the PETSCII encoding allowing you to format strings and screen easily
