@@ -2,7 +2,7 @@
   title: Read Data
   is_free: true
   is_published: true
-  publication_time:
+  publication_time: 2015-07-01
   wistia_id: z1yl0wrn93
   description: 
     The DATA statement is used to define sequences of string or numerical constants. The READ command is used in to pick values from these sequences of one by one. They are mostly used in combination with FOR loops and the POKE command in programs. In this episode you'll learn how to use them.
