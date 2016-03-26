@@ -3,6 +3,68 @@ title: 64 bites - Paid Episode
 ---
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
+
+  <section class="pricing-tiers two">
+    <div class="tier left">
+      <div class="title">
+        <h3>Just This Episode</h3>
+      </div>
+      <div class="price">
+        <span class="value">$3.99</span>
+      </div>
+      <div class="features">
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
+          <li><i class="fa-li fa fa-check"></i>Online streaming</li>
+          <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
+          <li><i class="fa-li fa fa-check"></i>Full Transcript</li>
+          <li><i class="fa-li fa fa-check"></i>Source Code</li>
+          <li><i class="fa-li fa fa-check"></i>Exercises</li>
+          <li><i class="fa-li fa fa-check"></i>One-time payment</li>
+        </ul>
+
+      </div>
+      <div class="price-per-episode">
+        Price per episode: $3.99
+      </div>
+      <div class="call-to-action">
+        <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Get Episode</a>
+      </div>
+      <div class="more">
+        or <a href="#">browse past episodes</a>
+      </div>
+    </div>
+    <div class="tier suggested">
+      <div class="title">
+        <h3>With the Current Season</h3>
+      </div>
+      <div class="price">
+        <span class="value">$19.99</span>
+      </div>
+      <div class="features">
+        <ul class="fa-ul">
+          <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
+          <li><i class="fa-li fa fa-check"></i>Online streaming</li>
+          <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
+          <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li>
+          <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
+          <li><i class="fa-li fa fa-check"></i>Source Codes</li>
+          <li><i class="fa-li fa fa-check"></i>Exercises</li>
+          <li><i class="fa-li fa fa-check"></i><strong>More cost-efficient!</strong></li>
+          <li><i class="fa-li fa fa-check"></i>One-time payment</li>
+        </ul>
+      </div>
+      <div class="price-per-episode">
+        Price per episode: ~$2.22
+      </div>
+      <div class="call-to-action">
+        <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Get Episode + Season</a>
+      </div>
+      <div class="more">
+        or <a href="#">browse past seasons</a>
+      </div>
+    </div>
+  </section>
   <section class="episode">
     <h2>Episode <%= episode.formatted_title %> <small>subscribers only</small></h2>
     <p><%= episode.description %></p>

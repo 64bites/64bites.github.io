@@ -329,3 +329,107 @@ left: 55px;
     vertical-align: middle;
   }
 }
+
+section.pricing-tiers {
+  @include outer-container;
+  &.three {
+    .tier {
+      @include span-columns(4);
+      &.suggested {
+        margin-left: -2.35765%;
+        margin-right: 0;
+        margin-top: -(2.35765%/2);
+        width: 31.76157 + 2*2.35765%;
+      }
+    }
+  }
+  &.two { 
+    .tier {
+      @include span-columns(6);
+      &.suggested {
+        margin-right: 0;
+        margin-left: -2.35765%;
+        margin-top: -(2.35765%/2);
+        width: 48.82117% + 2.35765%;
+      }
+    }
+  }
+  .tier {
+    border: 1px solid #4B473D;
+    position: relative;
+    background: #FFFCF7;
+    .fa-li {
+      color: #1589CE;
+    }
+    &.left {
+      border-right: none;
+    }
+    &.right {
+      border-left: none;
+    }
+
+    .title, .price, .price-per-episode {
+      text-align: center;
+    }
+    .title h3 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+    .title, .price {
+      border-bottom: 1px solid #5D594E;
+    }
+    .title, .price {
+      padding: 1em 0.2em;
+    }
+    .features {
+      padding: 1em 0.2em 0;
+    }
+    &.suggested .price {
+      padding: 1.7em;
+    }
+    .price {
+      background: #5D594E;
+      color: #FFFCF7;
+      position: relative;
+      .variant {
+        position: absolute;
+        bottom: 0.5em;
+        width: 100%;
+        display: block;
+        left: 0;
+      }
+    }
+    .price-per-episode {
+      /*display: none;*/
+      margin-top:0.5em;
+      padding: 0.5em;
+      background: #D2EEFF;
+    }
+    .price .value {
+      font-size: 2.2em;
+      color: #FFDB50;
+    }
+
+    .call-to-action {
+      .button { 
+        margin: 1em 2em;
+        display: block;
+        padding: 1em;
+        background-color: #3DA736;
+        &:hover, &:focus {
+          background-color: #2DE022;
+          color: #0D5E8E;
+        }
+        transition: all 0.3s;
+      }
+    }
+    .more {
+      padding-top: 0.5em;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+abbr { cursor: help; }
