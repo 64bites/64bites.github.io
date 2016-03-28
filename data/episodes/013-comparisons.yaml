@@ -1,8 +1,11 @@
 ---
-  title: Comparisons
-  is_free: false
-  is_published: true
-  publication_time: 2015-08-20
-  wistia_id:
-  description: 
-    In this episode we'll learn the remaining Z flag along with it's BEQ and BNE instructions. We'll also try to compare arbitrary numbers using subtraction and CMP command, which only seems to be straightforward.
+title: Comparisons
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep013
+is_published: true
+publication_time: 2015-08-19
+wistia_id: 
+description: In this episode we'll learn the remaining Z flag along with it's BEQ
+  and BNE instructions. We'll also try to compare arbitrary numbers using subtraction
+  and CMP command, which only seems to be straightforward.
