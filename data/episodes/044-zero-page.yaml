@@ -1,10 +1,12 @@
 ---
-:title: Zero Page
-:free: false
-:is_published: true
-:publication_time: 2015-03-24
-:wistia_id: 
-:description: |
+title: Zero Page
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep044
+is_published: true
+publication_time: 2016-03-23
+wistia_id: 
+description: |
   In most computers based on 6502 and 6510 processors the first 256 bytes of memory are precious. Most instructions using this part of memory are shorter and faster to execute. Commodore 64 uses almost 99% of it default.
 
   In this episode we will learn how to use Zero Page addressing modes in our programs.
