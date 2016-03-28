@@ -1,8 +1,12 @@
 ---
-  title: Compile-Time TDD
-  is_free: false
-  is_published: true
-  publication_time: 2015-09-09
-  wistia_id:
-  description: 
-    On top of being awesome, KickAssembler's scripting language has two simple but powerful directives - .assert and .asserterror.<br><br>We can use both to do compile-time Test Driven Development, and make sure our functions work and macros generate valid code.
+title: Compile Time TDD
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep016
+is_published: true
+publication_time: 2015-09-09
+wistia_id: 
+description: On top of being awesome, KickAssembler's scripting language has two simple
+  but powerful directives - .assert and .asserterror.<br><br>We can use both to do
+  compile-time Test Driven Development, and make sure our functions work and macros
+  generate valid code.
