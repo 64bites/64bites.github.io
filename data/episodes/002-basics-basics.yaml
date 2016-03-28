@@ -1,7 +1,12 @@
 ---
-  title: BASIC's Basics
-  is_free: true
-  is_published: true
-  publication_time: 2015-06-10
-  wistia_id: a372l7yjjb
-  description: In which we'll learn how to execute BASIC commands. We will define and use variables, convert between different types and display them on the screen. Along the way we will find out why floats in BASIC are faster than integers. And finally, we'll discover obscure uses of the PRINT command.
+title: BASIC's Basics
+free: true
+price: 0.0
+gumroad_product_id: 64bites-ep002
+is_published: true
+publication_time: 2015-06-03
+wistia_id: z1yl0wrn93
+description: In which we'll learn how to execute BASIC commands. We will define and
+  use variables, convert between different types and display them on the screen. Along
+  the way we will find out why floats in BASIC are faster than integers. And finally,
+  we'll discover obscure uses of the PRINT command.
