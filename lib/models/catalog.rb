@@ -41,13 +41,8 @@ class Catalog
   def all_episodes
     episodes_data.map do |episode_slug, episode_data|
       episode = Episode.new(
+        episode_data,
         decode_number(episode_slug),
-        episode_data["title"],
-        episode_data["is_free"],
-        episode_data["is_published"],
-        episode_data["publication_time"],
-        episode_data["wistia_id"],
-        episode_data["description"],
         episode_slug
       )
       episode

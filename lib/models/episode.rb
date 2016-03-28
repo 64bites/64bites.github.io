@@ -1,13 +1,22 @@
 class Episode
   attr_reader :number, :title, :publication_time, :wistia_id, :description, :slug
-  def initialize(number, title, is_free, is_published, publication_time, wistia_id, description, slug=nil)
-    @number, @title, @is_free, @is_published, @publication_time, @wistia_id, @description = number, title, is_free, is_published, publication_time, wistia_id, description
-    @slug = slug || build_slug
+  def initialize(episode_data, number, slug)
+    @number = number
+    @title = episode_data.fetch("title")
+    @is_free = episode_data.fetch("free")
+    @gumroad_product_id = episode_data.fetch("gumroad_product_id")
+    @price = Price.new(episode_data.fetch("price"))
+    @is_published = episode_data.fetch("is_published")
+    @publication_time = episode_data.fetch("publication_time")
+    @wistia_id = episode_data.fetch("wistia_id")
+    @description = episode_data.fetch("description")
+    @slug = slug
   end
 
   def free?
     @is_free
   end
+
   
   def published?
     @is_published
@@ -25,6 +34,8 @@ class Episode
     "##{formatted_number} - #{title}"
   end
 
+  attr_reader :price, :gumroad_product_id
+  
   private
 
   def build_slug
