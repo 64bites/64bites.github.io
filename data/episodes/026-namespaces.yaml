@@ -1,8 +1,11 @@
 ---
-  title: Namespaces
-  is_free: false
-  is_published: true
-  publication_time: 2015-11-18
-  wistia_id:
-  description: 
-    Some languages provide structures or records to group data at runtime. Surprisingly KickAssembler's namespaces can be used in a similar manner. We can use them to group data together and pass them around as arguments of macros.
+title: Namespaces
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep026
+is_published: true
+publication_time: 2015-11-18
+wistia_id: 
+description: Some languages provide structures or records to group data at runtime.
+  Surprisingly KickAssembler's namespaces can be used in a similar manner. We can
+  use them to group data together and pass them around as arguments of macros.
