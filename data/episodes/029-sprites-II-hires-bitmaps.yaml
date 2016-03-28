@@ -1,8 +1,11 @@
 ---
-  title: Sprites II - Hi-Res Bitmaps
-  is_free: true
-  is_published: true
-  publication_time: 2015-12-09
-  wistia_id: 6oktrezynw
-  description: 
-    As we already know, sprites are a 24 by 21-pixel bitmaps. But default ones are just filled rectangles. In this episode we will learn how to redefine sprite bitmaps to make them more interesting.
+title: Sprites II - Hires Bitmaps
+free: true
+price: 0.0
+gumroad_product_id: 64bites-ep029
+is_published: true
+publication_time: 2015-12-09
+wistia_id: 6oktrezynw
+description: As we already know, sprites are a 24 by 21-pixel bitmaps. But default
+  ones are just filled rectangles. In this episode we will learn how to redefine sprite
+  bitmaps to make them more interesting.
