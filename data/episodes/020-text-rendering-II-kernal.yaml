@@ -1,8 +1,11 @@
 ---
-  title: Text Rendering II - KERNAL
-  is_free: false
-  is_published: true
-  publication_time: 2015-10-08
-  wistia_id:
-  description: 
-    Today we will learn how to print strings at the current cursor position, just like the print command does it in BASIC. To make it more interesting we'll be using built in KERNAL subroutines CHROUT and PLOT. 
+title: Text Rendering II - KERNAL
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep020
+is_published: true
+publication_time: 2015-10-07
+wistia_id: 
+description: Today we will learn how to print strings at the current cursor position,
+  just like the print command does it in BASIC. To make it more interesting we'll
+  be using built in KERNAL subroutines CHROUT and PLOT.
