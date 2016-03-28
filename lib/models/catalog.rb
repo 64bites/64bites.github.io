@@ -1,13 +1,15 @@
 require_relative 'episode'
 require_relative 'season'
+require_relative 'subscription'
 
 class Catalog
 
   EPISODES_PER_SEASON = 9
-  def initialize(episodes_data, featured_episodes_data, seasons_data)
+  def initialize(episodes_data, featured_episodes_data, seasons_data, subscription_data)
     @episodes_data = episodes_data
     @featured_episodes_data = featured_episodes_data
     @seasons_data = seasons_data
+    @subscription_data = subscription_data
   end
 
   def find_episode(number)
@@ -63,6 +65,14 @@ class Catalog
   def past_seasons
     all_seasons.reject(&:current?)
   end
+
+  def subscription
+    Subscription.new(
+      subscription_data["monthly_price_in_dollars"],
+      subscription_data["annual_price_in_dollars"],
+      subscription_data["gumroad_product_id"],
+    )
+  end
   
   def all_seasons
     current_season_index = seasons_data.count - 1
@@ -80,7 +90,7 @@ class Catalog
   end
 
   private
-  attr_reader :episodes_data, :featured_episodes_data, :seasons_data
+  attr_reader :episodes_data, :featured_episodes_data, :seasons_data, :subscription_data
   
   def decode_number(episode_slug)
     episode_slug.split("-").first.to_i 
