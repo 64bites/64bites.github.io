@@ -1,8 +1,11 @@
 ---
-  title: Pseudo Commands
-  is_free: false
-  is_published: true
-  publication_time: 2015-09-16
-  wistia_id:
-  description: 
-    Today we'll learn about .pseudocommand directive in KickAssembler. It allows us to make more robust macros that can work with different addressing modes and behave like a built in assembly instructions. 
+title: Pseudo Commands
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep018
+is_published: true
+publication_time: 2015-09-23
+wistia_id: 
+description: Today we'll learn about .pseudocommand directive in KickAssembler. It
+  allows us to make more robust macros that can work with different addressing modes
+  and behave like a built in assembly instructions.
