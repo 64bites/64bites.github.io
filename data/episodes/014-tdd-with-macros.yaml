@@ -1,8 +1,12 @@
 ---
-  title: TDD with Macros
-  is_free: true
-  is_published: true
-  publication_time: 2015-08-26
-  wistia_id: x1akbwgl11
-  description: 
-    Have you ever thought of doing Test Driven Development on Commodore 64?<br><br>It's not only possible, but surprisingly simple and rewarding. In this episode, with the help of macros, we'll build a very minimal testing framework and use it to test-drive our code.
+title: TDD with Macros
+free: true
+price: 0.0
+gumroad_product_id: 64bites-ep014
+is_published: true
+publication_time: 2015-08-26
+wistia_id: x1akbwgl11
+description: Have you ever thought of doing Test Driven Development on Commodore 64?<br><br>It's
+  not only possible, but surprisingly simple and rewarding. In this episode, with
+  the help of macros, we'll build a very minimal testing framework and use it to test-drive
+  our code.
