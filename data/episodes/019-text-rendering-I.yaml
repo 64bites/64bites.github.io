@@ -1,8 +1,11 @@
 ---
-  title: Text Rendering I
-  is_free: false
-  is_published: true
-  publication_time: 2015-09-30
-  wistia_id:
-  description: 
-    Today we take a look at printing strings during compilation and at runtime. We also examine few pros and cons of C-like null terminated string in comparison to Pascal-like strings prepended with their length.
+title: Text Rendering I
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep019
+is_published: true
+publication_time: 2015-09-30
+wistia_id: 
+description: Today we take a look at printing strings during compilation and at runtime.
+  We also examine few pros and cons of C-like null terminated string in comparison
+  to Pascal-like strings prepended with their length.
