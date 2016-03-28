@@ -1,9 +1,11 @@
 ---
-  title: Robust Animations
-  is_free: false
-  is_published: true
-  publication_time: 2016-01-27
-  wistia_id:
-  description: If you solved exercises from the previous episode, you should already have a robust program that can animate sprites of any type exported from the sprite pad. <br> Today we will analyse one of possible solutions.
-
-    
+title: Robust Animations
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep036
+is_published: true
+publication_time: 2016-01-27
+wistia_id: 
+description: If you solved exercises from the previous episode, you should already
+  have a robust program that can animate sprites of any type exported from the sprite
+  pad. <br> Today we will analyse one of possible solutions.
