@@ -1,10 +1,13 @@
 ---
-  title: Importing SpritePad Files
-  is_free: false
-  is_published: true
-  publication_time: 2015-12-30
-  wistia_id:
-  description: 
-    In the previous episode we've used the SpritePad application to design four different sprites. We have also exported them into binary files in two formats. The native spritepad one and the SEUCK format that can be also used in the Shoot'Em Up Construction Kit.<br>Today we will learn how to import the sprites from the file into an assembly program.
-
-    
+title: Importing SpritePad Files
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep032
+is_published: true
+publication_time: 2015-12-30
+wistia_id: 
+description: In the previous episode we've used the SpritePad application to design
+  four different sprites. We have also exported them into binary files in two formats.
+  The native spritepad one and the SEUCK format that can be also used in the Shoot'Em
+  Up Construction Kit.<br>Today we will learn how to import the sprites from the file
+  into an assembly program.
