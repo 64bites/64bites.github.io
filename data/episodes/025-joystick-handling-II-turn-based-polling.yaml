@@ -1,8 +1,10 @@
 ---
-  title: Joystick Handling I - Turn-Based Polling
-  is_free: false
-  is_published: true
-  publication_time: 2015-11-12
-  wistia_id:
-  description: 
-    Today we'll learn a robust method of implementing turn-based joystick polling that works well for rogue-like games or puzzles.
+title: Joystick Handling II - Turn Based Polling
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep025
+is_published: true
+publication_time: 2015-11-11
+wistia_id: 
+description: Today we'll learn a robust method of implementing turn-based joystick
+  polling that works well for rogue-like games or puzzles.
