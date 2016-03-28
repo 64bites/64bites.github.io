@@ -1,8 +1,12 @@
 ---
-  title: Using the SpritePad
-  is_free: true
-  is_published: true
-  publication_time: 2015-12-23
-  wistia_id: k0tc3txst9
-  description: 
-    This time, instead of programming, we'll learn to use one of the most popular sprite editors - the SpritePad.<br>It allows you to create multicolor and hires sprite bitmaps in a much more convenient way that specifying them bit by bit in your source code.
+title: Using the SpritePad
+free: true
+price: 0.0
+gumroad_product_id: 64bites-ep031
+is_published: true
+publication_time: 2015-12-23
+wistia_id: k0tc3txst9
+description: This time, instead of programming, we'll learn to use one of the most
+  popular sprite editors - the SpritePad.<br>It allows you to create multicolor and
+  hires sprite bitmaps in a much more convenient way that specifying them bit by bit
+  in your source code.
