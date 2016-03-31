@@ -1,10 +1,12 @@
 ---
-:title: Managing ROM & RAM
-:free: false
-:is_published: true
-:publication_time: 2016-03-30
-:wistia_id: 
-:description: "As we already know, Commodore 64 has exactly 64 Kilobytes of RAM. But
+title: Managing ROM & RAM
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep045
+is_published: true
+publication_time: 2016-03-30
+wistia_id: 
+description: "As we already know, Commodore 64 has exactly 64 Kilobytes of RAM. But
   we can't use all of it by default.\n\nBASIC Interpreter ROM, KERNAL ROM and I/O
   registers cover 20KB of RAM.\n\nToday we will learn how to disable BASIC & KERNAL,
   move their routines to RAM and modify them. \n"
