@@ -21,5 +21,3 @@
 * What makes the **Zero Page** so important.
 * Disable BASIC and KERNAL ROMs to get more space for your programs.
 * Modify BASIC and KERNAL code.
-
-

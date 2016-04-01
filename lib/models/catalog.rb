@@ -39,6 +39,10 @@ class Catalog
     end
   end 
 
+  def latest_episode
+    all_episodes.first
+  end
+
   def all_episodes
     episodes_data.map do |episode_slug, episode_data|
       episode = Episode.new(

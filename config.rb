@@ -160,7 +160,7 @@ CATALOG.past_seasons.each do |season|
 end
 
 CATALOG.current_season.tap do |season|
-  proxy season_path(season) + ".html", "/views/templates/seasons/current.html", :locals => { :season => season }, layout: 'season', ignore: true
+  proxy season_path(season) + ".html", "/views/templates/seasons/past.html", :locals => { :season => season }, layout: 'season', ignore: true
 end
 
 

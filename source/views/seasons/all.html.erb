@@ -1,5 +1,5 @@
 <section class="seasons current">
-  <h1>Current Season - <small>Available via Subscription</small></h1>
+  <h1>Season <%= episodes_catalog.current_season.number %> - Current Season</h1>
 <% episodes_catalog.current_season.tap do |season| %>
   <div class="season" id="season-<%= season.number %>" >
     <% link_to season_path(season) do %>
