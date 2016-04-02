@@ -13,7 +13,7 @@ class Catalog
   end
 
   def find_episode(number)
-    all_episodes.select {|episode| episode.number == number }.first
+    all_episodes.find {|episode| episode.number == number }
   end
 
   def find_season_by_episode(episode)

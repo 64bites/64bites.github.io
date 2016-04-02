@@ -1,0 +1,14 @@
+<section class="latest-episode">
+  <div class="w">
+  <div class="episode">
+    <div class="poster">
+      <h2 style="text-align:center;width: 100%">The Latest Episode</h2>
+      <%= image_tag(episode.poster_path, class: "thumbnail") %>
+  </div>
+  <div class="info">
+    <h2><%= "#{ episode.formatted_title}" %></h2>
+  <p><%= partial("views/episodes/description_045") %></p>
+  </div>
+  </div>
+  </div>
+</section>

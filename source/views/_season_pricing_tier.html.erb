@@ -1,0 +1,32 @@
+<div class="tier <%= tier_class %>">
+  <div class="title">
+    <h3>with the Current Season</h3>
+  </div>
+  <div class="price">
+    <span class="value"><%= season.price.formatted %></span>
+  </div>
+  <div class="features">
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
+      <li><i class="fa-li fa fa-check"></i>Online streaming</li>
+      <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
+      <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li>
+      <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
+      <li><i class="fa-li fa fa-check"></i>Source Codes</li>
+      <li><i class="fa-li fa fa-check"></i>Exercises</li>
+      <li><i class="fa-li fa fa-check"></i><strong>More cost-efficient</strong></li>
+      <li><i class="fa-li fa fa-check"></i>One-time payment</li>
+    </ul>
+  </div>
+  <div class="price-per-episode">
+    Price per episode: <abbr title="estimated">~$2.22</abbr>
+  </div>
+  <div class="call-to-action">
+    <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Get Episode + Season</a>
+  </div>
+  <% if show_alternative_cta %>
+  <div class="more">
+    or <a href="/seasons/all">browse all seasons</a>
+  </div>
+  <% end %>
+</div>

@@ -1,118 +1,22 @@
 ---
 title: 64 bites - Paid Episode
 ---
+<section class="pitch">
+  <div class="w">
+    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+    <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> 
+  </div>
+</section>
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
 
+  <%= partial "views/episode_section", locals: { episode: episode } %>
   <section class="pricing-tiers two">
-    <div class="tier left">
-      <div class="title">
-        <h3>Just This Episode</h3>
-      </div>
-      <div class="price">
-        <span class="value">$3.99</span>
-      </div>
-      <div class="features">
-        <ul class="fa-ul">
-          <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
-          <li><i class="fa-li fa fa-check"></i>Online streaming</li>
-          <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-          <li><i class="fa-li fa fa-check"></i>Full Transcript</li>
-          <li><i class="fa-li fa fa-check"></i>Source Code</li>
-          <li><i class="fa-li fa fa-check"></i>Exercises</li>
-          <li><i class="fa-li fa fa-check"></i>One-time payment</li>
-        </ul>
+    <h2>Watch this Video Today</h2>
+    
+      <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: episode, show_alternative_cta: false} %>
 
-      </div>
-      <div class="price-per-episode">
-        Price per episode: $3.99
-      </div>
-      <div class="call-to-action">
-        <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Get Episode</a>
-      </div>
-      <div class="more">
-        or <a href="#">browse past episodes</a>
-      </div>
-    </div>
-    <div class="tier suggested">
-      <div class="title">
-        <h3>With the Current Season</h3>
-      </div>
-      <div class="price">
-        <span class="value">$19.99</span>
-      </div>
-      <div class="features">
-        <ul class="fa-ul">
-          <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
-          <li><i class="fa-li fa fa-check"></i>Online streaming</li>
-          <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-          <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li>
-          <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
-          <li><i class="fa-li fa fa-check"></i>Source Codes</li>
-          <li><i class="fa-li fa fa-check"></i>Exercises</li>
-          <li><i class="fa-li fa fa-check"></i><strong>More cost-efficient!</strong></li>
-          <li><i class="fa-li fa fa-check"></i>One-time payment</li>
-        </ul>
-      </div>
-      <div class="price-per-episode">
-        Price per episode: ~$2.22
-      </div>
-      <div class="call-to-action">
-        <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Get Episode + Season</a>
-      </div>
-      <div class="more">
-        or <a href="#">browse past seasons</a>
-      </div>
-    </div>
+      <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
   </section>
-  <section class="episode">
-    <h2>Episode <%= episode.formatted_title %> <small>subscribers only</small></h2>
-    <p><%= episode.description %></p>
-    <div class="poster">
-      <%= image_tag(episode.poster_path, class: "thumbnail") %>
-    </div>
-  </section>
-  <section class="signup">
-  <%= render_convertkit_custom_form("default") %>
-</section>
-
-  <% if season.current? %>
-  <section class="signup">
-    <h2>This video belongs to the <%= link_to "Current Season", season_path(season) %></h2>
-    <% link_to season_path(season) do %>
-      <%= image_tag(season.poster_path, class: "thumbnail") %>
-    <% end %>
-    <h2>Watch Remaining Episodes Now!</h2>
-    <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
-    <ul class="pros">
-      <li><strong>HD version</strong> of this episode</li>
-      <li><strong>full transcript</strong>, show notes and source code</li> 
-      <li><strong>additional exercises</strong> to solve and practice</li>
-      <li><strong>All episodes released</strong> in this season.</li>
-    </ul>
-    All videos of are available for <strong>online HD streaming</strong>. 
-    You can also download them <strong>DRM free</strong>.
-
-    <p>On top of that you'll receive a <strong>new video every week</strong> straight to your inbox.</p>
-  </section>
-  <%= partial "views/subscribe_button" %>
-<% else %>
-  <h2>This video belongs to the <%= link_to "Season #{ season.number }", season_path(season) %></h2>
-  <% link_to season_path(season) do %>
-    <%= image_tag(season.poster_path, class: "thumbnail") %>
-  <% end %>
-  <h2>Watch 8 Remaining Episodes Now!</h2>
-  <p>You are a few clicks away from getting:</p>
-  <ul class="pros">
-    <li><strong>HD version</strong> of this episode</li>
-    <li><strong>full transcript</strong>, show notes and source code</li> 
-    <li><strong>additional exercises</strong> to solve and practice</li>
-    <li><strong>All episodes released</strong> in this season.</li>
-  </ul>
-  <p>All videos of are available for <strong>online HD streaming</strong>. 
-  You can also download them <strong>DRM free</strong>.</p>
-
-  <%= partial "views/buy_season_button", locals: {season: season} %>
-<% end %>
 
 <% end %>

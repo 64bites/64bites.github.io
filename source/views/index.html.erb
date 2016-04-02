@@ -7,192 +7,30 @@ thumbnail: episodes/014.png
 <% current_season = episodes_catalog.current_season %>
 <% subscription = episodes_catalog.subscription %>
 
-<section class="pricing-tiers three">
-  <div class="tier left">
-    <div class="title">
-      <h3>just this Episode</h3>
-    </div>
-    <div class="price">
-      <span class="value">$3.99</span>
-    </div>
-    <div class="features">
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
-        <li><i class="fa-li fa fa-check"></i>Online streaming</li>
-        <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-        <li><i class="fa-li fa fa-check"></i>Full Transcript</li>
-        <li><i class="fa-li fa fa-check"></i>Source Code</li>
-        <li><i class="fa-li fa fa-check"></i>Exercises</li>
-        <li><i class="fa-li fa fa-check"></i>One-time payment</li>
-      </ul>
-
-    </div>
-    <div class="price-per-episode">
-      Price per episode: $3.99
-    </div>
-    <div class="call-to-action">
-      <a class="button" href="https://gumroad.com/l/<%= latest_episode.gumroad_product_id %>">Get Episode</a>
-    </div>
-    <div class="more">
-      or <a href="#">browse past episodes</a>
-    </div>
-
-  </div>
-
-  <div class="tier suggested">
-    <div class="title">
-      <h3>with an Ongoing Subscription</h3>
-    </div>
-    <div class="price">
-      <span class="value">$9.99</span><span class="period">/month</span><br>
-      <span class="variant">(or less with an annual payment)</span>
-    </div>
-    <div class="features">
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
-        <li><i class="fa-li fa fa-check"></i>Online streaming</li>
-        <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-        <li><i class="fa-li fa fa-check"></i><strong>New video every week!</strong></li>
-        <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
-        <li><i class="fa-li fa fa-check"></i>Source Codes</li>
-        <li><i class="fa-li fa fa-check"></i>Exercises</li>
-        <li><i class="fa-li fa fa-check"></i><strong>The most cost-efficient</strong></li>
-        <li><i class="fa-li fa fa-check"></i>One payment per month (or year)</li>
-      </ul>
-    </div>
-    <div class="price-per-episode">
-      Price per episode: <abbr title="estimated for an annual payment">~$2.09</abbr>
-    </div>
-    <div class="call-to-action">
-      <a class="button" href="https://gumroad.com/l/<%= subscription.gumroad_product_id %>">Get Episode + Subscription</a>
-    </div>
-    <div class="more">
-      or <a href="#">learn more about the subscription</a>
-    </div>
-  </div>
-
-  <div class="tier right">
-    <div class="title">
-      <h3>with the Current Season</h3>
-    </div>
-    <div class="price">
-      <span class="value">$19.99</span>
-    </div>
-    <div class="features">
-      <ul class="fa-ul">
-        <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
-        <li><i class="fa-li fa fa-check"></i>Online streaming</li>
-        <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-        <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li>
-        <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
-        <li><i class="fa-li fa fa-check"></i>Source Codes</li>
-        <li><i class="fa-li fa fa-check"></i>Exercises</li>
-        <li><i class="fa-li fa fa-check"></i><strong>More cost-efficient</strong></li>
-        <li><i class="fa-li fa fa-check"></i>One-time payment</li>
-      </ul>
-    </div>
-    <div class="price-per-episode">
-      Price per episode: <abbr title="estimated">~$2.22</abbr>
-    </div>
-    <div class="call-to-action">
-      <a class="button" href="https://gumroad.com/l/<%= current_season.gumroad_product_id %>">Get Episode + Season</a>
-    </div>
-    <div class="more">
-      or <a href="#">browse past seasons</a>
-    </div>
-  </div>
-</section>
-
 <section class="pitch">
-
-  <div class="features">
-    <h1>The easiest way to start programming Commodore&nbsp;64</h1>
-    <p class="lead" style="font-size: 150%;">Life is too short for reading twenty-year-old books.<br>Learn BASIC and Assembly with bite-sized video tutorials.</p> 
-    <h2>Always wanted to write a game or a demo?</h2>
-    <p>Too bad your <strong>daily job sucks most of your time</strong>, so there is not much left for your hobby.</p>
-
-    <p>You can't afford to waste it on reading <strong>twenty-year-old-books</strong>, trying to understand <strong>outdated tutorials</strong>, or begging for help on <strong>hostile forums</strong>.</p> 
-
+  <div class="w">
+    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+    <p class="lead">Life is too short to read twenty-year-old books.<br><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials <em>today</em>!</p> 
   </div>
-  </section>
-
-  <section class="featured-episodes featured-<%= featured_episodes.count%>">
-    <h2>What if you could learn something new in just 5 minutes?</h2>
-    <p>Ready? Then watch <strong>any</strong> of those videos <strong>now</strong>:</p>
-    <% featured_episodes.each do |episode| %>
-      <div class="featured-episode">
-        <%= partial "views/wistia_responsive_popup", locals: {episode: episode} %>
-        <h4><%= episode.formatted_title %></h4>
-      </div>
-    <% end %>
-  </section>
-
-  <section class="pitch">
-    <h2>Short, condensed lesson every week</h2>
-
-    <p>Now imagine that:</p>
-    <ul class="pros">
-      <li><strong>Every week</strong>, new video is delivered <strong>straight to your inbox.</strong></li>
-      <li>You can <strong>watch</strong> each episode <strong>online on any device</strong>,</li>
-      <li>or <strong>download</strong> for your convenience <strong>DRM free</strong>.</li>
-    </ul>
-    <p>And each video comes with:</p>
-    <ul class="pros">
-      <li>detailed <strong>complete transcript</strong> of the episode,</li>
-      <li>plenty of source code <strong>examples</strong> to follow along,</li>
-      <li>additional <strong>exercises</strong> to solve on your own,</li>
-    </ul>
-    On top of that you will get </strong>
-  <ul class="pros">
-    <li>access to private and <strong>inclusive forum</strong>, where you can ask for help.</li>
-    <li>all episodes released in the current season</li>
-  </ul>
-
-  <h2>Continuous progress with virtually no effort</h2>
-
-  <p>With the 64 Bites Subscription you will <strong>level up consistently</strong>.</p>
-  <p>Every week <strong>you will learn</strong> a new thing and <strong>advance</strong> toward your goal without much effort.</p>
-
-  <%= image_tag("subscription-poster.png", class: "poster") %>
 </section>
 
-<%= partial "views/subscribe_button" %>
+<%= partial "views/episode_section", locals: { episode: latest_episode } %>
 
+<section class="pricing-tiers three">
+  <h2>Watch this Video Today</h2>
+  
+    <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: latest_episode, show_alternative_cta: true} %>
 
-<section class="testimonials">
-  <h2>See what others are saying!</h2>
-  <% data.testimonials.each_slice(2) do |testimonials_row| %>
-    <div class="row">
-      <% testimonials_row.each do |testimonial| %>
-        <div class="testimonial">
-          <div class=" bubble">
-            <blockquote><%= testimonial.body %></blockquote>
-          </div>
-          <div class="author">
-            <%= image_tag "testimonials/#{testimonial.photo}", class: "avatar" %>
-            <div class="credentials">
-              <h4>- <%= testimonial.name %></h4>
-              <p><%= testimonial.credentials %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
+    <%= partial "views/subscription_pricing_tier", locals: {tier_class: "suggested", subscription: subscription, show_alternative_cta: true} %>
+
+    <%= partial "views/season_pricing_tier", locals: {tier_class: "right", season: current_season, show_alternative_cta: true} %>
+
 </section>
+
+<%= partial "views/testimonials_section" %>
+
 <section class="signup">
   <%= render_convertkit_custom_form("default") %>
-</section>
-<section id="seasons" class="seasons">
-  <h2>Binge Watch Past Episodes</h2>
-  <% episodes_catalog.past_seasons.each do |season| %>
-    <div class="season">
-      <%= image_tag(season.poster_path, class: "poster") %>
-      <div class="info">
-        <%= partial "views/buy_season_button", locals: {season: season} %>
-      </div>
-    </div>
-  <% end %>
 </section>
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
