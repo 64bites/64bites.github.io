@@ -1,0 +1,1 @@
+We will learn how to use two most powerful instructions in BASIC - Peek and Poke. We can use them to read from and write to the memory, which on C64 is not only used to store data. By writing values into specific addresses we can display graphics, play sound, modify the behaviour of the operating system or even crash the computer if we're not careful.
