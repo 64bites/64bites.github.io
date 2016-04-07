@@ -3,14 +3,7 @@ title: 64 bites - Free Episode
 ---
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
-<section class="episode">
-  <h2>Episode <%= episode.formatted_title %></h2>
-  <p><%= episode.description %></p>
-<%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: "Free Episode #{episode.formatted_title}" } %>
-</section>
-<section class="signup">
-  <%= render_convertkit_custom_form("default") %>
-</section>
+  <%= partial "views/episode_section", locals: { episode: episode } %>
 <% if season.current? %>
   
 <section class="signup">

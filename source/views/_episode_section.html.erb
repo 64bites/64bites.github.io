@@ -1,5 +1,5 @@
 <section class="latest-episode">
-  <% info = partial("views/episodes/description_045") %>
+  <% info = partial("views/episodes/description_#{episode.formatted_number}") %>
   <h2>The Latest Episode <%= "#{ episode.formatted_title}" %></h2>
   <div class="episode">
     <div class="info">
@@ -8,15 +8,14 @@
       <% else %>
         <%= info %>
       <% end %>
-  </div>
-  <div class="poster">
-    <div class="wrapper">
-      <%= image_tag(episode.poster_path, class: "thumbnail") %>
-      <div class="ribbon-wrapper-green">
-        <div class="ribbon-green"><i class="fa fa-star"></i> NEW</div>
+    </div>
+    <div class="poster">
+      <div class="wrapper">
+        <%= image_tag(episode.poster_path, class: "thumbnail") %>
+        <div class="ribbon-wrapper-green">
+          <div class="ribbon-green"><i class="fa fa-star"></i> NEW</div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 </section>
