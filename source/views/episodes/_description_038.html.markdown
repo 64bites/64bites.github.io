@@ -1,0 +1,3 @@
+In our previous episodes, we've been using a quite primitive animation technique. We've been simply advancing frames in an infinite loop with and wasting enough time with a delay macro to slow the animation down.
+Not only we don't have an easy way to control the exact speed of animations using this technique. But the amount of delay needs to be updated whenever we add or remove any code to run in this loop.
+Fortunately there is a different way. And I'd like to use this opportunity to introduce one of the most exciting features of the 6510 processor that powers the Commodore 64 - the interrupt handling.
