@@ -1,0 +1,1 @@
+Today we'll learn about .pseudocommand directive in KickAssembler. It allows us to make more robust macros that can work with different addressing modes and behave like a built in assembly instructions.
