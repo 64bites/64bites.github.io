@@ -1,0 +1,1 @@
+The DATA statement is used to define sequences of string or numerical constants. The READ command is used in to pick values from these sequences of one by one. They are mostly used in combination with FOR loops and the POKE command in programs. In this episode you'll learn how to use them.
