@@ -1,0 +1,1 @@
+Some languages provide structures or records to group data at runtime. Surprisingly KickAssembler's namespaces can be used in a similar manner. We can use them to group data together and pass them around as arguments of macros.
