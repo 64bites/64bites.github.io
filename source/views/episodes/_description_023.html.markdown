@@ -1,0 +1,1 @@
+In this episode, we will find out how the 6502 processor handles boolean operations. We will use the 64spec library to see their results and side effects, and how they can be used to manipulate specific bits. We'll also take a peek at some of the uses of the peculiar bit operation.
