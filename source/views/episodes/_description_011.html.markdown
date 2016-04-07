@@ -1,0 +1,1 @@
+This one teaches not only how to subtract numbers on Commodore 64. It also shows different ways of representing negative numbers in binary and explains reasons why borrow in subtraction is defined as 1 - carry.
