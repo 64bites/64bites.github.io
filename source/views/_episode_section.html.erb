@@ -1,13 +1,21 @@
 <section class="latest-episode">
-  <div class="w">
+  <% info = partial("views/episodes/description_045") %>
+  <h2>The Latest Episode <%= "#{ episode.formatted_title}" %></h2>
   <div class="episode">
-    <div class="poster">
-      <h2 style="text-align:center;width: 100%">The Latest Episode</h2>
-      <%= image_tag(episode.poster_path, class: "thumbnail") %>
+    <div class="info">
+      <% if defined?(truncate_info) && truncate_info  %>
+        <p><%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %></p>
+      <% else %>
+        <p><%= info %></p>
+      <% end %>
   </div>
-  <div class="info">
-    <h2><%= "#{ episode.formatted_title}" %></h2>
-  <p><%= partial("views/episodes/description_045") %></p>
+  <div class="poster">
+    <div class="wrapper">
+      <%= image_tag(episode.poster_path, class: "thumbnail") %>
+      <div class="ribbon-wrapper-green">
+        <div class="ribbon-green"><i class="fa fa-star"></i> NEW</div>
+      </div>
+    </div>
   </div>
   </div>
   </div>
