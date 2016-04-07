@@ -1,0 +1,5 @@
+We already know how to insert our routine into the interrupt handler to get reliable 50 ar 60 frames per second for our animations.
+
+But what if we want to display them at only half that speed?
+
+In this episode we will learn a simple technique we can precisely control the frequency of any interrupt driven animation.
