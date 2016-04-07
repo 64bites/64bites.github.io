@@ -1,0 +1,12 @@
+---
+title: Managing ROM & RAM II
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep046
+is_published: true
+publication_time: 2016-04-06
+wistia_id: 
+description: |-
+  In the second part about ROM manipulation we will claim all of the RAM by disabling BASIC and KERNAL ROMS as well as I/O registers block.
+
+  We will also learn how to move the Character Generator ROM into the address space and read any character bitmap that is saved there.
