@@ -1,0 +1,1 @@
+Often in games we need to track various numbers. Score, number of lives, amount of fuel, experience points, or even the position of the player are just few examples. Therefore it's a good idea to learn commands that allow us to modify these numbers.
