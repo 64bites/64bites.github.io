@@ -1,0 +1,2 @@
+In the previous episode, we've seen how to optimize the memory usage of the sprite animation with a technique called run-length encoding. It allowed us to keep only a unique subset of all bitmaps in the memory. In effect, we managed to shave off almost 2KB of RAM.
+But we needed to calculate indices and repetition counts of unique frames by hand. Today we will use the compilation time metaprogramming to automate that process.
