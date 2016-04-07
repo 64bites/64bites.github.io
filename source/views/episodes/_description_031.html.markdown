@@ -1,0 +1,2 @@
+This time, instead of programming, we'll learn to use one of the most popular sprite editors - the SpritePad.
+It allows you to create multicolor and hires sprite bitmaps in a much more convenient way that specifying them bit by bit in your source code.
