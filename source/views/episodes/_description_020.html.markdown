@@ -1,0 +1,1 @@
+Today we will learn how to print strings at the current cursor position, just like the print command does it in BASIC. To make it more interesting we'll be using built in KERNAL subroutines CHROUT and PLOT.
