@@ -1,0 +1,1 @@
+As we already know, sprites are a 24 by 21-pixel bitmaps. But default ones are just filled rectangles. In this episode we will learn how to redefine sprite bitmaps to make them more interesting.
