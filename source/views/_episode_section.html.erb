@@ -4,9 +4,9 @@
   <div class="episode">
     <div class="info">
       <% if defined?(truncate_info) && truncate_info  %>
-        <p><%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %></p>
+        <%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %>
       <% else %>
-        <p><%= info %></p>
+        <%= info %>
       <% end %>
   </div>
   <div class="poster">

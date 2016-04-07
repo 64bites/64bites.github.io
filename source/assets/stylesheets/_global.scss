@@ -44,9 +44,13 @@ body {
     text-align: center;
   }
 }
-body.blog ul, ul.pros, ul.cons, section.pitch ul {
+body.blog main ul, ul.pros, ul.cons, section.pitch ul {
   list-style-type: disc;
   padding: 1em 2em;
+
+}
+.pitch h1 {
+  font-size: 3em;
 }
 h1 {
   font-size: 2.3em;
