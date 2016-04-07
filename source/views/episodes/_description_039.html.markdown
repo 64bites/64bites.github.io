@@ -1,0 +1,5 @@
+In a previous episode, we've learned how to insert a routine at the beginning of the IRQ handler. In the most typical situation, we just need to store our routine address in the place in RAM called IRQ vector and jump to the default KERNAL IRQ handler.
+
+This will work in the majority of situations. But in some cases, another routine can already be wedged into the default handler. This may happen if your program is not the first one to run, or more commonly if a cartridge is inserted.
+
+Today we will learn to add and remove multiple IRQ wedges.
