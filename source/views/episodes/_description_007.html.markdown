@@ -1,0 +1,1 @@
+In this episode we will start our adventure with the assembly. We will learn a handful of commands, how to translate them into machine code by hand [sic!], and how to run them from BASIC. We will also learn to use the Monitor program to view and modify our program in a slightly more convenient way.
