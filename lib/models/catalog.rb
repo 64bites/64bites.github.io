@@ -18,20 +18,13 @@ class Catalog
 
   def find_season_by_episode(episode)
     season_number = nil
-    if episode.number == 46
-      season_number = 5
-    else
-      season_number = (episode.number - 1).div(EPISODES_PER_SEASON) + 1
-    end
+    season_number = (episode.number - 1).div(EPISODES_PER_SEASON) + 1
     find_season(season_number)    
   end
 
   def all_episodes_in_season(season)
     last_episode_number = season.number * EPISODES_PER_SEASON
     first_episode_number = last_episode_number - EPISODES_PER_SEASON + 1
-    if season.number == 5
-      last_episode_number += 1
-    end
     episodes_range = first_episode_number..last_episode_number
     all_episodes.select { |episode| episodes_range.include?(episode.number) }
   end
