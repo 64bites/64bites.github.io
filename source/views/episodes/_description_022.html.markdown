@@ -1,0 +1,1 @@
+64spec is an open-source testing framework for Commodore 64. It is heavily inspired by an rspec library that Ruby developers use for testing their programs. Today we will see how to use it to learn assembly and generate living documentation.

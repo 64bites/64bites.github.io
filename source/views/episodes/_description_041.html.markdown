@@ -1,0 +1,5 @@
+The processor that powers the Commodore 64 supports only a handful of registers that can be used for arithmetic or logical operations. This means that we will often encounter a situation when we need to save temporary values in the memory, calculate some other thing, and then get back to previous ones.
+
+We can use store and load operations for that purpose. But it requires allocating memory for temporary variables.
+
+Fortunately, there is a better way...

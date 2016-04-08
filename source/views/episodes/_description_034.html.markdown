@@ -1,0 +1,1 @@
+In this episode, we'll see how to compress duplicated sprite bitmaps without any visual changes to the animation.

@@ -13,7 +13,7 @@ class Catalog
   end
 
   def find_episode(number)
-    all_episodes.select {|episode| episode.number == number }.first
+    all_episodes.find {|episode| episode.number == number }
   end
 
   def find_season_by_episode(episode)
@@ -38,6 +38,14 @@ class Catalog
       featured_episodes_data.include? episode.number
     end
   end 
+
+  def latest_episode
+    all_episodes.first
+  end
+
+  def latest_episode?(episode)
+    episode.number == latest_episode.number 
+  end
 
   def all_episodes
     episodes_data.map do |episode_slug, episode_data|

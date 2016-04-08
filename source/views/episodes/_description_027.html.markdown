@@ -1,0 +1,2 @@
+KickAssembler's scripting language provides a variety of data structures that can be used to group and order static data.
+Proper use of lists, hash tables and structures can add clarity to your code and help you to maintain it in the long run.

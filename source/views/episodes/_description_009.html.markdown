@@ -1,0 +1,1 @@
+Where we will learn how to use JMP, JSR and RTS commands to jump around programs. We will also use labels, constants and subroutines to make the programs a bit more readable.

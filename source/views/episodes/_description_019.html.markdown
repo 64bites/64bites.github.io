@@ -1,0 +1,1 @@
+Today we take a look at printing strings during compilation and at runtime. We also examine few pros and cons of C-like null terminated string in comparison to Pascal-like strings prepended with their length.

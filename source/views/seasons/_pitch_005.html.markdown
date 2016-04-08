@@ -9,7 +9,7 @@
 * download with no DRM
 * one time payment (no monthly/annual fees)
 
-## You WILL learn following:
+## You WILL learn how to:
 
 * Animate characters.
 * Use **Interrupt Handling** routine to drive the animation.
@@ -21,5 +21,3 @@
 * What makes the **Zero Page** so important.
 * Disable BASIC and KERNAL ROMs to get more space for your programs.
 * Modify BASIC and KERNAL code.
-
-

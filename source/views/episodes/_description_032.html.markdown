@@ -1,0 +1,2 @@
+In the previous episode we've used the SpritePad application to design four different sprites. We have also exported them into binary files in two formats. The native spritepad one and the SEUCK format that can be also used in the Shoot'Em Up Construction Kit.
+Today we will learn how to import the sprites from the file into an assembly program.

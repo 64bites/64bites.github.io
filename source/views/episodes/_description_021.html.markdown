@@ -1,0 +1,1 @@
+Today we will talk about the PETSCII character encoding. We'll learn how to use the control characters, master the conversion from screencodes, and figure out how to use it effectively from the KickAssembler.

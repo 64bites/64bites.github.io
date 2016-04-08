@@ -1,0 +1,2 @@
+If you solved exercises from the previous episode, you should already have a robust program that can animate sprites of any type exported from the sprite pad.
+Today we will analyse one of possible solutions.

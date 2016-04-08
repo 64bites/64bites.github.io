@@ -1,0 +1,1 @@
+In this episode we'll learn the remaining Z flag along with it's BEQ and BNE instructions. We'll also try to compare arbitrary numbers using subtraction and CMP command, which only seems to be straightforward.

@@ -1,0 +1,43 @@
+---
+title: "64Bites - Season"
+---
+<section class="pitch">
+  <div class="w">
+    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+    <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Binge-watch previous episodes <em>today</em>!</p> 
+  </div>
+</section>
+<% if defined?(season) %>
+  <% episodes = episodes_catalog.all_episodes_in_season(season) %>
+  <% free_episodes = episodes.select(&:free?) %>
+<section class="season">
+  <h1>Season <%= season.number %> - <small><%= season.title %></small></h1>
+  <%= image_tag(season.poster_path, class: "thumbnail") %>
+  </section>
+  <section class="features">
+    <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
+  </section>
+  <%= partial "views/buy_season_button", locals: {season: season} %>
+
+  <%= partial "views/testimonials_section" %>
+
+  <section class="episodes">
+    <h2>All Episodes in this Season</h2>
+  <% episodes.each do |episode| %>
+    <div class="episode free">
+      <div class="info">
+        <h2>Episode <%= episode.formatted_title %></h2>
+        <%= episode.description %>
+      </div>
+      <div class="poster">
+        <%= image_tag(episode.poster_path, class: "thumbnail") %>
+      </div>
+    </div>
+  <% end %>
+  <p><strong><%= 9 - episodes.count %> remaining episodes will be released in following weeks.</strong><br>If you buy the season now, you will get videos as soon as they are out without paying anything extra.</p>
+</section>
+
+<% end %>
+<% content_for(:javascript) do %>
+  <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+  <% end %>

@@ -1,0 +1,27 @@
+<section class="latest-episode">
+  <% info = partial("views/episodes/description_#{episode.formatted_number}") %>
+  <h2>Episode <%= "#{ episode.formatted_title}" %></h2>
+  <div class="episode">
+    <div class="info">
+      <% if defined?(truncate_info) && truncate_info  %>
+        <%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %>
+      <% else %>
+        <%= info %>
+      <% end %>
+    </div>
+    <div class="poster">
+      <div class="wrapper">
+        <%= image_tag(episode.poster_path, class: "thumbnail") %>
+        <div class="ribbon-wrapper">
+          <% if episodes_catalog.latest_episode?(episode) %>
+            <div class="ribbon ribbon-new"><i class="fa fa-star"></i> NEW</div>
+          <% elsif episode.free? %>
+            <div class="ribbon ribbon-free"><i class="fa fa-gift"></i></span> FREE</div>
+          <% else %>
+            <div class="ribbon ribbon-paid"><i class="fa fa-dollar"></i> PAID</div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

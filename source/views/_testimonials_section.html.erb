@@ -1,0 +1,21 @@
+<section class="testimonials">
+  <h2>See what others are saying!</h2>
+  <% data.testimonials.each_slice(2) do |testimonials_row| %>
+    <div class="row">
+      <% testimonials_row.each do |testimonial| %>
+        <div class="testimonial">
+          <div class=" bubble">
+            <blockquote><%= testimonial.body %></blockquote>
+          </div>
+          <div class="author">
+            <%= image_tag "testimonials/#{testimonial.photo}", class: "avatar" %>
+            <div class="credentials">
+              <h4>- <%= testimonial.name %></h4>
+              <p><%= testimonial.credentials %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

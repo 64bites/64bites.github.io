@@ -1,0 +1,3 @@
+If we take a look at a sprite bitmap, and treat each pixel as it was defined by a pair of bits.
+The displayed image grid would now only be 12 by 21 pixels. But each of them could be in one of four possible states...
+Or colors!

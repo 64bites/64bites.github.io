@@ -1,0 +1,2 @@
+When writing games and graphical programs we need some way of interacting with things presented on the screen.
+Commodore 64 has a built-in support for two joysticks that are perfect for dynamic games and interactive GUI applications. Today we'll learn how to use them.

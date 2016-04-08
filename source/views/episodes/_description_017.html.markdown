@@ -1,0 +1,1 @@
+In which we will learn about absolute indexed mode to access memory sequentially. We will also create self-modyfing code. On top of that we will figure out how and why should we use loop unrolling.

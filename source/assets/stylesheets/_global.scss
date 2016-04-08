@@ -1,16 +1,41 @@
+@mixin full-width-section($background-color) {
+  background: $background-color;
+  position: relative;
+  .w:before {
+    right: 100%;
+  }
+  .w:after {
+    left: 100%;
+  }
+  .w:before, .w:after {
+    content: "";
+    z-index: -1;
+    background-color: $background-color;
+    /*border-top: 1px solid #e5e5ee;*/
+    /*border-bottom: 1px solid #e5e5ee;*/
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 1000px;
+  }
+
+}
 body {
   background-color: #FBE6C8;
   color: #5D594E;
   header {
-    margin-bottom: 2em;
+    margin: 1em 0;
+    padding: 0;
+    height: 38px;
   }
   header > a.logo {
-    display:block;
-    margin: 4em 0;
-    min-height: 117px;
-    min-width: 400px;
+    display:inline-block;
+    margin: 0 0;
+    height: 38px;
+    width: 200px;
     background-size: contain;
-    background-image: url(image-path("logo-horizontal.png"));
+    background-image: url(image-path("logo-horizontal2.png"));
     background-repeat: no-repeat no-repeat;
     background-position: center center;
   }
@@ -19,15 +44,25 @@ body {
     text-align: center;
   }
 }
-body.blog ul, ul.pros, ul.cons, section.pitch ul {
+body.blog main ul, ul.pros, ul.cons, section.features ul {
   list-style-type: disc;
   padding: 1em 2em;
+
+}
+.pitch h1 {
+  font-size: 3em;
 }
 h1 {
   font-size: 2.3em;
 }
 h2 {
   font-size: 1.5em;
+}
+section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+  margin-top: 3em;
+}
+section.testimonials, section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+  h1, h2 { text-align: center;}
 }
 section.buy {
   @include outer-container;
@@ -39,7 +74,7 @@ section.buy {
       background-color: #3DA736;
       font-size: 1.5em;
       &:hover, &:focus {
-        background-color: darken(#3DA736, 10%);
+        background-color: lighten(#3DA736, 10%);
       }
       transition: all 0.3s;
     }
@@ -171,11 +206,18 @@ body {
   }
 }
 .navigation-bar {
-  border-top: 1px dotted lighten(#5D594E, 0.5);
-  border-bottom: 1px dotted lighten(#5D594E, 0.5);
+  display: inline-block;
+  position: relative;
+  line-height: 38px;
+  vertical-align: top;
+  margin: 0;
+  top: 0;
+  height: 38px;
+  /*border-top: 1px dotted lighten(#5D594E, 0.5);*/
+  /*border-bottom: 1px dotted lighten(#5D594E, 0.5);*/
   ul {
-  margin: 1em auto;
-  display: block;
+  margin: 0 auto;
+  display: inline-block;
   text-align: center;
   
   > li {
@@ -186,6 +228,13 @@ body {
     &:before {
       content: "|";
       margin:0 1em;
+    }
+    a {
+      color: #5D594E;
+      transition: all 0.3s;
+      &:hover {
+        color: white;
+      }
     }
   }
 
@@ -208,6 +257,8 @@ section.seasons {
   }
 }
 
+
+
 .article {
   position: relative;
   .thumbnail {
@@ -219,12 +270,68 @@ section.seasons {
   padding-bottom: 3.5em;
   min-height: 200px;
 }
-.episodes {
- & > .episode {
+section.pitch {
+  text-align:center;
+  padding: 1.5em 0;
+  color: #FFFCF7;
+  @include full-width-section(#4B473D);
+  margin-bottom: 0;
+  p.lead {
+    font-size: 150%;
+  }
+  em {
+    color: #FFDB50;
+    font-style: normal;
+  }
+}
+section.pricing-tiers {
+    padding-bottom:2.5em;
+    .features {
+      min-height: 232px;
+    }
+}
+
+section.pricing-tiers, section.latest-episode {
+  > h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+section.latest-episode {
+  padding-top:1.5em;
+  margin-bottom:0;
+  padding-bottom:0.5em;
+} 
+section.latest-episode, section.pricing-tiers {
+  /*background: #FFFCF7;*/
+  /*position: relative;*/
+  @include full-width-section(#FBE6C8);
+  /*.w:before {*/
+    /*right: 100%;*/
+  /*}*/
+  /*.w:after {*/
+    /*left: 100%;*/
+  /*}*/
+  /*.w:before, .w:after {*/
+    /*content: "";*/
+    /*z-index: -1;*/
+    /*background-color: #FFFCF7;*/
+    /*[>border-top: 1px solid #e5e5ee;<]*/
+    /*[>border-bottom: 1px solid #e5e5ee;<]*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*bottom: 0px;*/
+    /*width: 1000px;*/
+  /*}*/
+}
+.episodes, .latest-episode {
+ & > .episode, & .w > .episode {
   @include outer-container;
   .poster {
     position: relative;
-    @include span-columns(4);
+    @include span-columns(3.9);
     .play-icon {
       position: absolute;
       top: 0;
@@ -328,4 +435,191 @@ left: 55px;
     min-height: 100px;
     vertical-align: middle;
   }
+}
+
+section.pricing-tiers {
+  @include outer-container;
+  &.three {
+    .tier {
+      @include span-columns(4);
+      &.suggested {
+        margin-left: -2.35765%;
+        margin-right: 0;
+        margin-top: -(2.35765%/2);
+        width: 31.76157 + 2*2.35765%;
+      }
+    }
+  }
+  &.two { 
+    .tier {
+      @include span-columns(6);
+      &.suggested {
+        margin-right: 0;
+        margin-left: -2.35765%;
+        margin-top: -(2.35765%/2);
+        width: 48.82117% + 2.35765%;
+      }
+    }
+  }
+  .tier {
+    border: 1px solid #4B473D;
+    position: relative;
+    background: #FFFCF7;
+    .fa-li {
+      color: #1589CE;
+    }
+    &.left {
+      border-right: none;
+    }
+    &.right {
+      border-left: none;
+    }
+
+    .title, .price, .price-per-episode {
+      text-align: center;
+    }
+    .title h3 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+    .title, .price {
+      border-bottom: 1px solid #5D594E;
+    }
+    .title, .price {
+      padding: 1em 0.2em;
+    }
+    .features {
+      padding: 1em 0.2em 0;
+    }
+    &.suggested .price {
+      padding: 1.7em;
+    }
+    .price {
+      /*background: #5D594E;*/
+      /*color: #FFFCF7;*/
+      position: relative;
+      .variant {
+        position: absolute;
+        bottom: 0.5em;
+        width: 100%;
+        display: block;
+        left: 0;
+      }
+    }
+    .price-per-episode {
+      /*display: none;*/
+      margin-top:0.5em;
+      padding: 0.5em;
+      /*background: #D2EEFF;*/
+    }
+    .price .value {
+      font-size: 2.2em;
+      /*color: #FFDB50;*/
+    }
+
+    .call-to-action {
+      .button { 
+        margin: 1em 2em;
+        display: block;
+        padding: 1em;
+        background-color: #3DA736;
+        &:hover, &:focus {
+          background-color: #2DE022;
+          color: #0D5E8E;
+        }
+        transition: all 0.3s;
+      }
+    }
+    .more {
+      padding-top: 0.5em;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+abbr { cursor: help; }
+
+
+
+
+
+.wrapper {
+  position: relative;
+}
+
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-new {
+  background-color: #FFDB50;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFDB50), to(#DABB44)); 
+  background-image: -webkit-linear-gradient(top, #FFDB50, #DABB44); 
+  background-image:    -moz-linear-gradient(top, #FFDB50, #DABB44); 
+  background-image:     -ms-linear-gradient(top, #FFDB50, #DABB44); 
+  background-image:      -o-linear-gradient(top, #FFDB50, #DABB44); 
+  color: #6a6340;
+}
+
+.ribbon-free {
+  background-color: #229BE5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#229BE5), to(#1F84C3)); 
+  background-image: -webkit-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:    -moz-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:     -ms-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:      -o-linear-gradient(top, #229BE5, #1F84C3); 
+  color: #DDF2FF;
+}
+
+.ribbon-paid {
+  background-color: #E2804D;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#E2804D), to(#CE703F)); 
+  background-image: -webkit-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:    -moz-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:     -ms-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:      -o-linear-gradient(top, #E2804D, #CE703F); 
+  color: #DDF2FF;
+}
+
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
 }

@@ -1,17 +1,15 @@
-<section class="seasons current">
-  <h1>Current Season - <small>Available via Subscription</small></h1>
-<% episodes_catalog.current_season.tap do |season| %>
-  <div class="season" id="season-<%= season.number %>" >
+  <section class="pitch">
+    <div class="w">
+      <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+      <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Binge-watch previous episodes <em>today</em>!</p> 
+    </div>
+  </section>
+  <section class="seasons">
+  <h1>All Released Seasons</h1>
+  <% episodes_catalog.all_seasons.each_with_index do |season, index| %>
     <% link_to season_path(season) do %>
-      <%= image_tag(season.poster_path, class: "thumbnail") %>
+      <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
     <% end %>
-    <%= partial "views/subscribe_button" %>
-  </div>
-<% end %>
-</section>
-<section class="seasons passed">
-  <h1>Past Seasons</h1>
-  <% episodes_catalog.past_seasons.each_with_index do |season, index| %>
     <div class="season" id="season-<%= season.number %>" >
       <% link_to season_path(season) do %>
         <%= image_tag(season.poster_path, class: "thumbnail") %>

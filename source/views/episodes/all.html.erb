@@ -1,10 +1,12 @@
+<section class="pitch">
+  <div class="w">
+    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+    <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch a few episodes <em>today</em>!</p> 
+  </div>
+</section>
 <section class="episodes">
   <h1>All released episodes</h1>
   <% episodes_catalog.all_episodes.each_with_index do |episode| %>
-    <% if episode.free? %>
-      <%= partial 'views/free_episode', locals: {episode: episode} %>
-    <% else %>
-      <%= partial 'views/paid_episode', locals: {episode: episode} %>
-    <% end %>
+    <%= partial 'views/episode', locals: {episode: episode} %>
   <% end %>
 </section>

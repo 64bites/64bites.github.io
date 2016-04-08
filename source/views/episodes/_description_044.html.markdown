@@ -1,0 +1,3 @@
+In most computers based on 6502 and 6510 processors the first 256 bytes of memory are precious. Most instructions using this part of memory are shorter and faster to execute. Commodore 64 uses almost 99% of it default.
+
+In this episode we will learn how to use Zero Page addressing modes in our programs.

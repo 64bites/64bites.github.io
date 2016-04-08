@@ -1,0 +1,1 @@
+Where we learn how to simplify repetitive tasks using FOR loops in BASIC. We will find out how to properly nest them to perform tasks on multidimensional data. And finally how can we use them to fill the computer screen with love;)
