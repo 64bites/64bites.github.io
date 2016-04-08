@@ -7,7 +7,7 @@ title: Current Season
   <%= image_tag(season.poster_path, class: "thumbnail") %>
   <% episodes = episodes_catalog.all_episodes_in_season(season) %>
   <% free_episodes = episodes.select(&:free?) %>
-  <section class="pitch">
+  <section class="features">
     <%= partial "views/seasons/pitch_current" %>
     <%= image_tag("subscription-poster.png", class: "poster") %>
   </section>

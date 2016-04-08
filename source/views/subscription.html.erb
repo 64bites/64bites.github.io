@@ -4,14 +4,16 @@
     <p class="lead" style=""><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Delivered to you <em>every week</em>.</p> 
   </div>
 </section>
-<section class="description">
-  <h2>Always wanted to write a game or a demo?</h2>
-  <p>Too bad your <strong>daily job sucks most of your time</strong>, so there is not much left for your hobby.</p>
+<section class="subscription">
+  <h1>Weekly Video Subscription</h1>
+  <%= image_tag("subscription-poster.png", class: "poster") %>
+  <h2>Always wanted to write a game or a demo for Commodore 64?</h2>
+  <p>But when you will find time for that?</p>
 
   <p>You can't afford to waste it on reading <strong>twenty-year-old-books</strong>, trying to understand <strong>outdated tutorials</strong>, or begging for help on <strong>hostile forums</strong>.</p> 
-    <h2>Short, condensed lesson every week</h2>
+    <h2>Get short, condensed lesson every week</h2>
 
-    <p>Now imagine that:</p>
+    <p>Imagine that:</p>
     <ul class="pros">
       <li><strong>Every week</strong>, new video is delivered <strong>straight to your inbox.</strong></li>
       <li>You can <strong>watch</strong> each episode <strong>online on any device</strong>,</li>
@@ -29,13 +31,15 @@
     <li>all episodes released in the current season</li>
   </ul>
 
-  <h2>Continuous progress with virtually no effort</h2>
+  <h2>Make progress with little effort</h2>
 
   <p>With the 64 Bites Subscription you will <strong>level up consistently</strong>.</p>
   <p>Every week <strong>you will learn</strong> a new thing and <strong>advance</strong> toward your goal without much effort.</p>
 
-  <%= image_tag("subscription-poster.png", class: "poster") %>
 </section>
 
 <%= partial "views/subscribe_button" %>
 
+<% content_for(:javascript) do %>
+  <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<% end %>

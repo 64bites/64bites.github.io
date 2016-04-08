@@ -14,6 +14,7 @@ thumbnail: episodes/014.png
   </div>
 </section>
 
+<section class="homepage"><h1>Here's The Latest Video</h1></section>
 <%= partial "views/episode_section", locals: { episode: latest_episode, truncate_info: false } %>
 
 <section class="pricing-tiers three">
@@ -22,7 +23,6 @@ thumbnail: episodes/014.png
     <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: latest_episode, show_alternative_cta: true} %>
 
     <%= partial "views/subscription_pricing_tier", locals: {tier_class: "suggested", subscription: subscription, show_alternative_cta: true} %>
-
     <%= partial "views/season_pricing_tier", locals: {tier_class: "right", season: current_season, show_alternative_cta: true} %>
 
 </section>

@@ -1,13 +1,14 @@
-<div class="episode paid">
+<div class="episode <%= episode.free? ? "free" : "paid" %>">
   <div class="info">
     <h2><%= link_to "Episode #{ episode.formatted_title}", episode_path(episode) %></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <p><%= truncate(episode.description, length: 200) %></p>
+    <!-- use article.summary(250) if you have Nokogiri available to show just
+         the first 250 characters -->
+    <p><%= truncate(episode.description, length: 200) %></p>
   </div>
   <div class="poster">
     <% link_to episode_path(episode) do %>
       <%= image_tag(episode.poster_path, class: "thumbnail") %>
+      <%#= image_tag "play-icon.png", class: "play-icon" %>
     <% end %>
     <div class="ribbon-wrapper">
       <% if episodes_catalog.latest_episode?(episode) %>

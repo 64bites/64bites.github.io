@@ -43,6 +43,10 @@ class Catalog
     all_episodes.first
   end
 
+  def latest_episode?(episode)
+    episode.number == latest_episode.number 
+  end
+
   def all_episodes
     episodes_data.map do |episode_slug, episode_data|
       episode = Episode.new(

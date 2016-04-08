@@ -19,9 +19,9 @@
       <li><i class="fa-li fa fa-check"></i>One payment per month (or year)</li>
     </ul>
   </div>
-  <% price_per_episode = Price.new(subscription.annual_price.in_dollars / 52) %>
+  <% price_per_episode = Price.new(subscription.annual_price.in_dollars / 53) %>
   <div class="price-per-episode">
-    Price per episode: <abbr title="estimated for an annual payment">~<%= price_per_episode.formatted %></abbr>
+    <strong>Price per episode: <abbr title="estimated for an annual payment">~<%= price_per_episode.formatted %></abbr></strong>
   </div>
   <div class="call-to-action">
     <a class="button" href="https://gumroad.com/l/<%= subscription.gumroad_product_id %>">Get Episode + Subscription</a>

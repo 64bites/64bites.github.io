@@ -1,49 +1,18 @@
 ---
 title: 64 bites - Free Episode
 ---
+<section class="pitch">
+  <div class="w">
+    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+    <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> 
+  </div>
+</section>
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
   <%= partial "views/episode_section", locals: { episode: episode } %>
-<% if season.current? %>
-  
-<section class="signup">
-  <h2>This video belongs to the <%= link_to "Current Season", season_path(season) %></h2>
-  <% link_to season_path(season) do %>
-    <%= image_tag(season.poster_path, class: "thumbnail") %>
-  <% end %>
-  <h2>Watch Remaining Episodes Now!</h2>
-  <p>When you buy subscription you'll get <strong>immediate access</strong> to:</p>
-  <ul class="pros">
-    <li><strong>HD version</strong> of this episode</li>
-    <li><strong>full transcript</strong>, show notes and source code</li> 
-    <li><strong>additional exercises</strong> to solve and practice</li>
-    <li><strong>All episodes released</strong> in this season.</li>
-  </ul>
-  All videos of are available for <strong>online HD streaming</strong>. 
-  You can also download them <strong>DRM free</strong>.
-
-  <p>On top of that you'll receive a <strong>new video every week</strong> straight to your inbox.</p>
-</section>
-<%= partial "views/subscribe_button" %>
-<% else %>
-  <h2>This video belongs to the <%= link_to "Season #{ season.number }", season_path(season) %></h2>
-  <% link_to season_path(season) do %>
-    <%= image_tag(season.poster_path, class: "thumbnail") %>
-  <% end %>
-  <h2>Watch 8 Remaining Episodes Now!</h2>
-  <p>You are a few clicks away from getting:</p>
-  <ul class="pros">
-    <li><strong>HD version</strong> of this episode</li>
-    <li><strong>full transcript</strong>, show notes and source code</li> 
-    <li><strong>additional exercises</strong> to solve and practice</li>
-    <li><strong>All episodes released</strong> in this season.</li>
-  </ul>
-  <p>All videos of are available for <strong>online HD streaming</strong>. 
-  You can also download them <strong>DRM free</strong>.</p>
-
-  <%= partial "views/buy_season_button", locals: {season: season} %>
+  <%= partial "views/get_free_episode_button", locals: {episode: episode} %>
 <% end %>
-<% end %>
+<%= partial "views/testimonials_section" %>
 <% content_for(:javascript) do %>
 <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>

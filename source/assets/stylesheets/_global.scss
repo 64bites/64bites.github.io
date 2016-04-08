@@ -44,7 +44,7 @@ body {
     text-align: center;
   }
 }
-body.blog main ul, ul.pros, ul.cons, section.pitch ul {
+body.blog main ul, ul.pros, ul.cons, section.features ul {
   list-style-type: disc;
   padding: 1em 2em;
 
@@ -58,6 +58,12 @@ h1 {
 h2 {
   font-size: 1.5em;
 }
+section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+  margin-top: 3em;
+}
+section.testimonials, section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+  h1, h2 { text-align: center;}
+}
 section.buy {
   @include outer-container;
   .buy-button {
@@ -68,7 +74,7 @@ section.buy {
       background-color: #3DA736;
       font-size: 1.5em;
       &:hover, &:focus {
-        background-color: darken(#3DA736, 10%);
+        background-color: lighten(#3DA736, 10%);
       }
       transition: all 0.3s;
     }
@@ -325,7 +331,7 @@ section.latest-episode, section.pricing-tiers {
   @include outer-container;
   .poster {
     position: relative;
-    @include span-columns(4);
+    @include span-columns(3.9);
     .play-icon {
       position: absolute;
       top: 0;
@@ -543,7 +549,7 @@ abbr { cursor: help; }
   position: relative;
 }
 
-.ribbon-wrapper-green {
+.ribbon-wrapper {
   width: 85px;
   height: 88px;
   overflow: hidden;
@@ -552,7 +558,7 @@ abbr { cursor: help; }
   right: -3px;
 }
 
-.ribbon-green {
+.ribbon {
   font: bold 15px Sans-Serif;
   color: #333;
   text-align: center;
@@ -566,6 +572,12 @@ abbr { cursor: help; }
   left: -5px;
   top: 15px;
   width: 120px;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-new {
   background-color: #FFDB50;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FFDB50), to(#DABB44)); 
   background-image: -webkit-linear-gradient(top, #FFDB50, #DABB44); 
@@ -573,12 +585,30 @@ abbr { cursor: help; }
   background-image:     -ms-linear-gradient(top, #FFDB50, #DABB44); 
   background-image:      -o-linear-gradient(top, #FFDB50, #DABB44); 
   color: #6a6340;
-  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
-  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
 }
 
-.ribbon-green:before, .ribbon-green:after {
+.ribbon-free {
+  background-color: #229BE5;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#229BE5), to(#1F84C3)); 
+  background-image: -webkit-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:    -moz-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:     -ms-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image:      -o-linear-gradient(top, #229BE5, #1F84C3); 
+  color: #DDF2FF;
+}
+
+.ribbon-paid {
+  background-color: #E2804D;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#E2804D), to(#CE703F)); 
+  background-image: -webkit-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:    -moz-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:     -ms-linear-gradient(top, #E2804D, #CE703F); 
+  background-image:      -o-linear-gradient(top, #E2804D, #CE703F); 
+  color: #DDF2FF;
+}
+
+
+.ribbon:before, .ribbon:after {
   content: "";
   border-top:   3px solid #6e8900;   
   border-left:  3px solid transparent;
@@ -587,9 +617,9 @@ abbr { cursor: help; }
   bottom: -3px;
 }
 
-.ribbon-green:before {
+.ribbon:before {
   left: 0;
 }
-.ribbon-green:after {
+.ribbon:after {
   right: 0;
 }
