@@ -327,25 +327,53 @@ section.latest-episode, section.pricing-tiers {
   /*}*/
 }
 .episodes, .latest-episode {
- & > .episode, & .w > .episode {
-  @include outer-container;
-  .poster {
-    position: relative;
-    @include span-columns(3.9);
-    .play-icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.8;
-      transition: opacity 0.5s ease;
+  & > .episode, & .w > .episode {
+    @include outer-container;
+    padding: 1em 0;
+    .poster {
+      position: relative;
+      @include span-columns(3.9);
+      .play-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0.8;
+        transition: opacity 0.5s ease;
+      }
+    }
+
+    .info {
+      @include span-columns(8);
     }
   }
-
-  .info {
-    @include span-columns(8);
-  }
 }
+.episodes > .episode {
+  a.button {
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s;
+  }
+
+  &.paid {
+    a.button {
+
+      background-color: #3DA736;
+      &:hover, &:focus {
+        background-color: lighten(#3DA736, 10%);
+      }
+    }
+  }
+  &.free {
+    /*#229BE5, #1F84C3*/
+    a.button {
+
+      background-color: #1F84C3;
+      &:hover, &:focus {
+        background-color: lighten(#1F84C3, 10%);
+      }
+    }
+  }
 }
 .bubble 
 {
@@ -598,12 +626,12 @@ abbr { cursor: help; }
 }
 
 .ribbon-paid {
-  background-color: #E2804D;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#E2804D), to(#CE703F)); 
-  background-image: -webkit-linear-gradient(top, #E2804D, #CE703F); 
-  background-image:    -moz-linear-gradient(top, #E2804D, #CE703F); 
-  background-image:     -ms-linear-gradient(top, #E2804D, #CE703F); 
-  background-image:      -o-linear-gradient(top, #E2804D, #CE703F); 
+  background-color: #3DA736;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3DA736), to(#33992C)); 
+  background-image: -webkit-linear-gradient(top, #3DA736, #33992C); 
+  background-image:    -moz-linear-gradient(top, #3DA736, #33992C); 
+  background-image:     -ms-linear-gradient(top, #3DA736, #33992C); 
+  background-image:      -o-linear-gradient(top, #3DA736, #33992C); 
   color: #DDF2FF;
 }
 

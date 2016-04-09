@@ -10,3 +10,6 @@
     <%= partial 'views/episode', locals: {episode: episode} %>
   <% end %>
 </section>
+<% content_for(:javascript) do %>
+<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<% end %>
