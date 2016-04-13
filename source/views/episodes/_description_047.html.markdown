@@ -1,0 +1,2 @@
+Commodore 64 has two default character sets. We can switch between them by pressing the shift+commodore key. 
+In this episode we will learn how to create our own character bitmaps and make the computer display them.
