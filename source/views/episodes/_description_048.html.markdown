@@ -1,0 +1,3 @@
+Commodore 64 has plenty of built-in graphical modes that we can use to paint images on the screen. All of them use characters in one way or the other. Some of them enable us to achieve better resolution while others give us more colors or more characters to choose from.
+
+Today we will use the Hi-Res character mode to create a mockup of a rogue-like game with knights, monsters, dragons and coins. Lot's of coins...
