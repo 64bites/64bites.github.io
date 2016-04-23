@@ -12,13 +12,13 @@ activate :directory_indexes
   #imageoptim.allow_lossy = true
 #end
 
-#redirect "/blog/2016/04/14/behind-the-scenes-part-2.html", to: "/blog/behind-the-scenes-part-2.html"
-#redirect "/blog/2016/04/13/behind-the-scenes-part-1.html", to: "/blog/behind-the-scenes-part-1.html"
-#redirect "/blog/2016/04/07/are-you-an-8-bit-kid.html", to: "/blog/are-you-an-8-bit-kid.html"
-#redirect "/blog/2015/11/19/your-live-demo-is-boring-lets-fix-it.html", to: "/blog/your-live-demo-is-boring-lets-fix-it.html"
-#redirect "/blog/2015/06/17/my-very-first-computer-program.html", to: "/blog/my-very-first-computer-program.html"
-#redirect "/blog/2015/06/11/64bites-is-live.html", to: "/blog/64bites-is-live.html"
-#redirect "/blog/2015/05/31/create-a-1k-image-for-c64-with-ruby.html", to: "/blog/create-a-1k-image-for-c64-with-ruby.html"
+redirect "/blog/2016/04/14/behind-the-scenes-part-2.html", to: "/blog/behind-the-scenes-part-2.html"
+redirect "/blog/2016/04/13/behind-the-scenes-part-1.html", to: "/blog/behind-the-scenes-part-1.html"
+redirect "/blog/2016/04/07/are-you-an-8-bit-kid.html", to: "/blog/are-you-an-8-bit-kid.html"
+redirect "/blog/2015/11/19/your-live-demo-is-boring-lets-fix-it.html", to: "/blog/your-live-demo-is-boring-lets-fix-it.html"
+redirect "/blog/2015/06/17/my-very-first-computer-program.html", to: "/blog/my-very-first-computer-program.html"
+redirect "/blog/2015/06/11/64bites-is-live.html", to: "/blog/64bites-is-live.html"
+redirect "/blog/2015/05/31/create-a-1k-image-for-c64-with-ruby.html", to: "/blog/create-a-1k-image-for-c64-with-ruby.html"
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
