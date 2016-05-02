@@ -79,11 +79,12 @@ class Catalog
   end
   
   def all_seasons
-    current_season_index = seasons_data.count - 1
-    seasons_data.map.with_index do |(season_slug, season_data), index|
+    last_season_number = seasons_data.keys.map { |slug| decode_number(slug) }.max
+    seasons_data.map do |season_slug, season_data|
+      number = decode_number(season_slug) 
       season = Season.new(
-        index == current_season_index,
-        decode_number(season_slug),
+        number == last_season_number,
+        number,
         season_data["title"],
         season_slug,
         season_data["price_in_dollars"],
