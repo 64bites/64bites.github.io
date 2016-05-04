@@ -1,6 +1,8 @@
+<% url = "https://gumroad.com/l/#{season.gumroad_product_id}" unless defined?(url) %>
+<% caption = "Buy Season #{season.number} for just #{season.price.formatted}" unless defined?(caption) %>
 <section class="buy">
   <div class="buy-button">
-    <a class="button" href="https://gumroad.com/l/<%= season.gumroad_product_id %>">Buy Season <%= season.number %> for just <%= season.price.formatted %></a>
+    <a class="button" href="<%= url %>"><%= caption %></a>
     <p>Includes <strong>9 videos</strong>, <strong>detailed transcripts</strong>, <strong>source code examples</strong> and <strong>exercises</strong>.</p>
-  <div>
+  </div>
 </section>
