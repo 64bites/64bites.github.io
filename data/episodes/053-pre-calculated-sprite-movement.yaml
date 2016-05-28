@@ -1,0 +1,13 @@
+---
+title: Pre-calculated Sprite Movement
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep053
+is_published: true
+publication_time: 2016-05-25
+wistia_id: 
+description: "We have been animating sprites in the past but only in a way of changing
+  their bitmaps on each frame. But this kind of animation is not unique to sprites.
+  It can also be realized using the character graphics. \n\nSprites are designed to
+  be movable and today we will take a look into a technique that allows them to follow
+  virtually any path."
