@@ -17,7 +17,7 @@ title: "64Bites - Season"
   <section class="features">
     <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
   </section>
-  <%= partial "views/buy_season_button", locals: {season: season} %>
+  <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}", caption: "Buy Season #{season.number} for just #{season.price.formatted}"} %>
 
   <%= partial "views/testimonials_section" %>
 
