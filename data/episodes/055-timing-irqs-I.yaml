@@ -1,0 +1,12 @@
+---
+title: Timing IRQs
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep055
+is_published: true
+publication_time: 2016-06-08
+wistia_id: 
+description: |-
+  When we turn the computer on the maskable interrupt signal or IRQ is being sent around sixty times per second by one of the internal timers.
+
+  Today we will learn how this process actually works.
