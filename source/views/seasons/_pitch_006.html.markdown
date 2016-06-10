@@ -13,6 +13,13 @@
 
 * Disable BASIC and KERNAL ROMs as well as I/O registers to get more space for your programs.
 * Move the Character Generator ROM into the Address Space to read the character bitmaps.
-* And much more, but it's a secret until new episodes are released.
+* Design you own custom character set
+* Use every built-in graphical mode
+    * Hi-Res Character Mode
+    * Multicolor Character Mode
+    * Extended Background Color Mode 
+    * Hi-Res Bitmap Mode
+    * Multicolor Bitmap Mode
+* Animating arbitrary Sprite movement.
+* Use Sprite-Character drawing priorities in all graphical modes
 
-Some episodes are not yet released. If you buy the season now, you will get videos as soon as they are released without paying anything extra.
