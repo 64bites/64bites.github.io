@@ -1,0 +1,12 @@
+---
+title: Vertical Sync
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep057
+is_published: true
+publication_time: 2016-06-22
+wistia_id: 
+description: |-
+  We've been animating sprites and characters for some time already. But we've never managed to synchronize the animation with the rate of screen refresh. It caused noticable flickering and artifacts during the sprite display.
+
+  Today we will learn how to get rid of them.
