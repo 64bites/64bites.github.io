@@ -1,0 +1,5 @@
+One of the things that made games more interesting when the Commodore 64 came out was the ability to scroll the screen pixel by pixel.
+
+The VIC-II - the graphical chip of Commodore 64, allows moving the screen vertically and horizontally by up to 7 pixels in each direction.
+
+And today we will learn how to use this feature.
