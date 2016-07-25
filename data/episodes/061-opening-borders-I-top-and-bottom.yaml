@@ -1,0 +1,14 @@
+---
+title: Opening Borders I - Top & Bottom
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep061
+is_published: true
+publication_time: 2016-07-20
+wistia_id: 
+description: |-
+  The VIC-II - the graphical chip of Commodore 64 was designed in a hurry and many of its features ended having unexpected side effects.
+
+  Discovering those quirks, and using them to enhance capabilities of the computer can be surprisingly fun.
+
+  Today we will learn how to fool VIC-II to open top and bottom part of the border.
