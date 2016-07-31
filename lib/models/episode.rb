@@ -11,6 +11,7 @@ class Episode
     @wistia_id = episode_data.fetch("wistia_id")
     @description = episode_data.fetch("description")
     @slug = slug
+    @poster_ext = episode_data.fetch("poster_ext", "png")
   end
 
   def free?
@@ -23,7 +24,7 @@ class Episode
   end
 
   def poster_path
-    "episodes/#{formatted_number}.png"
+    "episodes/#{formatted_number}.#{poster_ext}"
   end
 
   def formatted_number
@@ -34,7 +35,7 @@ class Episode
     "##{formatted_number} - #{title}"
   end
 
-  attr_reader :price, :gumroad_product_id
+  attr_reader :price, :gumroad_product_id, :poster_ext
   
   private
 
