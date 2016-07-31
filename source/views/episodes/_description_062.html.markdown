@@ -1,0 +1,1 @@
+Since we already know how the hardware scrolling works, let's put it to a good use and implement one of the most common effects seen in demos - a scrolling text.
