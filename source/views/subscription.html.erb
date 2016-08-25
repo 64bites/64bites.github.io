@@ -39,7 +39,23 @@
 </section>
 
 <%= partial "views/subscribe_button" %>
-
+<% episodes = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season) %>
+<% if episodes.any? %>
+  <section class="episodes">
+    <h2>You will get following episodes immediately</h2>
+    
+  <% episodes.each do |episode| %>
+    <div class="episode free">
+      <div class="info">
+        <h2>Episode <%= episode.formatted_title %></h2>
+        <%= episode.description %>
+      </div>
+      <div class="poster">
+        <%= image_tag(episode.poster_path, class: "thumbnail") %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>

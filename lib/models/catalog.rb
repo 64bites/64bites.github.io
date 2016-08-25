@@ -62,8 +62,16 @@ class Catalog
     all_seasons.find {|season| season.number == number }
   end
 
+  def episode_in_current_season?(episode)
+    current_season?(find_season_by_episode(episode))
+  end
+
   def current_season
     all_seasons.select(&:current?).first
+  end
+
+  def current_season?(season)
+    current_season.number == season.number
   end
 
   def past_seasons

@@ -6,7 +6,18 @@
   </section>
   <section class="seasons">
   <h1>All Released Seasons</h1>
-  <% episodes_catalog.all_seasons.each_with_index do |season, index| %>
+  <% season = episodes_catalog.current_season %>
+  <% subscription = episodes_catalog.subscription %>
+  <% link_to "/subscription" do %>
+    <h2>Season <%= season.number %> - <small>Available via Subscription</small></h2>
+  <% end %>
+  <div class="season" id="season-<%= season.number %>" >
+    <% link_to "/subscription" do %>
+      <%= image_tag(season.poster_path, class: "thumbnail") %>
+    <% end %>
+    <%= partial "views/subscribe_button", locals: { caption: "Buy the Subscription"} %>
+  </div>
+  <% episodes_catalog.past_seasons.each_with_index do |season, index| %>
     <% link_to season_path(season) do %>
       <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
     <% end %>
