@@ -1,0 +1,12 @@
+---
+title: Horizontal Software Scrolling
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep066
+is_published: true
+publication_time: 2016-08-24
+wistia_id: 
+description: |-
+  In the previous episode, we've learned how to create a twenty-five-character vertical scroll.
+
+  Today we will create a horizontal one made out of forty characters. To do that efficiently we'll need to get familiar with couple of new assembly instructions.
