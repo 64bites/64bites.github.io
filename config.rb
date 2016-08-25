@@ -155,6 +155,6 @@ CATALOG.all_episodes.each do |episode|
   proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode', ignore: true
 end
 
-CATALOG.all_seasons.each do |season|
+CATALOG.past_seasons.each do |season|
   proxy season_path(season) + ".html", "/views/templates/seasons/show.html", :locals => { :season => season }, layout: 'season', ignore: true
 end
