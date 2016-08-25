@@ -1,0 +1,14 @@
+---
+title: Vertical Software Scrolling
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep065
+is_published: true
+publication_time: 2016-08-17
+wistia_id: 
+description: |-
+  Although efficient, hardware screen scrolling forces us to widen the border, which in turn leaves us with only twenty-four rows or thirty-nine columns of characters.
+
+  In a case of vertical scrolling, we also don't have an easy way to make the rest of the screen static.
+
+  Fortunately, we can sacrifice some efficiency, and use the custom character set to scroll twenty-five characters vertically.
