@@ -10,3 +10,4 @@ description: "Today we will focus on sprite display priorities. \n\nOr in other 
   how can we display sprites in front or behind the character-based graphics.\n\nWe
   will explore all built-in graphical modes and learn the exact order of sprite and
   character graphics display in different configurations."
+poster_ext: "jpg"

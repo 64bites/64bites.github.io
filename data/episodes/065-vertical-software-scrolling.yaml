@@ -12,3 +12,4 @@ description: |-
   In a case of vertical scrolling, we also don't have an easy way to make the rest of the screen static.
 
   Fortunately, we can sacrifice some efficiency, and use the custom character set to scroll twenty-five characters vertically.
+poster_ext: "jpg"
