@@ -1,0 +1,12 @@
+---
+title: Multiplication
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep067
+is_published: true
+publication_time: 2016-08-31
+wistia_id: 
+description: |-
+  Multiplication on the Commodore 64 is not trivial. The 6510 processor does not have built-in instruction for it.
+
+  We have to use some kind of an algorithm. Why not a one used few centuries ago... by Russian peasants!
