@@ -10,3 +10,4 @@ description: VIC-II the graphical chip of Commodore 64 can display eight movable
   also known as sprites. It is a feature designed specifically to use in games. Sprites
   can be controlled by the set of registers that are mapped directly onto the memory
   starting at the hexadecimal address $d000...
+poster_ext: "jpg"
