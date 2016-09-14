@@ -34,7 +34,14 @@ title: "64Bites - Season"
       </div>
     </div>
   <% end %>
-  <p><strong><%= 9 - episodes.count %> remaining episodes will be released in following weeks.</strong><br>If you buy the season now, you will get videos as soon as they are out without paying anything extra.</p>
+  <% remaining_episodes_count = 9 - episodes.count %>
+  <% if remaining_episodes_count > 0 %>
+    <% if remaining_episodes_count == 1 %>
+      <p><strong>One remaining episode will be released next week.</strong><br>If you buy the season now, you will get the video as soon as it is out without paying anything extra.</p>
+    <% else %>
+      <p><strong><%= remaining_episodes_count %> remaining episodes will be released in following weeks.</strong><br>If you buy the season now, you will get videos as soon as they are out without paying anything extra.</p>
+    <% end %>
+  <% end %>
 </section>
 
 <% end %>
