@@ -1,11 +1,11 @@
 ---
 title: Stack
-free: false
-price: 3.99
+free: true
+price: 0
 gumroad_product_id: 64bites-ep041
 is_published: true
 publication_time: 2016-03-02
-wistia_id: 
+wistia_id: mdugzimunk 
 description: |
   The processor that powers the Commodore 64 supports only a handful of registers that can be used for arithmetic or logical operations. This means that we will often encounter a situation when we need to save temporary values in the memory, calculate some other thing, and then get back to previous ones.
 

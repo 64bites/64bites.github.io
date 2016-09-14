@@ -1,11 +1,11 @@
 ---
 title: Raster Interrupts
-free: false
-price: 3.99
+free: true
+price: 0
 gumroad_product_id: 64bites-ep058
 is_published: true
 publication_time: 2016-06-29
-wistia_id: 
+wistia_id: kuhe8hasvg
 description: |-
   Waiting actively until the display reaches specific raster line has few drawbacks.
 

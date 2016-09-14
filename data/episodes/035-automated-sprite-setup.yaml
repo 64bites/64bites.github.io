@@ -12,3 +12,4 @@ description: In the previous episode, we've seen how to optimize the memory usag
   to shave off almost 2KB of RAM. <br> But we needed to calculate indices and repetition
   counts of unique frames by hand. Today we will use the compilation time metaprogramming
   to automate that process.
+poster_ext: "jpg"
