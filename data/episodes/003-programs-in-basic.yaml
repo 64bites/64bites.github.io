@@ -9,3 +9,4 @@ wistia_id:
 description: We will learn how to write LIST and RUN programs in basic. We'll see
   how to debug them using STOP and CONT commands. We will also find out the surprising
   similarities and differences between the RUN and GOTO.
+poster_ext: "jpg"

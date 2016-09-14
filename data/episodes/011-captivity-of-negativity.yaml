@@ -1,5 +1,5 @@
 ---
-title: Add and Carry On
+title: Captivity of Negativity
 free: false
 price: 3.99
 gumroad_product_id: 64bites-ep011
@@ -9,3 +9,4 @@ wistia_id:
 description: This one teaches not only how to subtract numbers on Commodore 64. It
   also shows different ways of representing negative numbers in binary and explains
   reasons why borrow in subtraction is defined as 1 - carry.
+poster_ext: "jpg"

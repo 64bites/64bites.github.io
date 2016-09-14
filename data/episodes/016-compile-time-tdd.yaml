@@ -10,3 +10,4 @@ description: On top of being awesome, KickAssembler's scripting language has two
   but powerful directives - .assert and .asserterror.<br><br>We can use both to do
   compile-time Test Driven Development, and make sure our functions work and macros
   generate valid code.
+poster_ext: "jpg"

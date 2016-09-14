@@ -9,3 +9,4 @@ wistia_id: suafi2665k
 description: Did you know you can use the carry flag to signify an overflow in unsigned
   integer operations. But wait, there's more. We also have other flags like V, or
   N and we can use  them to make decisions in our programs.
+poster_ext: "jpg"

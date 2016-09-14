@@ -8,3 +8,4 @@ publication_time: 2015-11-11
 wistia_id: 
 description: Today we'll learn a robust method of implementing turn-based joystick
   polling that works well for rogue-like games or puzzles.
+poster_ext: "jpg"
