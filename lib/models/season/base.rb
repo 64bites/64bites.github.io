@@ -14,7 +14,7 @@ module Season
 
 
     def poster_path
-      "seasons/#{formatted_number}.png"
+      "seasons/#{formatted_number}.jpg"
     end
 
     def formatted_number
