@@ -10,3 +10,4 @@ description: "As we already know, Commodore 64 has exactly 64 Kilobytes of RAM. 
   we can't use all of it by default.\n\nBASIC Interpreter ROM, KERNAL ROM and I/O
   registers cover 20KB of RAM.\n\nToday we will learn how to disable BASIC & KERNAL,
   move their routines to RAM and modify them. \n"
+poster_ext: "jpg"

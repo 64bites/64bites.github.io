@@ -9,3 +9,4 @@ wistia_id:
 description: "We already known that RTS and RTI can be used as jump instructions.\n\nBut
   using branching as unconditional jumps and the BIT instruction to skip few bytes?\n\nThat's
   just insane...\n\nBut frequently used by KERNAL programmers:) \n"
+poster_ext: "jpg"

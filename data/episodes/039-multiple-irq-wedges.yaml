@@ -12,3 +12,4 @@ description: |
   This will work in the majority of situations. But in some cases, another routine can already be wedged into the default handler. This may happen if your program is not the first one to run, or more commonly if a cartridge is inserted.
 
   Today we will learn to add and remove multiple IRQ wedges.
+poster_ext: "jpg"
