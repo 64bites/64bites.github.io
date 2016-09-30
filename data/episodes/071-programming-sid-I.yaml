@@ -1,0 +1,14 @@
+---
+title: Programming SID I - Sound Waves
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep071
+is_published: true
+publication_time: 2016-09-28
+wistia_id: 
+description: |-
+  It's about time to figure out how to use the SID chip without a pre-built player.
+
+  In this video we will learn how to use one of the built-in oscillators to generate different kinds of sound waves.
+
+  We are also going to find out why a particular bug in the chip (the one causing a click when volume is changed) became a desirable feature.
