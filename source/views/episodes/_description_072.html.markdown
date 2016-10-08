@@ -1,0 +1,2 @@
+Today we are going to figure out how to specify the sound frequency of the SID chip in Hertz. Then we are going to find correct frequencies for notes in different octaves.
+All of that (in theory at least) should allow us to play music.
