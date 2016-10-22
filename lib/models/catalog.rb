@@ -19,6 +19,9 @@ class Catalog
   def find_season_by_episode(episode)
     season_number = nil
     season_number = (episode.number - 1).div(EPISODES_PER_SEASON) + 1
+    if season_number > 8
+      season_number = 8
+    end
     find_season(season_number)    
   end
 
