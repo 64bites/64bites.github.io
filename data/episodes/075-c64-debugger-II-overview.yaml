@@ -1,0 +1,15 @@
+---
+title: C64 Debugger II - Overview
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep075
+is_published: true
+publication_time: 2016-10-26
+wistia_id: 
+description: "In this episode we will learn how to use basic features of the C64 Debugger.\nMemory
+  map allows us to quickly notice patterns in the running program. \nDisassembly view
+  allows us to locate the program counter and modify the code on the fly. \nMemory
+  dump view can help us edit raw data and shows memory as sprite or character bitmaps.\nFinally
+  we get familiar with status views of VIC-II, SID and both CIA chips."
+poster_ext: !ruby/object:Pathname
+  path: "/Users/mehowte/code/private/64bites-episodes/075-c64-debugger-II-overview/poster.jpg"
