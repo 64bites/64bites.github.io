@@ -54,4 +54,6 @@
       -#_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
     = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
     = partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0}
+    = partial "layouts/drip"
     = yield_content(:javascript)
+
