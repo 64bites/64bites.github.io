@@ -37,12 +37,12 @@
   <p>Every week <strong>you will learn</strong> a new thing and <strong>advance</strong> toward your goal without much effort.</p>
 
 </section>
-
+<a name="episodes-included"></a>
 <%= partial "views/subscribe_button" %>
 <% episodes = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season) %>
 <% if episodes.any? %>
   <section class="episodes">
-    <h2>You will get following episodes immediately</h2>
+    <h2>You will get <%= episodes.count %> latest episodes immediately</h2>
     
   <% episodes.each do |episode| %>
     <div class="episode free">
@@ -56,6 +56,7 @@
     </div>
   <% end %>
 <% end %>
+<%= partial "views/subscribe_button" %>
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>

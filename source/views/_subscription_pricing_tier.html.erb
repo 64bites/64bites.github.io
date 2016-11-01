@@ -1,21 +1,23 @@
+<% episodes = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season) %>
+<% annual_price_per_month = Price.new(subscription.annual_price.in_dollars / 12) %>
 <div class="tier <%= tier_class %>">
   <div class="title">
     <h3>with an Ongoing Subscription</h3>
   </div>
   <div class="price">
     <span class="value"><%= subscription.monthly_price.formatted %></span><span class="period">/month</span><br>
-    <span class="variant">(or less with an annual payment)</span>
+    <span class="variant">(or <%= annual_price_per_month.formatted %>/month with an annual payment)</span>
   </div>
   <div class="features">
     <ul class="fa-ul">
-      <li><i class="fa-li fa fa-check"></i>Immediate access to latest episodes</li>
+      <li><i class="fa-li fa fa-check"></i><strong>Immediate access to <%= episodes.count %> latest episodes!</strong></li>
       <li><i class="fa-li fa fa-check"></i>Online streaming</li>
       <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
       <li><i class="fa-li fa fa-check"></i><strong>New video every week!</strong></li>
       <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
       <li><i class="fa-li fa fa-check"></i>Source Codes</li>
       <li><i class="fa-li fa fa-check"></i>Exercises</li>
-      <li><i class="fa-li fa fa-check"></i><strong>The most cost-efficient</strong></li>
+      <li><i class="fa-li fa fa-check"></i><strong>The most cost-efficient option</strong></li>
       <li><i class="fa-li fa fa-check"></i>One payment per month (or year)</li>
     </ul>
   </div>

@@ -28,6 +28,9 @@ class Catalog
   def all_episodes_in_season(season)
     last_episode_number = season.number * EPISODES_PER_SEASON
     first_episode_number = last_episode_number - EPISODES_PER_SEASON + 1
+    if current_season?(season)
+      last_episode_number = latest_episode.number
+    end
     episodes_range = first_episode_number..last_episode_number
     all_episodes.select { |episode| episodes_range.include?(episode.number) }
   end

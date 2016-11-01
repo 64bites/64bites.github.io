@@ -1,10 +1,11 @@
 <% subscription = episodes_catalog.subscription %>
 <% caption ||= "I want a new episode each week!" %>
+<% episodes_count = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season).count %>
 
 <section class="buy">
   <div class="buy-button">
     <p>You can get the subscription for <%= subscription.monthly_price.formatted %>/month or <%= subscription.annual_price.formatted %>/year (two months for free).</p>
     <a class="button" href="https://gumroad.com/l/<%= subscription.gumroad_product_id %>"><%= caption %></a>
-    <p>Get <strong> latest episodes now</strong> and a <strong>new one each week</strong>.<br>All with <strong>detailed transcripts</strong>, <strong>source code examples</strong> and <strong>programming exercises</strong>.</p>
+    <p>Get <strong> <%= episodes_count %> latest episodes now</strong> and a <strong>new one each week</strong>.<br>All with <strong>detailed transcripts</strong>, <strong>source code examples</strong> and <strong>programming exercises</strong>.</p>
   <div>
 </section>
