@@ -19,6 +19,7 @@
     %link{href:"//cdn-images.mailchimp.com/embedcode/classic-081711.css", rel:"stylesheet", type:"text/css"}
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
     = partial "layouts/sumo_me"
+    = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
   %body{class: page_classes}
     .container
       = partial "layouts/header"
@@ -52,7 +53,6 @@
       -#}
       -#_kms('//i.kissmetrics.com/i.js');
       -#_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
-    = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
     = partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0}
     = partial "layouts/drip"
     = yield_content(:javascript)
