@@ -1,0 +1,1 @@
+We already know how to play sounds using the SID chip. Today we are going to learn how to make them more interesting by changing attack, decay, sustain and release registers, which define a so-called sound envelope.
