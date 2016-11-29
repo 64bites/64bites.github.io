@@ -1,0 +1,2 @@
+Up until now, we've been using only the first one of three voice of the SID chip.  
+But if we use all three voices simultaneously, we can play songs with chords, simulate multiple instruments, or play sound effects in games while the music is playing.
