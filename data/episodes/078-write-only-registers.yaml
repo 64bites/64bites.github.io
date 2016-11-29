@@ -6,5 +6,5 @@ gumroad_product_id: 64bites-ep078
 is_published: true
 publication_time: 2016-11-16
 wistia_id: 
-description: ''
+description: "Most SID registers are write-only.\nIt means that we can't use the usual read-modify-store construction to update just part of a register.\nThe most common technique to deal with this problem is to employ so-called shadow registers.\nAnd that's what we are going to learn today!"
 poster_ext: jpg
