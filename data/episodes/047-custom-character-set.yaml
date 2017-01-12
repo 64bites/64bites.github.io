@@ -6,7 +6,8 @@ gumroad_product_id: 64bites-ep047
 is_published: true
 publication_time: 2016-04-13
 wistia_id: nuv7083srm
+poster_ext: jpg
+url_part: ZU0DAPn2
 description: "Commodore 64 has two default character sets. We can switch between them
   by pressing the shift+commodore key. \nIn this episode we will learn how to create
   our own character bitmaps and make the computer display them."
-poster_ext: "jpg"
