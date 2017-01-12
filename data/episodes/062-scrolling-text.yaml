@@ -1,12 +1,13 @@
 ---
 title: Scrolling Text
 free: true
-price: 0
+price: 0.0
 gumroad_product_id: 64bites-ep062
 is_published: true
 publication_time: 2016-07-27
 wistia_id: 51xg5mi12e
+poster_ext: jpg
+url_part: mK1TQT4W
 description: Since we already know how the hardware scrolling works, let's put it
   to a good use and implement one of the most common effects seen in demos - a scrolling
   text.
-poster_ext: "jpg"
