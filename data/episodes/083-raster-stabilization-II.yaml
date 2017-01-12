@@ -9,7 +9,7 @@ wistia_id:
 description: |-
   In this episode we continue stabilization of the raster.
 
-  All we need to do is solve two problems:
+  All we need to do is solving two problems:
     * find out a way to detect if we are one cycle early and then 
     * delay the execution by just one cycle only in this situation.
 
