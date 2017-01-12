@@ -1,11 +1,13 @@
 ---
 title: Zero Page
 free: true
-price: 0
+price: 0.0
 gumroad_product_id: 64bites-ep044
 is_published: true
 publication_time: 2016-03-23
 wistia_id: wu7pvfmrzv
+poster_ext: png
+url_part: WucB29Zf
 description: |
   In most computers based on 6502 and 6510 processors the first 256 bytes of memory are precious. Most instructions using this part of memory are shorter and faster to execute. Commodore 64 uses almost 99% of it default.
 
