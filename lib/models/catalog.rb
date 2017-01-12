@@ -81,6 +81,14 @@ class Catalog
     all_seasons.reject(&:current?)
   end
 
+  def released_seasons
+    all_seasons.select(&:released?)
+  end
+
+  def unreleased_seasons
+    all_seasons.reject(&:released?)
+  end
+
   def subscription
     Subscription.new(
       subscription_data["monthly_price_in_dollars"],
@@ -99,7 +107,8 @@ class Catalog
         season_data["title"],
         season_slug,
         season_data["price_in_dollars"],
-        season_data["gumroad_product_id"]
+        season_data["gumroad_product_id"],
+        season_data.fetch("released")
       )
       season
     end.sort { |a,b| a.number <=> b.number }.reverse

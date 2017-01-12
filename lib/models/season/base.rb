@@ -2,12 +2,13 @@ require_relative '../price'
 
 module Season
   class Base
-    def initialize(number, title, slug, price_in_dollars, gumroad_product_id)
+    def initialize(number, title, slug, price_in_dollars, gumroad_product_id, released)
       @number, @title = number, title
       @slug = slug
       @price_in_dollars = price_in_dollars
       @gumroad_product_id = gumroad_product_id
       @price = Price.new(price_in_dollars)
+      @released = !!released
     end
 
     attr_reader :title, :number, :slug, :gumroad_product_id, :price
@@ -25,6 +26,9 @@ module Season
       "a, b, c, d"
     end
 
+    def released?
+      @released
+    end
     protected
 
     attr_reader :price_in_dollars
