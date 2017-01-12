@@ -90,6 +90,9 @@ helpers do
     "/seasons/#{season.slug}"
   end
 
+  def watch_episode_path(episode)
+    "/episodes/watch/#{episode.url_part}"
+  end
 
   def render_convertkit_js_form(form_name)
     partial("views/convertkit_js_signup_form", locals: {convertkit_form: ConvertkitForm.find(form_name, data.convertkit_forms) })
@@ -153,6 +156,11 @@ end
 CATALOG.all_episodes.each do |episode|
   template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
   proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode', ignore: true
+end
+
+CATALOG.free_episodes.each do |episode|
+  template = "/views/templates/episodes/watch.html"
+  proxy watch_episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
 end
 
 CATALOG.released_seasons.each do |season|

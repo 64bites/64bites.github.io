@@ -12,12 +12,16 @@ class Episode
     @description = episode_data.fetch("description")
     @slug = slug
     @poster_ext = episode_data.fetch("poster_ext", "png")
+    @episode_data = episode_data
   end
 
   def free?
     @is_free
   end
 
+  def url_part
+    @episode_data.fetch("url_part")
+  end
   
   def published?
     @is_published
