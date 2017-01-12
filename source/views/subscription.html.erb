@@ -39,7 +39,7 @@
 </section>
 <a name="episodes-included"></a>
 <%= partial "views/subscribe_button" %>
-<% episodes = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season) %>
+<% episodes = episodes_catalog.all_episodes_in_subscription %>
 <% if episodes.any? %>
   <section class="episodes">
     <h2>You will get <%= episodes.count %> latest episodes immediately</h2>
