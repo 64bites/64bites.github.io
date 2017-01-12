@@ -1,4 +1,4 @@
-<% episodes = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season) %>
+<% episodes = episodes_catalog.all_episodes_in_subscription %>
 <% annual_price_per_month = Price.new(subscription.annual_price.in_dollars / 12) %>
 <div class="tier <%= tier_class %>">
   <div class="title">
