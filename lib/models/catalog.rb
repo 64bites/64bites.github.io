@@ -31,6 +31,12 @@ class Catalog
     episodes_range = first_episode_number..last_episode_number
     all_episodes.select { |episode| episodes_range.include?(episode.number) }
   end
+
+  def all_episodes_in_subscription
+    unreleased_seasons.flat_map do |season|
+      all_episodes_in_season(season)
+    end
+  end
   
   def free_episodes
     all_episodes.select(&:free?)

@@ -1,6 +1,6 @@
 <% subscription = episodes_catalog.subscription %>
 <% caption ||= "I want a new episode each week!" %>
-<% episodes_count = episodes_catalog.all_episodes_in_season(episodes_catalog.current_season).count %>
+<% episodes_count = episodes_catalog.all_episodes_in_subscription.count %>
 
 <section class="buy">
   <div class="buy-button">
