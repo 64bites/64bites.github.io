@@ -6,8 +6,9 @@ gumroad_product_id: 64bites-ep024
 is_published: true
 publication_time: 2015-11-04
 wistia_id: z0c6x6aozq
+poster_ext: jpg
+url_part: kHHwhE-J
 description: When writing games and graphical programs we need some way of interacting
   with things presented on the screen.<br>Commodore 64 has a built-in support for
   two joysticks that are perfect for dynamic games and interactive GUI applications.
   Today we'll learn how to use them.
-poster_ext: "jpg"
