@@ -90,8 +90,12 @@ helpers do
     "/seasons/#{season.slug}"
   end
 
-  def watch_episode_path(episode)
+  def episode_watch_path(episode)
     "/episodes/watch/#{episode.url_part}"
+  end
+
+  def episode_show_notes_path(episode)
+    "/episodes/show-notes/#{episode.show_notes_filename}"
   end
 
   def render_convertkit_js_form(form_name)
@@ -160,7 +164,7 @@ end
 
 CATALOG.free_episodes.each do |episode|
   template = "/views/templates/episodes/watch.html"
-  proxy watch_episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
+  proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
 end
 
 CATALOG.released_seasons.each do |season|

@@ -23,6 +23,10 @@ class Episode
     @episode_data.fetch("url_part")
   end
   
+  def show_notes_filename
+    slug+ "-show-notes.zip"
+  end
+
   def published?
     @is_published
   end

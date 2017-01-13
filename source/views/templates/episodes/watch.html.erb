@@ -1,1 +1,13 @@
-Here's episode <%= episode.title %>
+<h1>Episode <%= episode.formatted_title %></h1>
+<%= episode.description %>
+<br>
+<br>
+<br>
+<h2>Watch the video</h2>
+<%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: episode.title } %>
+
+<h2>Download show notes</h2>
+<p>Click on the button below to get the full transcript, source code and programming exercises.</p>
+<p>This way you follow along while watching the episode.</p>
+<p>You will not only understand what is happening but also code everything yourself!</p>
+<%= link_to "Download show notes", episode_show_notes_path(episode), class: "button" %>
