@@ -156,8 +156,10 @@ CATALOG.all_episodes.each do |episode|
   proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode', ignore: true
 end
 
-CATALOG.free_episodes.each do |episode|
+CATALOG.all_episodes.select(&:watchable?).each do |episode|
   template = "/views/templates/episodes/watch.html"
+  puts episode.number
+  puts episode_watch_path(episode) + ".html"
   proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
 end
 

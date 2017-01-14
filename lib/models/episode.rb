@@ -19,6 +19,10 @@ class Episode
     @is_free
   end
 
+  def watchable?
+    @wistia_id.present? && @episode_data.has_key?("url_part")
+  end
+
   def url_part
     @episode_data.fetch("url_part")
   end
