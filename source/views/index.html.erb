@@ -27,9 +27,24 @@ thumbnail: episodes/014.png
 
 <%= partial "views/testimonials_section" %>
 
-<section class="signup">
-  <%= render_convertkit_custom_form("default") %>
-</section>
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>
+<section class="newsletter">
+  <h2>Want to try it out for free?</h2>
+  <p class="lead">I can send you free videos and articles on programming Commodore 64 from time to time.</p>
+  <a href="https://www.getdrip.com/forms/18339237/submissions/new" data-drip-show-form="18339237" class="show-newsletter-subscription button">Sounds Good!</a>
+</section>
+
+<% content_for(:javascript) do %>
+  <script type="text/javascript">
+  $("body").on("click", ".show-newsletter-subscription", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var formId = $(this).data("drip-show-form")
+      console.log(formId);
+      _dcq.push(["showForm", { id:formId }]);
+  });
+  </script>
+<% end %>
+

@@ -1,6 +1,5 @@
 require "extensions/views"
 require "lib/models/catalog"
-require "lib/models/convertkit_form"
 
 activate :views
 activate :directory_indexes
@@ -98,14 +97,9 @@ helpers do
     "/episodes/show-notes/#{episode.show_notes_filename}"
   end
 
-  def render_convertkit_js_form(form_name)
-    partial("views/convertkit_js_signup_form", locals: {convertkit_form: ConvertkitForm.find(form_name, data.convertkit_forms) })
+  def render_default_drip_form
+    partial("views/drip_basic_email_form")
   end
-
-  def render_convertkit_custom_form(form_name)
-    partial("views/convertkit_custom_signup_form", locals: {convertkit_form: ConvertkitForm.find(form_name, data.convertkit_forms) })
-  end
-
 
   def episodes_catalog
     CATALOG

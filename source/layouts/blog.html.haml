@@ -28,7 +28,6 @@
         %h1= current_article.title
         = yield
         %hr
-        = render_convertkit_custom_form("default")
       = partial "layouts/footer"
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"
     :javascript
