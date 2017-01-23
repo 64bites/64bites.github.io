@@ -1,0 +1,13 @@
+---
+title: Raster Stabilization III - Optimization
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep084
+is_published: true
+publication_time: 2016-12-28
+wistia_id: 
+description: |-
+  Once we have our stable raster routine working it's time to optimize it.
+
+  Let's see if we can minimize its memory footprint and shave off few cycles here and there.
+poster_ext: jpg
