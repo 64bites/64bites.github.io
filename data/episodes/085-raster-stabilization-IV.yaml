@@ -1,0 +1,17 @@
+---
+title: Raster Stabilization IV - Pitfalls
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep085
+is_published: true
+publication_time: 2017-01-04
+wistia_id: 
+description: |-
+  We've been working on a raster stabilization routine for three episodes already.
+
+  We ended up with an optimized code that does the job quite well.
+
+  But I've also been warning you about difficulties in writing timing specific code.
+
+  Today we will explore the topic, and try to break our routine deliberately.
+poster_ext: gif
