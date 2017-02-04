@@ -19,6 +19,7 @@ layout: no_menu
 <% content_for :javascript do %>
   <script>
     $(document).ready(function(){
+        _dcq = _dcq || [];
         _dcq.push(["identify", { success: function(payload){
             console.log(payload);
           if (!payload.anonymous) {

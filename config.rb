@@ -89,6 +89,10 @@ helpers do
     "/seasons/#{season.slug}"
   end
 
+  def downloads_path(file)
+    "/downloads/#{file}"
+  end
+
   def episode_watch_path(episode)
     "/episodes/watch/#{episode.url_part}"
   end
