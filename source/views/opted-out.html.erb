@@ -19,7 +19,8 @@ layout: no_menu
 <% content_for :javascript do %>
   <script>
     $(document).ready(function(){
-      _dcq.push(["identify", { success: function(payload){
+        _dcq.push(["identify", { success: function(payload){
+            console.log(payload);
           if (!payload.anonymous) {
             var opt_in_urls = {
               <% data.drip.fetch("opt_in_urls").each do |name, url| %>
