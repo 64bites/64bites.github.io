@@ -1,4 +1,6 @@
-#= require_tree .
+#= require "highlight"
+#= require "syntax-highlighting"
+#= require "jquery.bbq"
 
 self.loadKMTrackableVideo = (wistia_object, videoName) ->
   wistia_object.bind "play", ->
