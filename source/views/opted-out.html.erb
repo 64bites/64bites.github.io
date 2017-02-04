@@ -18,29 +18,32 @@ layout: no_menu
 
 <% content_for :javascript do %>
   <script>
-$(document).ready(function(){
-      _dcq.push(["identify", {success: function(p){console.log(p)}}])
-      var opt_in_urls = {
-        <% data.drip.fetch("opt_in_urls").each do |name, url| %>
-            "<%= name %>": "<%= url %>"
-        <% end %>
-      };
-      var opt_in_url = null
-      p = jQuery.deparam.querystring()
-      if (!jQuery.isEmptyObject(p)) {
-        for (var key in p) {
-          if (key.indexOf('sfb_opt_in') === 0) {
-            if (opt_in_urls.hasOwnProperty(p[key])) {
-              opt_in_url = opt_in_urls[p[key]];
+    $(document).ready(function(){
+      _dcq.push(["identify", { success: function(payload){
+          if (!payload.anonymous) {
+            var opt_in_urls = {
+              <% data.drip.fetch("opt_in_urls").each do |name, url| %>
+                  "<%= name %>": "<%= url %>"
+              <% end %>
+            };
+            var opt_in_url = null
+            p = jQuery.deparam.querystring()
+            if (!jQuery.isEmptyObject(p)) {
+              for (var key in p) {
+                if (key.indexOf('sfb_opt_in') === 0) {
+                  if (opt_in_urls.hasOwnProperty(p[key])) {
+                    opt_in_url = opt_in_urls[p[key]];
+                  }
+                }
+              }
+            }
+            if (opt_in_url) {
+              var $opt_in = jQuery(".opt-in");
+              $opt_in.find("#opt-in").attr("href", opt_in_url + "?" + jQuery.param({v: payload.visitor_uuid}));
+              $opt_in.show()
             }
           }
-        }
-      }
-      if (opt_in_url) {
-        var $opt_in = jQuery(".opt-in");
-        $opt_in.find("#opt-in").attr("href", opt_in_url);
-        $opt_in.show()
-      }
+      }}]);
     });
   </script>
 <% end %>
