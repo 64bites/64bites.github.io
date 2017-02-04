@@ -19,6 +19,7 @@ layout: no_menu
 <% content_for :javascript do %>
   <script>
 $(document).ready(function(){
+      _dcq.push(["identify", {success: function(p){console.log(p)}}])
       var opt_in_urls = {
         <% data.drip.fetch("opt_in_urls").each do |name, url| %>
             "<%= name %>": "<%= url %>"
