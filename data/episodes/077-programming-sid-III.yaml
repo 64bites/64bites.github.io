@@ -6,7 +6,7 @@ gumroad_product_id: 64bites-ep077
 is_published: true
 publication_time: 2016-11-09
 wistia_id: 
+poster_ext: jpg
 description: We already know how to play sounds using the SID chip. Today we are going
   to learn how to make them more interesting by changing attack, decay, sustain and
   release registers, which define a so-called sound envelope.
-poster_ext: jpg
