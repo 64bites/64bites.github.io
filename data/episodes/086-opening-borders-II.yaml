@@ -1,0 +1,15 @@
+---
+title: Opening Borders II - Left & Right
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep086
+is_published: true
+publication_time: 2017-01-11
+wistia_id: 
+description: |-
+  In the episode sixty-one, we've learned how to use the vertical border expansion to remove parts of the border that are above and below the drawable area.
+
+  Opening side borders can be accomplished in a similar fashion, but it is significantly harder.
+
+  Not only the timing has to be spot-on, the process has to be repeated on each raster line.
+poster_ext: jpg
