@@ -163,7 +163,7 @@ end
 CATALOG.all_episodes.select(&:watchable?).each do |episode|
   template = "/views/templates/episodes/watch.html"
   puts episode.formatted_title
-  puts episode_watch_path(episode) + ".html"
+  puts "http://64bites.com" + episode_watch_path(episode) + "/"
   proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
 end
 
