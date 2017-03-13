@@ -1,0 +1,13 @@
+---
+title: Sprites on the border III - Eight sprites
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep091
+is_published: true
+publication_time: 2017-02-15
+wistia_id: 
+description: |-
+  In this episode, we will learn how to display sprite zero while the side border is open.
+
+  This allows us to draw all eight sprites on the top and the bottom part of the border where there are no bad lines.
+poster_ext: jpg
