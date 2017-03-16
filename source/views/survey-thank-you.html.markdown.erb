@@ -1,0 +1,69 @@
+# Thank you so much!
+
+<%= partial "views/wistia_video", locals: {wistia_id: data.survey.thank_you_wistia_id, kissmetrics_data: "Survey Thank You"} %>
+<br>
+<br>
+
+## Please share the survey :)
+
+Your friends or followers might be interested in programming Commodore 64 as well. 
+
+Please consider sharing the link to the survey by clicking any of the following buttons:
+
+<a data-sumome-share-id="0cedccc1-bdda-4e11-97c1-9ede720bf02d" data-sumome-share-url="http://64bites/better-together" data-sumome-share-text="I've just helped 64bites to be more awesome! You can too! #c64"></a>
+
+Or just copy and paste this link: <a href="http://64bites.com/better-together">http://64bites.com/better-together</a> to do it manually.
+
+Thanks,
+
+_Michał_
+
+<% content_for :javascript do %>
+  <script>
+    $(document).ready(function(){
+      _dcq = _dcq || [];
+      window.survey = jQuery.deparam.fragment()
+      window.location.hash = ""
+      function identify_survey_taker(payload) {
+        console.log(payload);
+        var identify_fields = {success:function(payload){console.log(payload)}}
+        if (payload.success && payload.anonymous) {
+          if (!jQuery.isEmptyObject(window.survey)) {
+            if (window.survey.hasOwnProperty("sur_id")) {
+              identify_fields.survey_id = window.survey["sur_id"]
+            }
+            if (window.survey.hasOwnProperty("sur_em")) {
+              identify_fields.email = window.survey["sur_em"]
+            } else if (window.survey.hasOwnProperty("sur_chem")) {
+              identify_fields.email = window.survey["sur_chem"]
+              indetify_fields.email_given_via_survey = true
+            } else if (window.survey.hasOwnProperty("sur_chh")) {
+              identify_fields.email = window.survey["sur_chh"]
+              indetify_fields.email_given_via_survey = true
+            }
+          }
+          console.log("Second")
+          console.log(payload)
+          console.log(identify_fields)
+          _dcq.push(["identify", identify_fields])
+        }
+      }
+      var identify_fields = { success: identify_survey_taker }
+      if (!jQuery.isEmptyObject(window.survey)) {
+        if (window.survey.hasOwnProperty("sur_id")) {
+          identify_fields.survey_id = window.survey["sur_id"]
+        }
+      }
+console.log("First")
+      console.log(identify_fields)
+      _dcq.push(["identify", identify_fields])
+    })
+    window._wq = window._wq || [];
+    _wq.push({ id: "_all", onReady: function(video) {
+    if (window.survey.hasOwnProperty("autoplay") && window.survey.autoplay) {
+      video.play()
+    }
+    }});
+
+  </script>
+<% end %>

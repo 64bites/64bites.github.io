@@ -1,10 +1,1 @@
-<div id="wistia_<%= wistia_id %>" class="wistia_embed" style="width:730px;height:456px;">&nbsp;</div>
-<% content_for(:javascript) do %>
-  <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js"></script>
-  <script>
-  wistiaEmbed = Wistia.embed("<%= wistia_id %>", {
-    videoFoam: true
-    });
-loadKMTrackableVideo(wistiaEmbed, "<%= kissmetrics_data %>");
-  </script>
-<% end %>
+<script src="https://fast.wistia.com/embed/medias/<%= wistia_id %>.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_<%= wistia_id %> videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>

@@ -1,0 +1,46 @@
+# Let's make 64bites better together!
+
+<% link_to data.survey.url, class: "survey" do %>
+  <%= image_tag "survey/start.png", alt: "Let's make 64bites better together!" %>
+<% end %>
+
+
+## 64bites is a series of Weekly C64 Programming Video Tutorials
+
+There are already <%= episodes_catalog.all_episodes.count %> Video Tutorials published on a variety of topics.
+
+Each one with a full transcript. Plenty of source code and programming exercises.
+
+You can already learn a variety of topics, ranging from simple stuff in BASIC to opening the borders and displaying more than eight sprites in a pretty advanced Assembly.
+
+## But it's time to make it even better.
+
+I am working hard to make it **the #1 best place to learn about Commodore 64 in the world**.
+
+And I need your help to do that.
+
+Click on the link below and I'll tell you more.
+
+_Michał_
+
+<%= link_to "Let's make 64bites better", data.survey.url, class: "button survey" %>
+
+
+<% content_for :javascript do %>
+  <script>
+    $(document).ready(function(){
+      _dcq = _dcq || [];
+      _dcq.push(["identify", { success: function(payload){
+      console.log(payload);
+      console.log(payload.success && !payload.anonymous)
+        if (payload.success && !payload.anonymous) {
+          jQuery("a.survey").each(function(id,link) {
+          $link = jQuery(link)
+            console.log($link.attr("href") + "?" + jQuery.param({em: payload.email}))
+            $link.attr("href", $link.attr("href") + "?" + jQuery.param({em: payload.email}))
+          })
+        }
+      }}])
+    })
+  </script>
+<% end %>
