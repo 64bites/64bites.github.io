@@ -166,7 +166,14 @@ end
 
 CATALOG.all_episodes.each do |episode|
   template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
-  proxy episode_path(episode) + ".html", template, :locals => { :episode => episode, main_image: episode.poster_path, title: "64bites - Episode #{episode.formatted_title}" }, layout: 'episode', ignore: true
+  locals = {
+    episode: episode, 
+    main_image: episode.poster_path, 
+    title: "64bites - Episode #{episode.formatted_title}",
+    description: episode.description,
+    og_type: "video.episode"
+  }
+  proxy episode_path(episode) + ".html", template, :locals => locals, ignore: true
 end
 
 CATALOG.all_episodes.select(&:watchable?).each do |episode|
@@ -177,7 +184,8 @@ CATALOG.all_episodes.select(&:watchable?).each do |episode|
     episode: episode, 
     main_image: episode.poster_path, 
     title: "64bites - Episode #{episode.formatted_title}",
-    description: episode.description
+    description: episode.description,
+    og_type: "video.episode"
   }
   proxy episode_watch_path(episode) + ".html", template, :locals => locals, ignore: true
 end
