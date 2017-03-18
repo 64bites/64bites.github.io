@@ -146,6 +146,15 @@ helpers do
     protocol + host_with_port + page_path
   end
 
+  def page_property(locals, name)
+    if locals.has_key?(name.to_s)
+      locals[name.to_s]
+    elsif locals.has_key?(name.to_sym)
+      locals[name.to_sym]
+    else
+      current_page.data.send(name)
+    end
+  end
 end
 
 configure :development do
@@ -157,14 +166,20 @@ end
 
 CATALOG.all_episodes.each do |episode|
   template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
-  proxy episode_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'episode', ignore: true
+  proxy episode_path(episode) + ".html", template, :locals => { :episode => episode, main_image: episode.poster_path, title: "64bites - Episode #{episode.formatted_title}" }, layout: 'episode', ignore: true
 end
 
 CATALOG.all_episodes.select(&:watchable?).each do |episode|
   template = "/views/templates/episodes/watch.html"
   puts episode.formatted_title
   puts "http://64bites.com" + episode_watch_path(episode) + "/"
-  proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, ignore: true
+  locals = {
+    episode: episode, 
+    main_image: episode.poster_path, 
+    title: "64bites - Episode #{episode.formatted_title}",
+    description: episode.description
+  }
+  proxy episode_watch_path(episode) + ".html", template, :locals => locals, ignore: true
 end
 
 CATALOG.released_seasons.each do |season|

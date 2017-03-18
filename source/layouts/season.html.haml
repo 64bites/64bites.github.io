@@ -17,8 +17,8 @@
     %meta{:property => "og:type", :content => "video.tv_show"}
     %meta{:property => "og:description", :content => season.description}
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
-    = partial "layouts/sumo_me"
     = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
+    = partial "layouts/sumo_me"
   %body{class: page_classes}
     .container
       = partial "layouts/header"
