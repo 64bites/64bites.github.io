@@ -7,17 +7,17 @@
     %title= "64 Bites - Episode #{current_article.title}"
     = stylesheet_link_tag "application"
     = favicon_tag 'favicon.ico'
+    %link{rel:"apple-touch-icon", href:"favicon-76.png"}
+    %link{rel:"apple-touch-icon", sizes:"120x120", href:"favicon-120.png"}
+    %link{rel:"apple-touch-icon", sizes:"152x152", href:"favicon-152.png"}
+    %link{rel:"apple-touch-icon", sizes:"180x180", href:"favicon-180.png"}
     %meta{:property => "og:image", :content => article_thumbnail_url(current_article)}
     %meta{:property => "og:url", :content => page_url(current_article.url)}
     %meta{:property => "og:title", :content => "64 Bites Blog - #{current_article.title}"}
     %meta{:property => "og:type", :content => "video.episode"}
     %meta{:property => "og:description", :content => current_article.summary(250)}
-    %link{rel:"apple-touch-icon", href:"favicon-76.png"}
-    %link{rel:"apple-touch-icon", sizes:"120x120", href:"favicon-120.png"}
-    %link{rel:"apple-touch-icon", sizes:"152x152", href:"favicon-152.png"}
-    %link{rel:"apple-touch-icon", sizes:"180x180", href:"favicon-180.png"}
-    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
+    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
     = partial "layouts/sumo_me"
   %body{class: page_classes}
@@ -34,27 +34,6 @@
       analytics.load("3z8xJ01MQLwMsgpwWuPmw2BTxor55hoB");
       analytics.page()
       }}();
-    -#:javascript
-      -#(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        -#(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        -#m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      -#})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      -#ga('create', 'UA-55867441-1', 'auto');
-      -#ga('send', 'pageview');
-    -#:javascript
-      -#var _kmq = _kmq || [];
-      -#var _kmk = _kmk || '7a4a215ccec4ec81ef6a57d51b38c6615c0e95df';
-      -#function _kms(u){
-        -#setTimeout(function(){
-          -#var d = document, f = d.getElementsByTagName('script')[0],
-          -#s = d.createElement('script');
-          -#s.type = 'text/javascript'; s.async = true; s.src = u;
-          -#f.parentNode.insertBefore(s, f);
-        -#}, 1);
-      -#}
-      -#_kms('//i.kissmetrics.com/i.js');
-      -#_kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
     = partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0}
     = partial "layouts/gumroad_script"
     = partial "layouts/drip"

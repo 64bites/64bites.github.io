@@ -164,7 +164,7 @@ CATALOG.all_episodes.select(&:watchable?).each do |episode|
   template = "/views/templates/episodes/watch.html"
   puts episode.formatted_title
   puts "http://64bites.com" + episode_watch_path(episode) + "/"
-  proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, layout: 'no_menu', ignore: true
+  proxy episode_watch_path(episode) + ".html", template, :locals => { :episode => episode }, ignore: true
 end
 
 CATALOG.released_seasons.each do |season|
