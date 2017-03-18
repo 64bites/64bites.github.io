@@ -191,5 +191,12 @@ CATALOG.all_episodes.select(&:watchable?).each do |episode|
 end
 
 CATALOG.released_seasons.each do |season|
-  proxy season_path(season) + ".html", "/views/templates/seasons/show.html", :locals => { :season => season }, layout: 'season', ignore: true
+  locals = {
+    season: season,
+    main_image: season.poster_path, 
+    title: "64bites - #{season.formatted_title}",
+    description: season.description,
+    og_type: "video.tv_show"
+  }
+  proxy season_path(season) + ".html", "/views/templates/seasons/show.html", :locals => locals, ignore: true
 end
