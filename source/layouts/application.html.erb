@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= page_property(locals, "title") || "64 Bites" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= favicon_tag 'favicon.ico' %>
+    <link rel="apple-touch-icon" href="favicon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href:"favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+    <meta property="og:image" content="<%= image_url(page_property(locals, "main_image") || "logo-square.png") %>">
+    <meta property="og:url" content="<%= page_url(current_page.url)%>">
+    <meta property="og:title" content="<%= page_property(locals, "title") || "64 Bites"%>">
+    <meta property="og:type" content="<%= page_property(locals, "ogtype") || "website"%>">
+    <meta property="og:description" content="<%= page_property(locals, "description") || current_page.data.summary || ""%>">
+    <meta name="google-site-verification" content="Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE">
+    <%= partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" } %>
+    <%= partial "layouts/sumo_me" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="container">
+      <% if(!current_page.data.hide_menu) %>
+        <%= partial "layouts/header" %>
+      <% end %>
+      <main>
+        <%= yield %>
+      </main>
+      <%= partial "layouts/footer" %>
+    </div>
+    <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application" %>
+    <%= partial "layouts/segment_io" %> 
+    <%= partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0} %>
+    <%= partial "layouts/drip" %>
+    <%= yield_content(:javascript) %>
+  </body>
+</html>
