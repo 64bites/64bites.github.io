@@ -170,7 +170,7 @@ CATALOG.all_episodes.each do |episode|
     episode: episode, 
     main_image: episode.poster_path, 
     title: "64bites - Episode #{episode.formatted_title}",
-    description: episode.description,
+    description: episode.short_description,
     og_type: "video.episode"
   }
   proxy episode_path(episode) + ".html", template, :locals => locals, ignore: true
@@ -184,7 +184,7 @@ CATALOG.all_episodes.select(&:watchable?).each do |episode|
     episode: episode, 
     main_image: episode.poster_path, 
     title: "64bites - Episode #{episode.formatted_title}",
-    description: episode.description,
+    description: episode.short_description,
     og_type: "video.episode"
   }
   proxy episode_watch_path(episode) + ".html", template, :locals => locals, ignore: true

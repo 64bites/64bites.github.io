@@ -47,6 +47,10 @@ class Episode
     "##{formatted_number} - #{title}"
   end
 
+  def short_description
+    @episode_data[:short_description] || description
+  end
+
   attr_reader :price, :gumroad_product_id, :poster_ext
   
   private
