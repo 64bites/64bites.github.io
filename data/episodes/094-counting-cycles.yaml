@@ -1,0 +1,17 @@
+---
+title: Counting Cycles
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep094
+is_published: true
+publication_time: 2017-03-08
+wistia_id: 
+description: "Aren't you tired of counting cycles in your routines by hand?\n\nLooking
+  up specifications of every single instruction gets old soon.\n\nIt's especially
+  hard if your code contains branches and loops.\n\nNot to mention page crossing.
+  \n\nWouldn't it be great to have the cycle-count computed automatically?\n\nIn this
+  tutorial, we are going to create a library.\n\nYou'll be able to include it in any
+  project.\n\nIt will automatically compute how many cycles your routine takes.\n\nWe
+  won't need to look up specifications of every single instruction.\n\nWe will also
+  make sure the library works well by using Test Driven Development to create it."
+poster_ext: jpg
