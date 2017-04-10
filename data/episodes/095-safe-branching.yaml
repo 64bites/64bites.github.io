@@ -1,0 +1,17 @@
+---
+title: Safe Branching
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep095
+is_published: true
+publication_time: 2017-03-15
+wistia_id: 
+description: "Often in programming Commodore 64, we need accurate and compact delay
+  loops. \n\nWe usually create them using one of branching instructions.\n\nOnce we
+  introduce such loop, our code can become fragile, since branches can take one cycle
+  more if the jump lands on a different page than the next instruction.\n\nAnd it
+  can happen by accident if we add some code to before those instructions or if we
+  relocate the program.\n\nThis can lead to frustrating debugging sessions since the
+  compiler doesn't warn us about this problem automatically.\n\nToday we will change
+  that."
+poster_ext: jpg
