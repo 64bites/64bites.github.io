@@ -1,0 +1,15 @@
+---
+title: Binary Coded Decimal
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep098
+is_published: true
+publication_time: 2017-04-05
+wistia_id: 
+description: |-
+  One of the pretty common tasks we encounter while creating a game is printing the score.
+
+  It can also be surprisingly difficult. Especially if you need an efficient solution.
+
+  Today we will learn how an underestimated feature of the 6510 processor - the binary coded decimal mode, can be used to update and print the score efficiently.
+poster_ext: jpg
