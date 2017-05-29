@@ -8,7 +8,9 @@
   <h1>Seasons</h1>
   <p class="lead">Seasons are simply <strong>bundles of nine episodes</strong>.</p>
   <p class="lead">Buying a whole season is <strong>less expensive</strong> than buying each video separately.</p>
-  <% if episodes_catalog.unreleased_seasons.count == 2 %>
+  <% if episodes_catalog.unreleased_seasons.count == 3 %>
+    <p class="lead"><strong>Three latest seasons</strong> are included with the subscription as a <strong>bonus</strong>.</p>
+  <% elsif episodes_catalog.unreleased_seasons.count == 2 %>
     <p class="lead"><strong>Two latest seasons</strong> are included with the subscription as a <strong>bonus</strong>.</p>
   <% elsif episodes_catalog.unreleased_seasons.count == 1 %>
     <p class="lead"><strong>The latest season</strong> is included with the subscription as a <strong>bonus</strong>.</p>
