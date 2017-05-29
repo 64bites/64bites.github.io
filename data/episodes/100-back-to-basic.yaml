@@ -1,0 +1,15 @@
+---
+title: Back to BASIC
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep100
+is_published: true
+publication_time: 2017-04-19
+wistia_id: 
+description: |-
+  It is time to get back to BASIC and take a closer look at the SYS instruction.
+
+  We used it all the time to run our assembly programs. But it can do much more than that.
+
+  Did you know that we can use it to pass information between BASIC and assembly programs?
+poster_ext: jpg
