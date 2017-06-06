@@ -5,7 +5,9 @@ price: 3.99
 gumroad_product_id: 64bites-ep089
 is_published: true
 publication_time: 2017-02-01
-wistia_id: 
+wistia_id: ohyvp7lm6t
+poster_ext: jpg
+url_part: QXAqh4nV
 description: |-
   Now that we have the border open around the whole screen, we can finally use that space to draw something.
 
@@ -14,4 +16,3 @@ description: |-
   But having them enabled with the side border open is actually quite hard.
 
   Today we will see how to display them on separate raster lines.
-poster_ext: jpg
