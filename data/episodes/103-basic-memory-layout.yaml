@@ -1,0 +1,17 @@
+---
+title: BASIC memory layout
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep103
+is_published: true
+publication_time: 2017-05-10
+wistia_id: 
+description: |-
+  When we turn the Commodore 64 on it greets us with an information about how many bytes are free for BASIC programs.
+
+  But not all of it can be used for the code.
+
+  As soon as we introduce variables, arrays or do operations on strings the interpreter needs to allocate memory for them as well.
+
+  Today we'll take a closer look at the memory layout of BASIC programs, and what happens when the program grows.
+poster_ext: jpg
