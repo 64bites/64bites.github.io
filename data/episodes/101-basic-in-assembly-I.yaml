@@ -1,0 +1,17 @@
+---
+title: BASIC in Assembly I
+free: false
+price: 3.99
+gumroad_product_id: 64bites-ep101
+is_published: true
+publication_time: 2017-04-26
+wistia_id: 
+description: |-
+  When we type programs in BASIC, they are pre-processed and saved into the memory, to be interpreted later.
+
+  Now imagine we don't need to type them anymore.
+
+  What if we could write their contents directly into the memory alongside our assembly program.
+
+  Well, that's what we are going to do in this episode.
+poster_ext: jpg
