@@ -1,0 +1,1 @@
+Today we will learn about different modes of the BASIC load command. How to display the directory, and why it even works, and how to load BASIC and Assembly programs from a disk drive.
