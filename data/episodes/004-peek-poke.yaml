@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep004
 is_published: true
 publication_time: 2015-06-17
+actual_release_date: 2015-06-29
 wistia_id: 
 description: We will learn how to use two most powerful instructions in BASIC - Peek
   and Poke. We can use them to read from and write to the memory, which on C64 is

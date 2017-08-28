@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep003
 is_published: true
 publication_time: 2015-06-10
+actual_release_date: 2015-06-17
 wistia_id: 
 description: We will learn how to write LIST and RUN programs in basic. We'll see
   how to debug them using STOP and CONT commands. We will also find out the surprising

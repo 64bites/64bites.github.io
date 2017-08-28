@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep008
 is_published: true
 publication_time: 2015-07-15
+actual_release_date: 2015-07-15
 wistia_id: 
 description: In this episode we will learn an easier way to write the assembly. Instead
   of using machine language monitor like animals, we can use modern development environments

@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep043
 is_published: true
 publication_time: 2016-03-16
+actual_release_date: 2016-03-16
 wistia_id: 
 description: "We already known that RTS and RTI can be used as jump instructions.\n\nBut
   using branching as unconditional jumps and the BIT instruction to skip few bytes?\n\nThat's

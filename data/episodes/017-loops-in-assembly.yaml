@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep017
 is_published: true
 publication_time: 2015-09-16
+actual_release_date: 2015-09-16
 wistia_id: 
 description: In which we will learn about absolute indexed mode to access memory sequentially.
   We will also create self-modyfing code. On top of that we will figure out how and

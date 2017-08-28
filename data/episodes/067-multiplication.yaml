@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep067
 is_published: true
 publication_time: 2016-08-31
+actual_release_date: 2016-09-06
 wistia_id: 
 description: |-
   Multiplication on the Commodore 64 is not trivial. The 6510 processor does not have built-in instruction for it.

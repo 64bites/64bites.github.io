@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep015
 is_published: true
 publication_time: 2015-09-02
+actual_release_date: 2015-09-02
 wistia_id: 
 description: The KickAssembler has one exclusive feature that allows for really powerful
   compile-time metaprogramming. It has a built-in programming language that can be

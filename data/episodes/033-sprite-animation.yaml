@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep033
 is_published: true
 publication_time: 2016-01-06
+actual_release_date: 2016-01-08
 wistia_id: 
 description: On top of creating bitmaps for use in static sprites, SpritePad allows
   us to create series of images that can be animated in our program.<br>Today we will

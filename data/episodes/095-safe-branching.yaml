@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep095
 is_published: true
 publication_time: 2017-03-15
+actual_release_date: 2017-04-11
 wistia_id: 
 description: "Often in programming Commodore 64, we need accurate and compact delay
   loops. \n\nWe usually create them using one of branching instructions.\n\nOnce we

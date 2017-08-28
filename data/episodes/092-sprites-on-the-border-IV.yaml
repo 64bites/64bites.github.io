@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep092
 is_published: true
 publication_time: 2017-02-22
+actual_release_date: 2017-03-18
 wistia_id: 
 description: |-
   In the previous episode, we've found a way to display sprite-zero while also having the side border open.

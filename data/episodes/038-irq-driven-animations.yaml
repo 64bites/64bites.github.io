@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep038
 is_published: true
 publication_time: 2016-02-10
+actual_release_date: 2016-02-10
 wistia_id: 
 description: In our previous episodes, we've been using a quite primitive animation
   technique. We've been simply advancing frames in an infinite loop with and wasting

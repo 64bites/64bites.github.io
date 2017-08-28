@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep040
 is_published: true
 publication_time: 2016-02-24
+actual_release_date: 2016-02-24
 wistia_id: 
 description: |
   We already know how to insert our routine into the interrupt handler to get reliable 50 ar 60 frames per second for our animations.

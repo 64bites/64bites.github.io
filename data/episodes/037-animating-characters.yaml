@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep037
 is_published: true
 publication_time: 2016-02-03
+actual_release_date: 2016-02-04
 wistia_id: 
 description: We've already been talking a lot about hardware sprites. They are a useful
   tool to draw and animate dynamic parts of your game, application or a demo. <br>

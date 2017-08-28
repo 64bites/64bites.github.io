@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep035
 is_published: true
 publication_time: 2016-01-20
+actual_release_date: 2016-01-20
 wistia_id: 
 description: In the previous episode, we've seen how to optimize the memory usage
   of the sprite animation with a technique called run-length encoding. It allowed

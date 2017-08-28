@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep021
 is_published: true
 publication_time: 2015-10-14
+actual_release_date: 2015-10-14
 wistia_id: 
 description: Today we will talk about the PETSCII character encoding. We'll learn
   how to use the control characters, master the conversion from screencodes, and figure

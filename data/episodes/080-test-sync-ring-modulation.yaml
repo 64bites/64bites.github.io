@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep080
 is_published: true
 publication_time: 2016-11-30
+actual_release_date: 2016-12-07
 wistia_id: 
 description: |-
   Today we will learn how to synchronize SID voices using the test bit and hard-sync functionality.

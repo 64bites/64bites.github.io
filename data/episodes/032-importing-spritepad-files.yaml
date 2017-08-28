@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep032
 is_published: true
 publication_time: 2015-12-30
+actual_release_date: 2015-12-31
 wistia_id: 
 description: In the previous episode we've used the SpritePad application to design
   four different sprites. We have also exported them into binary files in two formats.

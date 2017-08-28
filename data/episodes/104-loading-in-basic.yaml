@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep104
 is_published: true
 publication_time: 2017-05-17
+actual_release_date: 2017-07-25
 wistia_id: 
 description: Today we will learn about different modes of the BASIC load command.
   How to display the directory, and why it even works, and how to load BASIC and Assembly

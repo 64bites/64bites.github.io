@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep046
 is_published: true
 publication_time: 2016-04-06
+actual_release_date: 2016-04-07
 wistia_id: 
 description: |-
   In the second part about ROM manipulation we will claim all of the RAM by disabling BASIC and KERNAL ROMS as well as I/O registers block.

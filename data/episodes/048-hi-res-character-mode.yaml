@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep048
 is_published: true
 publication_time: 2016-04-20
+actual_release_date: 2016-04-22
 wistia_id: 
 description: |-
   Commodore 64 has plenty of built-in graphical modes that we can use to paint images on the screen. All of them use characters in one way or the other. Some of them enable us to achieve better resolution while others give us more colors or more characters to choose from.

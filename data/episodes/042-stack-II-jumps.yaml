@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep042
 is_published: true
 publication_time: 2016-03-09
+actual_release_date: 2016-03-11
 wistia_id: 
 description: |
   The 6502 stack is not only useful as a temporary storage for data in assembly programs. It is also used internally by the processor in three jump instructions: jsr, rts and rti.

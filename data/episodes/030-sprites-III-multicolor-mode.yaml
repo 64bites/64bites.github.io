@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep030
 is_published: true
 publication_time: 2015-12-16
+actual_release_date: 2015-12-16
 wistia_id: 
 description: If we take a look at a sprite bitmap, and treat each pixel as it was
   defined by a pair of bits.<br>The displayed image grid would now only be 12 by 21

@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep097
 is_published: true
 publication_time: 2017-03-29
+actual_release_date: 2017-05-02
 wistia_id: 
 description: |-
   In the previous episode, we've created pseudo commands that converted numbers into their binary and hexadecimal string representations.

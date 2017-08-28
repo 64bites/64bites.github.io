@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep054
 is_published: true
 publication_time: 2016-06-01
+actual_release_date: 2016-06-01
 wistia_id: 
 description: "Today we will focus on sprite display priorities. \n\nOr in other words,
   how can we display sprites in front or behind the character-based graphics.\n\nWe

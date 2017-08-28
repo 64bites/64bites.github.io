@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep072
 is_published: true
 publication_time: 2016-10-05
+actual_release_date: 2016-10-08
 wistia_id: 
 description: |-
   Today we are going to figure out how to specify the sound frequency of the SID chip in Hertz. Then we are going to find correct frequencies for notes in different octaves.

@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep023
 is_published: true
 publication_time: 2015-10-28
+actual_release_date: 2015-10-29
 wistia_id: 
 description: In this episode, we will find out how the 6502 processor handles boolean
   operations. We will use the 64spec library to see their results and side effects,

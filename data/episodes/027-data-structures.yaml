@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep027
 is_published: true
 publication_time: 2015-11-25
+actual_release_date: 2015-11-25
 wistia_id: 
 description: KickAssembler's scripting language provides a variety of data structures
   that can be used to group and order static data.<br>Proper use of lists, hash tables

@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep018
 is_published: true
 publication_time: 2015-09-23
+actual_release_date: 2015-09-24
 wistia_id: 
 description: Today we'll learn about .pseudocommand directive in KickAssembler. It
   allows us to make more robust macros that can work with different addressing modes

@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep039
 is_published: true
 publication_time: 2016-02-17
+actual_release_date: 2016-02-17
 wistia_id: 
 description: |
   In a previous episode, we've learned how to insert a routine at the beginning of the IRQ handler. In the most typical situation, we just need to store our routine address in the place in RAM called IRQ vector and jump to the default KERNAL IRQ handler.

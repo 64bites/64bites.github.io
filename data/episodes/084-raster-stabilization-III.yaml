@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep084
 is_published: true
 publication_time: 2016-12-28
+actual_release_date: 2017-01-23
 wistia_id: 
 description: |-
   Once we have our stable raster routine working it's time to optimize it.

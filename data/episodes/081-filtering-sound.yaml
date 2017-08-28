@@ -5,6 +5,7 @@ price: 3.99
 gumroad_product_id: 64bites-ep081
 is_published: true
 publication_time: 2016-12-07
+actual_release_date: 2016-12-24
 wistia_id: 
 description: |-
   We can create new waveforems not only by adding pure tones together. We can also start with complex sounds, like saw or a rectangle wave and subtract different frequencies from them.
