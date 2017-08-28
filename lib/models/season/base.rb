@@ -22,6 +22,14 @@ module Season
       "%.3d" % number
     end
 
+    def formatted_name
+      "Season #{number}"
+    end
+
+    def formatted_title
+      "Season #{number} - #{title}"
+    end
+
     def description
       "a, b, c, d"
     end

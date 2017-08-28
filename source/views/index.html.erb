@@ -5,7 +5,6 @@ main_image: episodes/014.png
 ---
 <% latest_episode = episodes_catalog.latest_episode %>
 <% current_season = episodes_catalog.current_season %>
-<% subscription = episodes_catalog.subscription %>
 
 <section class="pitch">
   <div class="w">
@@ -21,7 +20,7 @@ main_image: episodes/014.png
   <h2>Watch this Video Today</h2>
   
     <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: latest_episode, show_alternative_cta: true} %>
-    <%= partial "views/subscription_pricing_tier", locals: {tier_class: "suggested", subscription: subscription, show_alternative_cta: true} %>
+    <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: current_season, show_alternative_cta: false} %>
 
 </section>
 

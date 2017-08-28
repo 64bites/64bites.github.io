@@ -8,31 +8,6 @@
   <h1>Seasons</h1>
   <p class="lead">Seasons are simply <strong>bundles of nine episodes</strong>.</p>
   <p class="lead">Buying a whole season is <strong>less expensive</strong> than buying each video separately.</p>
-  <% if episodes_catalog.unreleased_seasons.count == 3 %>
-    <p class="lead"><strong>Three latest seasons</strong> are included with the subscription as a <strong>bonus</strong>.</p>
-  <% elsif episodes_catalog.unreleased_seasons.count == 2 %>
-    <p class="lead"><strong>Two latest seasons</strong> are included with the subscription as a <strong>bonus</strong>.</p>
-  <% elsif episodes_catalog.unreleased_seasons.count == 1 %>
-    <p class="lead"><strong>The latest season</strong> is included with the subscription as a <strong>bonus</strong>.</p>
-
-  <% else %>
-    <% raise "We can't have #{episodes_catalog.unreleased_seasons.count} unreleased seasons" %>
-  <% end %>
-  <p class="lead">Remaining seasons are available as a separate products.</p>
-  <p class="lead">Below you can find the list of all seasons:</p>
-  <% season = episodes_catalog.current_season %>
-  <% subscription = episodes_catalog.subscription %>
-  <% episodes_catalog.unreleased_seasons.each_with_index do |season, index| %>
-    <% link_to "/subscription" do %>
-      <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
-    <% end %>
-    <div class="season" id="season-<%= season.number %>" >
-      <% link_to "/subscription" do %>
-        <%= image_tag(season.poster_path, class: "thumbnail") %>
-      <% end %>
-    </div>
-  <% end %>
-  <%= partial "views/subscribe_button", locals: { caption: "Buy the Subscription"} %>
   <br><br>
   <% episodes_catalog.released_seasons.each_with_index do |season, index| %>
     <% link_to season_path(season) do %>

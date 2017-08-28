@@ -8,7 +8,6 @@ title: 64 bites - Paid Episode
   </div>
 </section>
 <% if defined?(episode) %>
-  <% is_available_via_subscription = episodes_catalog.episode_in_current_season?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
 
   <%= partial "views/episode_section", locals: { episode: episode } %>
@@ -16,12 +15,7 @@ title: 64 bites - Paid Episode
     <h2>Watch this Video Today</h2>
     
       <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: episode, show_alternative_cta: false} %>
-
-      <% if is_available_via_subscription %>
-        <%= partial "views/subscription_pricing_tier", locals: {tier_class: "suggested", subscription: episodes_catalog.subscription, show_alternative_cta: true} %>
-      <% else %>
-        <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
-      <% end %>
+      <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
   </section>
 
   <%= partial "views/testimonials_section" %>

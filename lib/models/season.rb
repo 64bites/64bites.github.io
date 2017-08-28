@@ -2,30 +2,14 @@ require_relative 'season/base'
 
 module Season
   class Current < Base
-    def formatted_title
-      "Current Season"
-    end
-
     def current?
       true
-    end
-
-    def slug
-      "current"
     end
   end
 
   class Past < Base
     def current?
       false
-    end
-
-    def formatted_name
-      "Season #{number}"
-    end
-
-    def formatted_title
-      "Season #{number} - #{title}"
     end
   end
 
