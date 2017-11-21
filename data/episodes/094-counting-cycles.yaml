@@ -5,8 +5,9 @@ price: 3.99
 gumroad_product_id: 64bites-ep094
 is_published: true
 publication_time: 2017-03-08
-actual_release_date: 2017-04-05
-wistia_id: 
+wistia_id: vjse6kdi5o
+poster_ext: jpg
+url_part: 6vcT2xyA
 description: "Aren't you tired of counting cycles in your routines by hand?\n\nLooking
   up specifications of every single instruction gets old soon.\n\nIt's especially
   hard if your code contains branches and loops.\n\nNot to mention page crossing.
@@ -15,4 +16,3 @@ description: "Aren't you tired of counting cycles in your routines by hand?\n\nL
   project.\n\nIt will automatically compute how many cycles your routine takes.\n\nWe
   won't need to look up specifications of every single instruction.\n\nWe will also
   make sure the library works well by using Test Driven Development to create it."
-poster_ext: jpg
