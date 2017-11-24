@@ -72,6 +72,7 @@ body.blog main ul, ul.pros, ul.cons, section.features ul {
     width: 100%;
     height: 100%;
 }
+.black_friday h1,
 .pitch h1 {
   font-size: 3em;
 }
@@ -177,7 +178,7 @@ body {
   }
 
   #mc_embed_signup{
-    clear:left; font:14px Helvetica,Arial,sans-serif; 
+    clear:left; font:14px Helvetica,Arial,sans-serif;
     form {
       padding: 0;
     }
@@ -242,7 +243,7 @@ body {
   margin: 0 auto;
   display: inline-block;
   text-align: center;
-  
+
   > li {
     display: inline-block;
     &:first-child:before {
@@ -307,6 +308,23 @@ section.pitch {
     font-style: normal;
   }
 }
+section.black_friday {
+  text-align:center;
+  color: #FFFCF7;
+  @include full-width-section(#000000);
+  margin-bottom: 0;
+  h1 {
+    margin-bottom: 0;
+  }
+  p.lead {
+    font-size: 150%;
+    padding-bottom: 10px;
+  }
+  em {
+    color: #FFDB50;
+    font-style: normal;
+  }
+}
 section.pricing-tiers {
     padding-bottom:2.5em;
     .features {
@@ -325,7 +343,7 @@ section.latest-episode {
   padding-top:1.5em;
   margin-bottom:0;
   padding-bottom:0.5em;
-} 
+}
 section.latest-episode, section.pricing-tiers {
   /*background: #FFFCF7;*/
   /*position: relative;*/
@@ -398,7 +416,7 @@ section.latest-episode, section.pricing-tiers {
     }
   }
 }
-.bubble 
+.bubble
 {
 position: relative;
 padding: 1em 0;
@@ -408,7 +426,7 @@ border: #4B473D solid 4px;
 margin-bottom:1.5em;
 }
 
-.bubble:after 
+.bubble:after
 {
 content: '';
 position: absolute;
@@ -423,7 +441,7 @@ bottom: -15px;
 left: 55px;
 }
 
-.bubble:before 
+.bubble:before
 {
 content: '';
 position: absolute;
@@ -447,21 +465,21 @@ left: 55px;
 .testimonial {
   @include span-columns(6);
   & blockquote:before, & blockquote:after {
-    content: "\201C";     
-    position: absolute;     
-    font-size: 80px;     
-    line-height: 1;     
-    color: #999;     
-    font-style: normal; 
-  } 
-  & blockquote:before {     
-    top: 0;     
-    left: 10px; 
-  } 
-  & blockquote:after {     
-    content: "\201D";     
-    right: 10px;     
-    bottom: -0.5em; 
+    content: "\201C";
+    position: absolute;
+    font-size: 80px;
+    line-height: 1;
+    color: #999;
+    font-style: normal;
+  }
+  & blockquote:before {
+    top: 0;
+    left: 10px;
+  }
+  & blockquote:after {
+    content: "\201D";
+    right: 10px;
+    bottom: -0.5em;
   }
   .author {
     position: relative;
@@ -501,7 +519,7 @@ section.pricing-tiers {
       }
     }
   }
-  &.two { 
+  &.two {
     .tier {
       @include span-columns(6);
       &.suggested {
@@ -569,7 +587,7 @@ section.pricing-tiers {
     }
 
     .call-to-action {
-      .button { 
+      .button {
         margin: 1em 2em;
         display: block;
         padding: 1em;
@@ -630,38 +648,38 @@ abbr { cursor: help; }
 
 .ribbon-new {
   background-color: #FFDB50;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFDB50), to(#DABB44)); 
-  background-image: -webkit-linear-gradient(top, #FFDB50, #DABB44); 
-  background-image:    -moz-linear-gradient(top, #FFDB50, #DABB44); 
-  background-image:     -ms-linear-gradient(top, #FFDB50, #DABB44); 
-  background-image:      -o-linear-gradient(top, #FFDB50, #DABB44); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFDB50), to(#DABB44));
+  background-image: -webkit-linear-gradient(top, #FFDB50, #DABB44);
+  background-image:    -moz-linear-gradient(top, #FFDB50, #DABB44);
+  background-image:     -ms-linear-gradient(top, #FFDB50, #DABB44);
+  background-image:      -o-linear-gradient(top, #FFDB50, #DABB44);
   color: #6a6340;
 }
 
 .ribbon-free {
   background-color: #229BE5;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#229BE5), to(#1F84C3)); 
-  background-image: -webkit-linear-gradient(top, #229BE5, #1F84C3); 
-  background-image:    -moz-linear-gradient(top, #229BE5, #1F84C3); 
-  background-image:     -ms-linear-gradient(top, #229BE5, #1F84C3); 
-  background-image:      -o-linear-gradient(top, #229BE5, #1F84C3); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#229BE5), to(#1F84C3));
+  background-image: -webkit-linear-gradient(top, #229BE5, #1F84C3);
+  background-image:    -moz-linear-gradient(top, #229BE5, #1F84C3);
+  background-image:     -ms-linear-gradient(top, #229BE5, #1F84C3);
+  background-image:      -o-linear-gradient(top, #229BE5, #1F84C3);
   color: #DDF2FF;
 }
 
 .ribbon-paid {
   background-color: #3DA736;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3DA736), to(#33992C)); 
-  background-image: -webkit-linear-gradient(top, #3DA736, #33992C); 
-  background-image:    -moz-linear-gradient(top, #3DA736, #33992C); 
-  background-image:     -ms-linear-gradient(top, #3DA736, #33992C); 
-  background-image:      -o-linear-gradient(top, #3DA736, #33992C); 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3DA736), to(#33992C));
+  background-image: -webkit-linear-gradient(top, #3DA736, #33992C);
+  background-image:    -moz-linear-gradient(top, #3DA736, #33992C);
+  background-image:     -ms-linear-gradient(top, #3DA736, #33992C);
+  background-image:      -o-linear-gradient(top, #3DA736, #33992C);
   color: #DDF2FF;
 }
 
 
 .ribbon:before, .ribbon:after {
   content: "";
-  border-top:   3px solid #6e8900;   
+  border-top:   3px solid #6e8900;
   border-left:  3px solid transparent;
   border-right: 3px solid transparent;
   position:absolute;

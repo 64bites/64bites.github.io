@@ -30,6 +30,7 @@
   <body class="<%= page_classes %>">
     <div class="container">
       <% if(!current_page.data.hide_menu) %>
+        <%= partial "views/black_friday" %>
         <%= partial "layouts/header" %>
       <% end %>
       <main>
