@@ -17,7 +17,7 @@
       <% link_to season_path(season) do %>
         <%= image_tag(season.poster_path, class: "thumbnail") %>
       <% end %>
-      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/blackfriday2017", caption: "Buy Season #{season.number} for just <s style='opacity:0.5;'>#{ season.price.formatted }</s> $15.99"} %>
+      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}", caption: "Buy Season #{season.number} for just #{season.price.formatted}"} %>
     </div>
   <% end %>
 </section>

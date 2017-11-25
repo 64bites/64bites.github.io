@@ -3,7 +3,7 @@
       <h3>just one Episode</h3>
     </div>
     <div class="price">
-      <span class="value"><s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19</span>
+      <span class="value">$3.99</span>
     </div>
     <div class="features">
       <ul class="fa-ul">
@@ -18,10 +18,10 @@
 
     </div>
       <div class="price-per-episode">
-        Price per episode: <s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19
+        Price per episode: <%= episode.price.formatted %>
     </div>
     <div class="call-to-action">
-      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/blackfriday2017">Get Episode</a>
+      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>">Get Episode</a>
     </div>
     <% if show_alternative_cta %>
       <div class="more">
