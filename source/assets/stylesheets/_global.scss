@@ -72,7 +72,6 @@ body.blog main ul, ul.pros, ul.cons, section.features ul {
     width: 100%;
     height: 100%;
 }
-.cyber_monday h1,
 .pitch h1 {
   font-size: 3em;
 }
@@ -314,19 +313,23 @@ section.cyber_monday {
   @include full-width-section(#000000);
   margin-bottom: 0;
   h1 {
+    font-size: 4.5em;
     margin-bottom: 0;
+    em {
+      font-style: normal;
+      background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 2px #fff;
+    }
   }
   p.lead {
     font-size: 150%;
     padding-bottom: 10px;
-  }
-  em {
-    color: #FFDB50;
-    font-style: normal;
-    background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px #fff;
+    em {
+      color: #FFDB50;
+      font-style: normal;
+    }
   }
 }
 section.pricing-tiers {
