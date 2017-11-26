@@ -1,7 +1,3 @@
-#= require "highlight"
-#= require "syntax-highlighting"
-#= require "jquery.bbq"
-
 self.loadKMTrackableVideo = (wistia_object, videoName) ->
   wistia_object.bind "play", ->
     _kmq.push(['record', 'Played Video', {'Played Video Name': videoName}])
@@ -13,3 +9,4 @@ self.loadKMTrackableVideo = (wistia_object, videoName) ->
     _kmq.push(['record', 'Finished Video', {'Entered Email Within Video Name':videoName}])
   wistia_object.bind "seek", ->
     _kmq.push(['record', 'Finished Video', {'Seeked Video Name':videoName}])
+

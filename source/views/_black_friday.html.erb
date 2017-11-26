@@ -1,6 +1,32 @@
-  <section class="black_friday">
+  <section class="cyber_monday">
     <div class="w">
-      <h1 style="width: 100%">Enjoy <em>Black Friday</em> Sale</h1>
-      <p class="lead">All prices are 20% off!</p> 
+      <h1 style="width: 100%">Enjoy <em>Digital Monday</em> Sale</h1>
+      <p class="lead">All prices are 20% off for the next:</p>
+      <div class="flipclock" data-deadline="2017-11-27T13:59:59" data-timezone="Europe/Warsaw"></div>
+      <%#<div class="flipclock" data-deadline="2017-11-30T23:59:59" data-timezone="Europe/Warsaw"></div>%>
     </div>
   </section>
+
+<% content_for(:javascript) do %>
+  <%= javascript_include_tag "moment-with-locales", "moment-timezone-with-data-2012-2022", "flipclock" %>
+  <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
+<script>
+$(document).ready(function(){    
+    var $clock = $('.flipclock');
+    var timezone = $clock.data("timezone");
+    var deadline = $clock.data("deadline");
+    var clientTimezone = moment.tz.guess();
+    var currentDate = moment.tz(moment(), clientTimezone);
+    var futureDate = moment.tz(deadline, timezone);
+    var secondsLeft = Math.round(Math.max(futureDate-currentDate, 0) / 1000);
+    var daysLeft = Math.floor(secondsLeft / (60*60*24));
+    var isDaily = daysLeft >= 1;
+    var width = isDaily ? "460px" : "340px";
+    $clock.width(width);
+    var clock = $clock.FlipClock(secondsLeft, {
+      clockFace: isDaily ? 'DailyCounter' : 'HourlyCounter',
+      countdown: true
+    });
+});
+</script>
+<% end %>
