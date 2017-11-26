@@ -7,7 +7,7 @@
     <% if episode.free? %>
       <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
     <% else %>
-      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>">Buy this episode for just <%= episode.price.formatted %>!</a> 
+      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/blackfriday2017">Buy this episode for just <s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19!</a> 
     <% end %>
   </div>
   <div class="poster">
