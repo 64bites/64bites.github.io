@@ -1,0 +1,17 @@
+section.buy {
+  @include outer-container;
+  .buy-button {
+    @include span-columns(10);
+    @include shift(1);
+    .button {
+      width: 100%;
+      background-color: $color-button-primary;
+      font-size: 1.5em;
+      &:hover, &:focus {
+        background-color: lighten($color-button-primary, 10%);
+      }
+      transition: all 0.3s;
+    }
+    p { text-align: center; }
+  }
+}

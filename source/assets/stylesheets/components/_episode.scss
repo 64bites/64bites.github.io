@@ -1,0 +1,39 @@
+.episode {
+  @include outer-container;
+  padding: 1em 0;
+
+  &__info {
+    @include span-columns(8);
+  }
+
+  &__poster {
+    position: relative;
+    padding: 0;
+    @include span-columns(3.9);
+    & > img,
+    & > a > img {
+      border-radius: 3px;
+      box-shadow: 5px 5px 10px rgba($color-dark, .4);
+
+    }
+  }
+  .episode-buy-button {
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s;
+
+    &--free {
+      background-color: $color-button-secondary;
+      &:hover, &:focus {
+        background-color: lighten($color-button-secondary, 10%);
+      }
+    }
+    &--paid {
+      background-color: $color-button-primary;
+      &:hover, &:focus {
+        background-color: lighten($color-button-primary, 10%);
+      }
+    }
+  }
+}
+

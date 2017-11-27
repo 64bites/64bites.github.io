@@ -1,0 +1,107 @@
+section.pricing-tiers {
+  @include outer-container;
+  &.three {
+    .tier {
+      @include span-columns(4);
+      &.suggested {
+        margin-left: -2.35765%;
+        margin-right: 0;
+        margin-top: -(2.35765%/2);
+        width: 31.76157 + 2*2.35765%;
+      }
+    }
+  }
+  &.two {
+    .tier {
+      @include span-columns(6);
+      &.suggested {
+        margin-right: 0;
+        margin-left: -2.35765%;
+        margin-top: -(2.35765%/2);
+        width: 48.82117% + 2.35765%;
+      }
+    }
+  }
+  .tier {
+    border-radius: 3px;
+    border: 1px solid $color-text-primary;
+    position: relative;
+    background: $color-light;
+    box-shadow: 5px 5px 10px rgba($color-dark, .4);
+    .fa-li {
+      color: $color-blue;
+    }
+    &.left {
+      border-right: none;
+      border-radius: 3px 0 0 3px;
+    }
+    &.right {
+      border-left: none;
+    }
+
+    .title, .price, .price-per-episode {
+      text-align: center;
+    }
+    .title h3 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+    .title, .price {
+      border-bottom: 1px solid $color-text-primary;
+    }
+    .title, .price {
+      padding: 1em 0.2em;
+    }
+    .features {
+      padding: 1em 0.2em 0;
+    }
+    &.suggested .price {
+      padding: 1.7em;
+    }
+    .price {
+      background: $color-text-primary;
+      color: $color-light;
+      position: relative;
+      .variant {
+        position: absolute;
+        bottom: 0.5em;
+        width: 100%;
+        display: block;
+        left: 0;
+      }
+    }
+    .price-per-episode {
+      /*display: none;*/
+      margin-top:0.5em;
+      padding: 0.5em;
+      background: lighten($color-blue, 45%);
+    }
+
+    .price .value {
+      font-size: 2.2em;
+      color: $color-text-light-emphasize;
+    }
+
+    .call-to-action {
+      .button {
+        margin: 1em 2em;
+        display: block;
+        padding: 1em;
+        background-color: $color-button-primary;
+        &:hover, &:focus {
+          background-color: lighten($color-button-primary, .1);
+        }
+        transition: all 0.3s;
+      }
+    }
+    .more {
+      padding-top: 0.5em;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+

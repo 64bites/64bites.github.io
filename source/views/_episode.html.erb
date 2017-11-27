@@ -1,28 +1,19 @@
 <div class="episode <%= episode.free? ? "free" : "paid" %>">
-  <div class="info">
+  <div class="episode__info">
     <h2><%= link_to "Episode #{ episode.formatted_title}", episode_path(episode) %></h2>
     <!-- use article.summary(250) if you have Nokogiri available to show just
          the first 250 characters -->
-    <p><%= truncate(episode.description.gsub("<p></p>",''), length: 200) %> <%= link_to "Read more", episode_path(episode) %></p>
+    <p><%= truncate(episode.description.gsub("<p></p>",''), length: 200) %> <%= link_to "Read more &rarr;", episode_path(episode) %></p>
     <% if episode.free? %>
-      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
+      <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
     <% else %>
-      <a class="button" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/blackfriday2017">Buy this episode for just <s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19!</a> 
+      <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/cybermonday2017?wanted=true">Buy this episode for just <s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19!</a> 
     <% end %>
   </div>
-  <div class="poster">
+  <div class="episode__poster">
     <% link_to episode_path(episode) do %>
       <%= image_tag(episode.poster_path, class: "thumbnail") %>
-      <%#= image_tag "play-icon.png", class: "play-icon" %>
     <% end %>
-    <div class="ribbon-wrapper">
-      <% if episodes_catalog.latest_episode?(episode) %>
-        <div class="ribbon ribbon-new"><i class="fa fa-star"></i> NEW</div>
-      <% elsif episode.free? %>
-        <div class="ribbon ribbon-free"><i class="fa fa-gift"></i> FREE</div>
-      <% else %>
-        <div class="ribbon ribbon-paid"><i class="fa fa-dollar"></i> PAID</div>
-      <% end %>
-    </div>
+    <%= partial "views/ribbon", locals: { episode: episode } %>
   </div>
 </div>

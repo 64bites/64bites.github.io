@@ -1,30 +1,8 @@
-@mixin full-width-section($background-color) {
-  background: $background-color;
-  position: relative;
-  .w:before {
-    right: 100%;
-  }
-  .w:after {
-    left: 100%;
-  }
-  .w:before, .w:after {
-    content: "";
-    z-index: -1;
-    background-color: $background-color;
-    /*border-top: 1px solid #e5e5ee;*/
-    /*border-bottom: 1px solid #e5e5ee;*/
-    content: "";
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    width: 1000px;
-  }
-}
 
-.opt-in {
-  display: none;
-}
 p.lead {
+  font-size: 1.4em;
+}
+p, ul {
   font-size: 1.2em;
 }
 body {
@@ -52,26 +30,10 @@ body {
 }
 body.blog main ul, ul.pros, ul.cons, section.features ul {
   list-style-type: disc;
-  padding: 1em 2em;
-
+  /*padding: 1em 2em;*/
+  padding-bottom: 1em;
 }
 
-.yt-videowrapper {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-}
-.yt-videowrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 .pitch h1 {
   font-size: 3em;
 }
@@ -81,36 +43,19 @@ h1 {
 h2 {
   font-size: 1.5em;
 }
-section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+section.homepage,
+section.season,
+section.episodes,
+section.seasons {
   margin-top: 3em;
 }
-section.testimonials, section.homepage, section.season, section.episodes, section.seasons, section.subscription {
+section.testimonials,
+section.featured-episodes,
+section.homepage,
+section.season,
+section.episodes,
+section.seasons {
   h1, h2 { text-align: center;}
-}
-section.buy {
-  @include outer-container;
-  .buy-button {
-    @include span-columns(10);
-    @include shift(1);
-    .button {
-      width: 100%;
-      background-color: #3DA736;
-      font-size: 1.5em;
-      &:hover, &:focus {
-        background-color: lighten(#3DA736, 10%);
-      }
-      transition: all 0.3s;
-    }
-    .button .old-price {
-      text-decoration: line-through;
-      color: darken(white, 15%);
-    }
-    p { text-align: center; }
-  }
-}
-.old-price {
-  text-decoration: line-through;
-  color: #5D594E;
 }
 body {
   & > .container {
@@ -123,160 +68,10 @@ body {
   main > section {
     margin-bottom: 3em;
   }
-  .pitch {
-    margin-bottom: 3em;
-    @include outer-container;
-    .author {
-      @include span-columns(3);
-      > img {
-        margin-top: 2em;
-        border-radius: 50%;
-      }
-      span {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-      }
-    }
-    .features {
-      @include span-columns(9);
-    }
-  }
-  .featured-episodes {
-    @include outer-container;
-    &.featured-3 > .featured-episode{
-      @include span-columns(4);
-    }
-    &.featured-2 > .featured-episode {
-      @include span-columns(6);
-    }
-    &.featured-1 > .featured-episode {
-      @include span-columns(6);
-      @include shift(3);
-    }
-    .featured-episode {
-      position: relative;
-      &:hover {
-        .play-icon {
-          opacity: 1;
-        }
-      }
-      h4 {
-        width: 100%;
-        text-align: center;
-      }
-    }
-    .play-icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.8;
-      transition: opacity 0.5s ease;
-    }
-  }
-
-  #mc_embed_signup{
-    clear:left; font:14px Helvetica,Arial,sans-serif;
-    form {
-      padding: 0;
-    }
-    .mc-field-group {
-      width: 100%;
-      padding-bottom: 2%;
-    }
-    div#mce-responses {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      div.response {
-        width: 100%;
-        margin: 0 0 1em 0;
-        padding: 1em;
-        font-size: 1.2em;
-        &#mce-success-response {
-          border: 1px solid #529214;
-          border-radius: 5px;
-        }
-      }
-    }
-
-    .button {
-      height: auto;
-      padding: 1em 2em;
-      background-color: #4B473D;
-      font-size: 1.5em;
-      transition: all 0.3s;
-
-      &:hover:after {
-        height: 260%;
-        opacity: 1;
-      }
-      &:after {
-          width: 100%;
-          height: 0;
-          top: 50%;
-          left: 50%;
-          background: #fff;
-          opacity: 0;
-          -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        }
-      }
-
-  }
 }
-.navigation-bar {
-  display: inline-block;
-  position: relative;
-  line-height: 38px;
-  vertical-align: top;
-  margin: 0;
-  top: 0;
-  height: 38px;
-  /*border-top: 1px dotted lighten(#5D594E, 0.5);*/
-  /*border-bottom: 1px dotted lighten(#5D594E, 0.5);*/
-  ul {
-  margin: 0 auto;
-  display: inline-block;
-  text-align: center;
-
-  > li {
-    display: inline-block;
-    &:first-child:before {
-        content: "";
-      }
-    &:before {
-      content: "|";
-      margin:0 1em;
-    }
-    a {
-      color: #5D594E;
-      transition: all 0.3s;
-      &:hover {
-        color: white;
-      }
-    }
-  }
-
-  .active {
-    font-weight: bold;
-  }
-}
-}
-
 section.seasons {
   .season {
-    /*@include outer-container;*/
     margin: 1em 0;
-    .poster {
-      /*@include span-columns(6);*/
-    }
-    .info {
-      /*@include span-columns(6);*/
-    }
   }
 }
 
@@ -308,9 +103,9 @@ section.pitch {
   }
 }
 section.cyber_monday {
+  @include full-width-section(#000000);
   text-align:center;
   color: #FFFCF7;
-  @include full-width-section(#000000);
   margin-bottom: 0;
   h1 {
     font-size: 4.5em;
@@ -346,356 +141,5 @@ section.pricing-tiers, section.latest-episode {
   }
 }
 
-section.latest-episode {
-  padding-top:1.5em;
-  margin-bottom:0;
-  padding-bottom:0.5em;
-}
-section.latest-episode, section.pricing-tiers {
-  /*background: #FFFCF7;*/
-  /*position: relative;*/
-  @include full-width-section(#FBE6C8);
-  /*.w:before {*/
-    /*right: 100%;*/
-  /*}*/
-  /*.w:after {*/
-    /*left: 100%;*/
-  /*}*/
-  /*.w:before, .w:after {*/
-    /*content: "";*/
-    /*z-index: -1;*/
-    /*background-color: #FFFCF7;*/
-    /*[>border-top: 1px solid #e5e5ee;<]*/
-    /*[>border-bottom: 1px solid #e5e5ee;<]*/
-    /*content: "";*/
-    /*position: absolute;*/
-    /*top: 0px;*/
-    /*bottom: 0px;*/
-    /*width: 1000px;*/
-  /*}*/
-}
-.episodes, .latest-episode {
-  & > .episode, & .w > .episode {
-    @include outer-container;
-    padding: 1em 0;
-    .poster {
-      position: relative;
-      @include span-columns(3.9);
-      .play-icon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        opacity: 0.8;
-        transition: opacity 0.5s ease;
-      }
-    }
 
-    .info {
-      @include span-columns(8);
-    }
-  }
-}
-.episodes > .episode {
-  a.button {
-    display: block;
-    margin: 0 auto;
-    transition: all 0.3s;
-  }
-
-  &.paid {
-    a.button {
-
-      background-color: #3DA736;
-      &:hover, &:focus {
-        background-color: lighten(#3DA736, 10%);
-      }
-    }
-  }
-  &.free {
-    /*#229BE5, #1F84C3*/
-    a.button {
-
-      background-color: #1F84C3;
-      &:hover, &:focus {
-        background-color: lighten(#1F84C3, 10%);
-      }
-    }
-  }
-}
-.bubble
-{
-position: relative;
-padding: 1em 0;
-background: #FFFFFF;
-border-radius: 22px;
-border: #4B473D solid 4px;
-margin-bottom:1.5em;
-}
-
-.bubble:after
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 15px 20px 0;
-border-color: #FFFFFF transparent;
-display: block;
-width: 0;
-z-index: 1;
-margin-left: -20px;
-bottom: -15px;
-left: 55px;
-}
-
-.bubble:before
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 18px 23px 0;
-border-color: #4B473D transparent;
-display: block;
-width: 0;
-z-index: 0;
-margin-left: -23px;
-bottom: -22px;
-left: 55px;
-}
-
-.testimonials {
-  .row {
-    @include outer-container;
-  }
-}
-
-.testimonial {
-  @include span-columns(6);
-  & blockquote:before, & blockquote:after {
-    content: "\201C";
-    position: absolute;
-    font-size: 80px;
-    line-height: 1;
-    color: #999;
-    font-style: normal;
-  }
-  & blockquote:before {
-    top: 0;
-    left: 10px;
-  }
-  & blockquote:after {
-    content: "\201D";
-    right: 10px;
-    bottom: -0.5em;
-  }
-  .author {
-    position: relative;
-    margin-bottom: 1em;
-  }
-  .avatar {
-    width: 100px;
-    height: 100px;
-    margin-left: 10px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .credentials {
-    margin-top: 1em;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding-left: 120px;
-    box-sizing: border-box;
-    width: 100%;
-    display: inline-block;
-    min-height: 100px;
-    vertical-align: middle;
-  }
-}
-
-section.pricing-tiers {
-  @include outer-container;
-  &.three {
-    .tier {
-      @include span-columns(4);
-      &.suggested {
-        margin-left: -2.35765%;
-        margin-right: 0;
-        margin-top: -(2.35765%/2);
-        width: 31.76157 + 2*2.35765%;
-      }
-    }
-  }
-  &.two {
-    .tier {
-      @include span-columns(6);
-      &.suggested {
-        margin-right: 0;
-        margin-left: -2.35765%;
-        margin-top: -(2.35765%/2);
-        width: 48.82117% + 2.35765%;
-      }
-    }
-  }
-  .tier {
-    border: 1px solid #4B473D;
-    position: relative;
-    background: #FFFCF7;
-    .fa-li {
-      color: #1589CE;
-    }
-    &.left {
-      border-right: none;
-    }
-    &.right {
-      border-left: none;
-    }
-
-    .title, .price, .price-per-episode {
-      text-align: center;
-    }
-    .title h3 {
-      margin: 0;
-      font-size: 1.1em;
-    }
-    .title, .price {
-      border-bottom: 1px solid #5D594E;
-    }
-    .title, .price {
-      padding: 1em 0.2em;
-    }
-    .features {
-      padding: 1em 0.2em 0;
-    }
-    &.suggested .price {
-      padding: 1.7em;
-    }
-    .price {
-      /*background: #5D594E;*/
-      /*color: #FFFCF7;*/
-      position: relative;
-      .variant {
-        position: absolute;
-        bottom: 0.5em;
-        width: 100%;
-        display: block;
-        left: 0;
-      }
-    }
-    .price-per-episode {
-      /*display: none;*/
-      margin-top:0.5em;
-      padding: 0.5em;
-      /*background: #D2EEFF;*/
-    }
-    .price .value {
-      font-size: 2.2em;
-      /*color: #FFDB50;*/
-    }
-
-    .call-to-action {
-      .button {
-        margin: 1em 2em;
-        display: block;
-        padding: 1em;
-        background-color: #3DA736;
-        &:hover, &:focus {
-          background-color: #2DE022;
-          color: #0D5E8E;
-        }
-        transition: all 0.3s;
-      }
-    }
-    .more {
-      padding-top: 0.5em;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      text-align: center;
-    }
-  }
-}
 abbr { cursor: help; }
-
-
-
-
-
-.wrapper {
-  position: relative;
-}
-
-.ribbon-wrapper {
-  width: 85px;
-  height: 88px;
-  overflow: hidden;
-  position: absolute;
-  top: -3px;
-  right: -3px;
-}
-
-.ribbon {
-  font: bold 15px Sans-Serif;
-  color: #333;
-  text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform:    rotate(45deg);
-  -ms-transform:     rotate(45deg);
-  -o-transform:      rotate(45deg);
-  position: relative;
-  padding: 7px 0;
-  left: -5px;
-  top: 15px;
-  width: 120px;
-  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
-  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
-}
-
-.ribbon-new {
-  background-color: #FFDB50;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFDB50), to(#DABB44));
-  background-image: -webkit-linear-gradient(top, #FFDB50, #DABB44);
-  background-image:    -moz-linear-gradient(top, #FFDB50, #DABB44);
-  background-image:     -ms-linear-gradient(top, #FFDB50, #DABB44);
-  background-image:      -o-linear-gradient(top, #FFDB50, #DABB44);
-  color: #6a6340;
-}
-
-.ribbon-free {
-  background-color: #229BE5;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#229BE5), to(#1F84C3));
-  background-image: -webkit-linear-gradient(top, #229BE5, #1F84C3);
-  background-image:    -moz-linear-gradient(top, #229BE5, #1F84C3);
-  background-image:     -ms-linear-gradient(top, #229BE5, #1F84C3);
-  background-image:      -o-linear-gradient(top, #229BE5, #1F84C3);
-  color: #DDF2FF;
-}
-
-.ribbon-paid {
-  background-color: #3DA736;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3DA736), to(#33992C));
-  background-image: -webkit-linear-gradient(top, #3DA736, #33992C);
-  background-image:    -moz-linear-gradient(top, #3DA736, #33992C);
-  background-image:     -ms-linear-gradient(top, #3DA736, #33992C);
-  background-image:      -o-linear-gradient(top, #3DA736, #33992C);
-  color: #DDF2FF;
-}
-
-
-.ribbon:before, .ribbon:after {
-  content: "";
-  border-top:   3px solid #6e8900;
-  border-left:  3px solid transparent;
-  border-right: 3px solid transparent;
-  position:absolute;
-  bottom: -3px;
-}
-
-.ribbon:before {
-  left: 0;
-}
-.ribbon:after {
-  right: 0;
-}

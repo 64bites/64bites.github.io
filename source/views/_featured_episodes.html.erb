@@ -1,8 +1,8 @@
   <section class="featured-episodes featured-<%= featured_episodes.count%>">
-    <h2>What if you could learn something new in just 5 minutes?</h2>
-    <p>Ready? Then watch <strong>any</strong> of those videos <strong>now</strong>:</p>
-    <% featured_episodes.each do |episode| %>
-      <div class="featured-episode">
+    <% featured_episodes.each.with_index do |episode, index| %>
+      <% classes = ["featured-episode"] %>
+      <% classes << "featured-episode--best-one" if index == 1 %>
+      <div class="<%= classes.join(" ") %>">
         <%= partial "views/wistia_responsive_popup", locals: {episode: episode} %>
         <h4><%= episode.formatted_title %></h4>
       </div>

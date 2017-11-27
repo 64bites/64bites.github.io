@@ -1,8 +1,10 @@
-<% url = "https://gumroad.com/l/#{season.gumroad_product_id}" unless defined?(url) %>
+<% single_product = false unless defined?(single_product) %>
+<% wanted = false unless defined?(wanted) %>
+<% url = "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=#{wanted.to_s}" unless defined?(url) %>
 <% caption = "Buy Season #{season.number} for just #{season.price.formatted}" unless defined?(caption) %>
 <section class="buy">
   <div class="buy-button">
-    <a class="button" href="<%= url %>"><%= caption %></a>
+    <a class="button" data-gumroad-single-product="<%= single_product.to_s %>" href="<%= url %>"><%= caption %></a>
     <p>Includes <strong>9 videos</strong>, <strong>detailed transcripts</strong>, <strong>source code examples</strong> and <strong>exercises</strong>.</p>
   </div>
 </section>

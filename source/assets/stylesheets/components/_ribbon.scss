@@ -1,0 +1,69 @@
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon {
+  font: bold 15px Sans-Serif;
+  color: #333;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  box-shadow: 0px 0px 3px rgba($color-dark, 0.3);
+}
+
+.ribbon-new {
+  background-color: $color-ribbon-background-new;
+  background-image: linear-gradient(
+    to right bottom,
+    lighten($color-ribbon-background-new, 10%),
+    darken($color-ribbon-background-new, 10%)
+  );
+  color: $color-ribbon-text;
+}
+
+.ribbon-free {
+  background-color: $color-ribbon-background-free;
+  background-image: linear-gradient(
+    to right bottom,
+    lighten($color-ribbon-background-free, 10%),
+    darken($color-ribbon-background-free, 10%)
+  );
+  color: $color-ribbon-text;
+}
+
+.ribbon-paid {
+  background-color: $color-ribbon-background-paid;
+  background-image: linear-gradient(
+    to right bottom,
+    lighten($color-ribbon-background-paid, 10%),
+    darken($color-ribbon-background-paid, 10%)
+  );
+  color: $color-ribbon-text;
+}
+
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  border-top:   3px solid #6e8900;
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon:before {
+  left: 0;
+}
+.ribbon:after {
+  right: 0;
+}

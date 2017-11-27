@@ -1,0 +1,38 @@
+.navigation-bar {
+  display: inline-block;
+  position: relative;
+  line-height: 38px;
+  vertical-align: top;
+  margin: 0;
+  top: 0;
+  height: 38px;
+  ul {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      &:first-child:before {
+          content: "";
+        }
+      &:before {
+        content: "|";
+        margin:0 1em;
+      }
+      a {
+        color: $color-text-primary;
+        transition: all 0.3s;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  }
+}
+
+

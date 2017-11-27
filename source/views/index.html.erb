@@ -13,17 +13,60 @@ main_image: episodes/014.png
   </div>
 </section>
 
-<section class="homepage"><h1>Here's The Latest Video</h1></section>
-<%= partial "views/episode_section", locals: { episode: latest_episode, truncate_info: false } %>
+<section>
+  <h2 class="u-margin-top-large u-centered-text">Let me guess, You Love Commodore&nbsp;64</h2>
+  <p class="lead">You've always wanted to either create a C64 game or a demo,<br>or at least figure out how they are made.</p>
+  <p>But it's not that easy. If you start from scratch, you need to learn <strong>BASIC</strong> and <strong>assembly</strong>, figure out how to put <strong>sprites</strong> on the screen, use graphical modes, <strong>play SID music</strong> or handle joystick.</p>
+  <p>If you already know all of that, you might be curious about <strong>opening borders</strong>, displaying more than eight sprites, stabilizing <strong>raster interrupts</strong> and dealing with those pesky <strong>BAD LINES</strong>.</p>
+    <p>The good news is, you can find a lot of old books about programming C64. You can even learn by reading source code of released demos.</p>
 
-<section class="pricing-tiers two">
-  <h2>Watch this Video Today</h2>
-  
-    <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: latest_episode, show_alternative_cta: true} %>
-    <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: current_season, show_alternative_cta: false} %>
+    <h2 class="u-margin-top-large u-centered-text">If only you had time for that...</h2>
+    <p>Ok, let's see where this path might lead you.</p>
+    <p>Finding books, reading them, realizing they are not always correct, searching for articles, reading source code, asking for help on forums...</p>
+    <p>It is <strong>tedious</strong>.</p>
+    <p>It is <strong>frustrating</strong>.</p>
+    <p>It <strong>takes ages</strong>.</p>
+    <p>Instead of a hobby you'll get another full-time job.</p><p>It's just not fun anymore, and your family doesn't enjoy it either.</p>
+    <p>They secretly conspire to get rid of this "OLD CRAPPY COMPUTER" of yours.</p>
+    <p>But what if I told you...</p> 
+    <h2 class="u-margin-top-large u-centered-text">There is a better way</h2>
+    <p>Imagine someone doing all that hard work so you don't have to.</p>
+    <p>Imagine watching a short video that you can easily fit it in your schedule.</p>
+    <p>It takes only five minutes, but it teaches you just enough to push you toward your goal.</p>
+    <p>Later you can get back to it. Read the source code and follow along in your own pace.</p>
+    <p>Sounds too good to be true?</p>
+   </section>
 
+  <h2 class="u-margin-top-large u-centered-text">Why don't you see for yourself?</h2>
+  <p >Watch <strong>any</strong> of those videos <strong>now</strong> and learn something new in the next five minutes!</p>
+  <br>
+   <%= partial "views/featured_episodes" %>
+   <section>
+      <h2 class="u-margin-top-large u-centered-text">That's not all</h2>
+
+    <%#<p>I'm reading tons of books, articles and forums so you don't have to. I'm working hard to give you exactly what you need to achieve your goal.</p>%>
+    <p>Watching a video is just a part of the fun. Each of those comes with:</p>
+    <ul class="pros">
+      <li><strong>complete transcript</strong> so that you won't miss a single word,</li>
+      <li><strong>full source code</strong> that you can modify on your own and</li>
+      <li><strong>programming exercises</strong> to make sure you completely understand the topic.</li>
+    </ul>
+    <p>You can <strong>watch them online</strong> on any device or <strong>download</strong> for your convenience <strong>DRM free</strong>.</p>
+    <p>There are already 104 short, <strong>~5-minute-videos</strong> covering a small bit of <strong>BASIC</strong>, <strong>6502/6510 assembly</strong> and the architecture of Commodore 64.</p>
 </section>
-
+<section class="first-season">
+  <% season = episodes_catalog.find_season(1) %>
+  <h2 class="u-margin-top-large u-centered-text">Get started with the first set of videos</h2>
+  <p>Below, you will find a package of first nine episodes. It will put you on the right track.</p>
+  <p>First six videos will tell you how to set up your tools, start programming in <strong>BASIC</strong>, and show you how to draw low-resolution graphics on the screen using <strong>FOR loops, READ, DATA, PEEK & POKE</strong>.</p>
+  <p>The last three episodes of this season are a gentle introduction to <strong>assembly</strong>. Which will be used for the most part of the series later on.</p>
+  <div class="season" id="season-<%= season.number %>" >
+    <% link_to season_path(season) do %>
+      <%= image_tag(season.poster_path, class: "season__poster") %>
+    <% end %>
+    <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/cybermonday2017?wanted=true", caption: "Buy Season #{season.number} for just <s style='opacity:0.5;'>#{ season.price.formatted }</s> $15.99"} %>
+  </div>
+</section>
 <%= partial "views/testimonials_section" %>
 
 <% content_for(:javascript) do %>

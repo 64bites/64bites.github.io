@@ -12,24 +12,24 @@ title: "64Bites - Season"
   <% free_episodes = episodes.select(&:free?) %>
 <section class="season">
   <h1>Season <%= season.number %> - <small><%= season.title %></small></h1>
-  <%= image_tag(season.poster_path, class: "thumbnail") %>
+  <%= image_tag(season.poster_path, class: "season__poster") %>
   </section>
   <section class="features">
     <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
   </section>
-  <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/blackfriday2017", caption: "Buy Season #{season.number} for just <s style='opacity:0.5;'>#{ season.price.formatted }</s> $15.99"} %>
+  <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/cybermonday2017?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style='opacity:0.5;'>#{ season.price.formatted }</s> $15.99"} %>
 
   <%= partial "views/testimonials_section" %>
 
   <section class="episodes">
     <h2>All Episodes in this Season</h2>
   <% episodes.each do |episode| %>
-    <div class="episode free">
-      <div class="info">
+    <div class="episode">
+      <div class="episode__info">
         <h2>Episode <%= episode.formatted_title %></h2>
         <%= episode.description %>
       </div>
-      <div class="poster">
+      <div class="episode__poster">
         <%= image_tag(episode.poster_path, class: "thumbnail") %>
       </div>
     </div>

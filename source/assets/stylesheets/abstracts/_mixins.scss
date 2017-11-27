@@ -1,0 +1,19 @@
+@mixin full-width-section($background-color) {
+  background-color: $background-color;
+  position: relative;
+  .w:before {
+    right: 100%;
+  }
+  .w:after {
+    left: 100%;
+  }
+  .w:before, .w:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: $background-color;
+  }
+}
