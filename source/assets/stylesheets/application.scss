@@ -10,6 +10,9 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
+@import "layout/header";
+@import "layout/footer";
+
 @import "components/bubble";
 @import "components/episode";
 @import "components/season";

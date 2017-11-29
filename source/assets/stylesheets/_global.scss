@@ -8,25 +8,6 @@ p, ul {
 body {
   background-color: $color-background;
   color: $color-dark;
-  header {
-    margin: 1em 0;
-    padding: 0;
-    height: 38px;
-  }
-  header > a.logo {
-    display:inline-block;
-    margin: 0 0;
-    height: 38px;
-    width: 200px;
-    background-size: contain;
-    background-image: url(image-path("logo-horizontal2.png"));
-    background-repeat: no-repeat no-repeat;
-    background-position: center center;
-  }
-  footer {
-    padding: 4em;
-    text-align: center;
-  }
 }
 body.blog main ul, ul.pros, ul.cons, section.features ul {
   list-style-type: disc;
