@@ -1,0 +1,36 @@
+.bubble {
+  position: relative;
+  padding: 1em 0;
+  background: $color-bubble-background;
+  border-radius: 22px;
+  border: $color-bubble-border solid 4px;
+  margin-bottom:1.5em;
+
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: $color-bubble-border transparent;
+    display: block;
+    width: 0;
+  }
+  &:after {
+    border-width: 15px 20px 0;
+    z-index: 1;
+    margin-left: -20px;
+    bottom: -15px;
+    left: 55px;
+  }
+
+  &:before {
+    border-width: 18px 23px 0;
+    z-index: 0;
+    margin-left: -23px;
+    bottom: -22px;
+    left: 55px;
+  }
+}
+
+

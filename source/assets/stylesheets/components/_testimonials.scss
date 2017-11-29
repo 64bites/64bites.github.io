@@ -1,43 +1,3 @@
-.bubble
-{
-position: relative;
-padding: 1em 0;
-background: $color-bubble-background;
-border-radius: 22px;
-border: $color-bubble-border solid 4px;
-margin-bottom:1.5em;
-}
-
-.bubble:after
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 15px 20px 0;
-border-color: $color-bubble-border transparent;
-display: block;
-width: 0;
-z-index: 1;
-margin-left: -20px;
-bottom: -15px;
-left: 55px;
-}
-
-.bubble:before
-{
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 18px 23px 0;
-border-color: $color-bubble-border transparent;
-display: block;
-width: 0;
-z-index: 0;
-margin-left: -23px;
-bottom: -22px;
-left: 55px;
-}
-
 .testimonials {
   .row {
     @include outer-container;
@@ -65,7 +25,7 @@ left: 55px;
   }
   .author {
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
   .avatar {
     width: 100px;
