@@ -6,8 +6,8 @@ p, ul {
   font-size: 1.2em;
 }
 body {
-  background-color: #FBE6C8;
-  color: #5D594E;
+  background-color: $color-background;
+  color: $color-dark;
   header {
     margin: 1em 0;
     padding: 0;
