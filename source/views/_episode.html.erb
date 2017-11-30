@@ -7,7 +7,7 @@
     <% if episode.free? %>
       <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
     <% else %>
-      <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/cybermonday2017?wanted=true">Buy this episode for just <s style='opacity:0.5;'><%= episode.price.formatted %></s> $3.19!</a> 
+      <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true">Buy this episode for just <%= episode.price.formatted %>!</a> 
     <% end %>
   </div>
   <div class="episode__poster">
