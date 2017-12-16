@@ -1,10 +1,10 @@
 .bubble {
   position: relative;
-  padding: 1em 0;
+  padding: 2.5rem 4.5rem;
   background: $color-bubble-background;
-  border-radius: 22px;
-  border: $color-bubble-border solid 4px;
-  margin-bottom:1.5em;
+  border-radius: 2.2rem;
+  border: $color-bubble-border solid .4rem;
+  margin-bottom: 2.5rem;
 
 
   &:before,
@@ -17,19 +17,19 @@
     width: 0;
   }
   &:after {
-    border-width: 15px 20px 0;
+    border-width: 1.5rem 2.0rem 0;
     z-index: 1;
-    margin-left: -20px;
-    bottom: -15px;
-    left: 55px;
+    margin-left: -2.0rem;
+    bottom: -1.5rem;
+    left: 5.5rem;
   }
 
   &:before {
-    border-width: 18px 23px 0;
+    border-width: 1.8rem 2.3rem 0;
     z-index: 0;
-    margin-left: -23px;
-    bottom: -22px;
-    left: 55px;
+    margin-left: -2.3rem;
+    bottom: -2.2rem;
+    left: 5.5rem;
   }
 }
 

@@ -1,24 +1,24 @@
 .ribbon-wrapper {
-  width: 85px;
-  height: 88px;
+  width: 8.5rem;
+  height: 8.8rem;
   overflow: hidden;
   position: absolute;
-  top: -3px;
-  right: -3px;
+  top: -.3rem;
+  right: -.3rem;
 }
 
 .ribbon {
-  font: bold 15px Sans-Serif;
+  font: bold 1.5rem Sans-Serif;
   color: #333;
   text-align: center;
-  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  text-shadow: rgba(255,255,255,0.5) .0rem .1rem .0rem;
   transform:      rotate(45deg);
   position: relative;
-  padding: 7px 0;
-  left: -5px;
-  top: 15px;
-  width: 120px;
-  box-shadow: 0px 0px 3px rgba($color-dark, 0.3);
+  padding: .7rem 0;
+  left: -.5rem;
+  top: 1.5rem;
+  width: 12.0rem;
+  box-shadow: .0rem .0rem .3rem rgba($color-dark, 0.3);
 }
 
 .ribbon-new {
@@ -54,11 +54,11 @@
 
 .ribbon:before, .ribbon:after {
   content: "";
-  border-top:   3px solid #6e8900;
-  border-left:  3px solid transparent;
-  border-right: 3px solid transparent;
+  border-top:   .3rem solid #6e8900;
+  border-left:  .3rem solid transparent;
+  border-right: .3rem solid transparent;
   position:absolute;
-  bottom: -3px;
+  bottom: -.3rem;
 }
 
 .ribbon:before {

@@ -23,17 +23,17 @@ section.pricing-tiers {
     }
   }
   .tier {
-    border-radius: 3px;
-    border: 1px solid $color-text-primary;
+    border-radius: .3rem;
+    border: .1rem solid $color-text-primary;
     position: relative;
     background: $color-light;
-    box-shadow: 5px 5px 10px rgba($color-dark, .4);
+    box-shadow: .5rem .5rem 1.0rem rgba($color-dark, .4);
     .fa-li {
       color: $color-blue;
     }
     &.left {
       border-right: none;
-      border-radius: 3px 0 0 3px;
+      border-radius: .3rem 0 0 .3rem;
     }
     &.right {
       border-left: none;
@@ -47,7 +47,7 @@ section.pricing-tiers {
       font-size: 1.1em;
     }
     .title, .price {
-      border-bottom: 1px solid $color-text-primary;
+      border-bottom: .1rem solid $color-text-primary;
     }
     .title, .price {
       padding: 1em 0.2em;
