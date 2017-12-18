@@ -17,7 +17,16 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(sm) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical;
+      }
     }
+
+    @include respond(sm) {
+      width: 100% !important;
+    }
+
   }
 
   .col-1-of-2 {

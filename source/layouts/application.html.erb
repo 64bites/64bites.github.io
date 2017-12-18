@@ -25,18 +25,21 @@
     <meta name="google-site-verification" content="Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE">
     <meta name="coverage" content="Worldwide">
     <%= partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" } %>
-    <%#<%= partial "layouts/sumo_me" %>%>
   </head>
   <body class="<%= page_classes %>">
-    <div class="container">
-      <% if(!current_page.data.hide_menu) %>
-        <%= partial "layouts/header" %>
-      <% end %>
-      <main>
+    <% if(!current_page.data.hide_menu) %>
+      <%= partial "layouts/header" %>
+    <% end %>
+    <main>
+      <% if(current_page.data.hide_menu) %>
+        <div class="container">
+          <%= yield %>
+        </div>
+      <% else %>
         <%= yield %>
-      </main>
-      <%= partial "layouts/footer" %>
-    </div>
+      <% end %>
+    </main>
+    <%= partial "layouts/footer" %>
     <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application" %>
     <%= partial "layouts/segment_io" %> 
     <%= partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0} %>

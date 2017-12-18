@@ -25,9 +25,15 @@
     &:hover {
       transform: scale(1.2);
       z-index: 20;
+      @include respond(sm) {
+        transform: scale(1);
+      }
     }
     &--best-one {
       transform: scale(1.1);
+      @include respond(sm) {
+        transform: scale(1);
+      }
     }
   }
 }

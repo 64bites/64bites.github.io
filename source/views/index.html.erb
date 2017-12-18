@@ -6,14 +6,11 @@ main_image: episodes/014.png
 <% latest_episode = episodes_catalog.latest_episode %>
 <% current_season = episodes_catalog.current_season %>
 
-<section class="pitch">
-  <div class="row">
-  <div class="w">
+
+<% partial 'views/pitch' do %>
     <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
     <p class="lead">Life is too short to read twenty-year-old books.<br><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials <em>today</em>!</p> 
-  </div>
-</div>
-</section>
+<% end %>
 
 <section>
   <div class="row">

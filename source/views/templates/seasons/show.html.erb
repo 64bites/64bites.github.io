@@ -1,13 +1,10 @@
 ---
 title: "64Bites - Season"
 ---
-<section class="pitch">
-  <div class="row">
-  <div class="w">
+<% partial 'views/pitch' do %>
     <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
     <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Binge-watch previous episodes <em>today</em>!</p> 
-  </div>
-</section>
+<% end %>
 <% if defined?(season) %>
   <% episodes = episodes_catalog.all_episodes_in_season(season) %>
   <% free_episodes = episodes.select(&:free?) %>
@@ -31,16 +28,16 @@ title: "64Bites - Season"
   <% episodes.each do |episode| %>
     <div class="episode">
       <div class="row">
-        <div class="col-2-of-3">
-      <div class="episode__info">
-        <h2>Episode <%= episode.formatted_title %></h2>
-        <%= episode.description %>
+        <div class="col-1-of-3">
+          <div class="episode__poster">
+            <%= image_tag(episode.poster_path, class: "thumbnail") %>
+        </div>
       </div>
-      </div>
-      <div class="col-1-of-3">
-      <div class="episode__poster">
-        <%= image_tag(episode.poster_path, class: "thumbnail") %>
-      </div></div>
+      <div class="col-2-of-3">
+        <div class="episode__info">
+          <h2>Episode <%= episode.formatted_title %></h2>
+          <%= episode.description %>
+        </div>
       </div>
     </div>
   <% end %>

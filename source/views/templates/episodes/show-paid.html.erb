@@ -1,14 +1,10 @@
 ---
 title: 64 bites - Paid Episode
 ---
-<section class="pitch">
-  <div class="row">
-  <div class="w">
-    <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
-    <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> 
-  </div>
-  </div>
-</section>
+<% partial 'views/pitch' do %>
+  <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
+  <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> 
+<% end %>
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
 
