@@ -1,15 +1,14 @@
 .episode {
-  @include outer-container;
   padding: 1em 0;
 
   &__info {
-    @include span-columns(8);
+    /*@include span-columns(8);*/
   }
 
   &__poster {
     position: relative;
     padding: 0;
-    @include span-columns(3.9);
+    /*@include span-columns(3.9);*/
     & > img,
     & > a > img {
       border-radius: .3rem;

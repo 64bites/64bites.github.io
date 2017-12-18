@@ -7,13 +7,16 @@ main_image: episodes/014.png
 <% current_season = episodes_catalog.current_season %>
 
 <section class="pitch">
+  <div class="row">
   <div class="w">
     <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
     <p class="lead">Life is too short to read twenty-year-old books.<br><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials <em>today</em>!</p> 
   </div>
+</div>
 </section>
 
 <section>
+  <div class="row">
   <h2 class="u-margin-top-large u-centered-text">Let me guess, You Love Commodore&nbsp;64</h2>
   <p class="lead">You've always wanted to either create a C64 game or a demo,<br>or at least figure out how they are made.</p>
   <p>But it's not that easy. If you start from scratch, you need to learn <strong>BASIC</strong> and <strong>assembly</strong>, figure out how to put <strong>sprites</strong> on the screen, use graphical modes, <strong>play SID music</strong> or handle joystick.</p>
@@ -35,13 +38,18 @@ main_image: episodes/014.png
     <p>It takes only five minutes, but it teaches you just enough to push you toward your goal.</p>
     <p>Later you can get back to it. Read the source code and follow along in your own pace.</p>
     <p>Sounds too good to be true?</p>
+    </row>
    </section>
 
+   <div class="row">
   <h2 class="u-margin-top-large u-centered-text">Why don't you see for yourself?</h2>
   <p >Watch <strong>any</strong> of those videos <strong>now</strong> and learn something new in the next five minutes!</p>
   <br>
+  </div>
    <%= partial "views/featured_episodes" %>
+  
    <section>
+    <div class="row">
       <h2 class="u-margin-top-large u-centered-text">That's not all</h2>
 
     <%#<p>I'm reading tons of books, articles and forums so you don't have to. I'm working hard to give you exactly what you need to achieve your goal.</p>%>
@@ -53,8 +61,10 @@ main_image: episodes/014.png
     </ul>
     <p>You can <strong>watch them online</strong> on any device or <strong>download</strong> for your convenience <strong>DRM free</strong>.</p>
     <p>There are already 104 short, <strong>~5-minute-videos</strong> covering a small bit of <strong>BASIC</strong>, <strong>6502/6510 assembly</strong> and the architecture of Commodore 64.</p>
+  </div>
 </section>
 <section class="first-season">
+  <div class="row">
   <% season = episodes_catalog.find_season(1) %>
   <h2 class="u-margin-top-large u-centered-text">Get started with the first set of videos</h2>
   <p>Below, you will find a package of first nine episodes. It will put you on the right track.</p>
@@ -66,18 +76,21 @@ main_image: episodes/014.png
     <% end %>
     <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }"} %>
   </div>
+</div>
 </section>
 <%= partial "views/testimonials_section" %>
+
+<section class="newsletter">
+  <div class="row">
+  <h2>Want to try it out for free?</h2>
+  <p class="lead">I can send you free videos and articles on programming Commodore 64 from time to time.</p>
+  <a href="https://www.getdrip.com/forms/18339237/submissions/new" data-drip-show-form="18339237" class="show-newsletter-subscription button">Sounds Good!</a>
+  </div>
+</section>
 
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>
-<section class="newsletter">
-  <h2>Want to try it out for free?</h2>
-  <p class="lead">I can send you free videos and articles on programming Commodore 64 from time to time.</p>
-  <a href="https://www.getdrip.com/forms/18339237/submissions/new" data-drip-show-form="18339237" class="show-newsletter-subscription button">Sounds Good!</a>
-</section>
-
 <% content_for(:javascript) do %>
   <script type="text/javascript">
   $("body").on("click", ".show-newsletter-subscription", function(e) {

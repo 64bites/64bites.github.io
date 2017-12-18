@@ -2,16 +2,22 @@
   <% info = partial("views/episodes/descriptions/description_#{episode.formatted_number}") %>
   <h2>Episode <%= "#{ episode.formatted_title}" %></h2>
   <div class="episode">
-    <div class="episode__info">
-      <% if defined?(truncate_info) && truncate_info  %>
-        <%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %>
-      <% else %>
-        <%= info %>
-      <% end %>
-    </div>
-    <div class="episode__poster">
-      <%= image_tag(episode.poster_path, class: "thumbnail") %>
-      <%= partial "views/ribbon", locals: { episode: episode } %>
+    <div class="row">
+      <div class="col-2-of-3">
+        <div class="episode__info">
+          <% if defined?(truncate_info) && truncate_info  %>
+            <%= truncate(info, length: 300) %> <%= link_to "Read more", episode_path(episode) %>
+          <% else %>
+            <%= info %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-1-of-3">
+        <div class="episode__poster">
+          <%= image_tag(episode.poster_path, class: "thumbnail") %>
+          <%= partial "views/ribbon", locals: { episode: episode } %>
+        </div>
+      </div>
     </div>
   </div>
 </section>

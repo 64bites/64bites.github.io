@@ -1,28 +1,6 @@
 section.pricing-tiers {
-  @include outer-container;
-  &.three {
-    .tier {
-      @include span-columns(4);
-      &.suggested {
-        margin-left: -2.35765%;
-        margin-right: 0;
-        margin-top: -(2.35765%/2);
-        width: 31.76157 + 2*2.35765%;
-      }
-    }
-  }
-  &.two {
-    .tier {
-      @include span-columns(6);
-      &.suggested {
-        margin-right: 0;
-        margin-left: -2.35765%;
-        margin-top: -(2.35765%/2);
-        width: 48.82117% + 2.35765%;
-      }
-    }
-  }
   .tier {
+    width: 105%;
     border-radius: .3rem;
     border: .1rem solid $color-text-primary;
     position: relative;
@@ -31,12 +9,9 @@ section.pricing-tiers {
     .fa-li {
       color: $color-blue;
     }
-    &.left {
-      border-right: none;
-      border-radius: .3rem 0 0 .3rem;
-    }
-    &.right {
-      border-left: none;
+    &.suggested {
+      transform: translate(-5rem,-2rem);
+      width: 110%
     }
 
     .title, .price, .price-per-episode {

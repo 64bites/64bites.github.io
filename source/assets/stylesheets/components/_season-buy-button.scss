@@ -1,8 +1,8 @@
 section.buy {
-  @include outer-container;
+  /*@include outer-container;*/
   .buy-button {
-    @include span-columns(10);
-    @include shift(1);
+    /*@include span-columns(10);*/
+    /*@include shift(1);*/
     .button {
       width: 100%;
       background-color: $color-button-primary;

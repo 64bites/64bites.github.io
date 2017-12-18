@@ -1,15 +1,19 @@
   <section class="pitch">
+    <div class="row">
     <div class="w">
       <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
       <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Binge-watch previous episodes <em>today</em>!</p> 
     </div>
+    </div>
   </section>
   <section class="seasons">
+    <div class="row">
   <h1>Seasons</h1>
   <p class="lead">Seasons are simply <strong>bundles of nine episodes</strong>.</p>
   <p class="lead">Buying a whole season is <strong>less expensive</strong> than buying each video separately.</p>
-  <br><br>
+</div>
   <% episodes_catalog.released_seasons.each_with_index do |season, index| %>
+    <div class="row">
     <% link_to season_path(season) do %>
       <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
     <% end %>
@@ -18,6 +22,7 @@
         <%= image_tag(season.poster_path, class: "season__poster") %>
       <% end %>
       <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }"} %>
+    </div>
     </div>
   <% end %>
 </section>

@@ -1,19 +1,25 @@
-<div class="episode <%= episode.free? ? "free" : "paid" %>">
-  <div class="episode__info">
-    <h2><%= link_to "Episode #{ episode.formatted_title}", episode_path(episode) %></h2>
-    <!-- use article.summary(250) if you have Nokogiri available to show just
-         the first 250 characters -->
-    <p><%= truncate(episode.description.gsub("<p></p>",''), length: 200) %> <%= link_to "Read more &rarr;", episode_path(episode) %></p>
-    <% if episode.free? %>
-      <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
-    <% else %>
-      <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true">Buy this episode for just <%= episode.price.formatted %>!</a> 
-    <% end %>
-  </div>
-  <div class="episode__poster">
-    <% link_to episode_path(episode) do %>
-      <%= image_tag(episode.poster_path, class: "thumbnail") %>
-    <% end %>
-    <%= partial "views/ribbon", locals: { episode: episode } %>
+<div class="episode u-margin-top-small <%= episode.free? ? "free" : "paid" %>">
+  <div class="row">
+    <div class="col-2-of-3">
+      <div class="episode__info">
+        <h2><%= link_to "Episode #{ episode.formatted_title}", episode_path(episode) %></h2>
+        <!-- use article.summary(250) if you have Nokogiri available to show just
+             the first 250 characters -->
+        <p><%= truncate(episode.description.gsub("<p></p>",''), length: 200) %> <%= link_to "Read more &rarr;", episode_path(episode) %></p>
+        <% if episode.free? %>
+          <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
+        <% else %>
+          <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true">Buy this episode for just <%= episode.price.formatted %>!</a> 
+        <% end %>
+      </div>
+    </div>
+    <div class="col-1-of-3">
+      <div class="episode__poster">
+        <% link_to episode_path(episode) do %>
+          <%= image_tag(episode.poster_path, class: "thumbnail") %>
+        <% end %>
+        <%= partial "views/ribbon", locals: { episode: episode } %>
+      </div>
+    </div>
   </div>
 </div>

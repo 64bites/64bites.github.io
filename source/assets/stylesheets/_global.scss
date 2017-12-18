@@ -1,4 +1,8 @@
 
+.container {
+  max-width: $grid-width;
+  margin: 0 auto;
+}
 p.lead {
   font-size: 1.2em;
 }
@@ -37,10 +41,7 @@ section.seasons {
 }
 body {
   & > .container {
-    @include outer-container;
     & > header, & > footer, & > main {
-      @include span-columns(10);
-      @include shift(1);
     }
   }
   main > section {
@@ -56,15 +57,10 @@ section.seasons {
 
 
 .article {
-  position: relative;
   .thumbnail {
-    float: left;
-    margin-right: 15px;
-    width: 200px;
+    max-width: 32rem;
+    transform: translateX(3rem);
   }
-  clear: both;
-  padding-bottom: 3.5em;
-  min-height: 200px;
 }
 section.pitch {
   text-align:center;

@@ -1,11 +1,11 @@
 .testimonials {
   .row {
-    @include outer-container;
+    /*@include outer-container;*/
   }
 }
 
 .testimonial {
-  @include span-columns(6);
+  /*@include span-columns(6);*/
   & blockquote:before, & blockquote:after {
     position: absolute;
     font-size: 8rem;

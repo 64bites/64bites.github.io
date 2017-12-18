@@ -2,9 +2,11 @@
 title: 64 bites - Paid Episode
 ---
 <section class="pitch">
+  <div class="row">
   <div class="w">
     <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1>
     <p class="lead"><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> 
+  </div>
   </div>
 </section>
 <% if defined?(episode) %>
@@ -12,10 +14,15 @@ title: 64 bites - Paid Episode
 
   <%= partial "views/episode_section", locals: { episode: episode } %>
   <section class="pricing-tiers two">
+    <div class="row">
     <h2>Watch this Video Today</h2>
-    
-      <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: episode, show_alternative_cta: false} %>
-      <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
+      <div class="col-1-of-2">
+        <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: episode, show_alternative_cta: false} %>
+      </div> 
+      <div class="col-1-of-2">
+        <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
+      <%#</div> %>
+    </div>
   </section>
 
   <%= partial "views/testimonials_section" %>
