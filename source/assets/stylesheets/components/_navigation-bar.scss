@@ -3,23 +3,20 @@
   position: relative;
   line-height: 3.8rem;
   vertical-align: top;
-  margin: 0;
-  top: 0;
-  height: 3.8rem;
+  width: calc(100% - 210px);
   ul {
     margin: 0 auto;
     display: inline-block;
-    text-align: center;
+    padding-left: 2rem;
+    text-align: left;
 
     > li {
       display: inline-block;
-      &:first-child:before {
-          content: "";
+
+        ::before {
+          content: "|";
+          margin:0 1em;
         }
-      &:before {
-        content: "|";
-        margin:0 1em;
-      }
       a {
         color: $color-text-primary;
         transition: all 0.3s;
