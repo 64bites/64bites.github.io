@@ -19,7 +19,6 @@
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
-    = partial "layouts/sumo_me"
   %body{class: page_classes}
     .container
       = partial "layouts/header"
