@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 
 # Deploy using Middleman-deploy
-middleman deploy
+# middleman deploy
+
+rsync -az --force --delete --progress -e "ssh -p22" ./build/ sfbites@digitalocean:/var/www/64bites.com/public
