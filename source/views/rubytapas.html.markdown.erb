@@ -1,0 +1,99 @@
+---
+hide_menu: true
+---
+<br>
+
+# Hi, fellow Rubyist :)
+
+<%= image_tag "promotions/rubytapas.png", alt: "RubyTapas episode screenshot" %>
+
+I hope you enjoyed the video as much as I enjoyed creating it.
+
+I also hope it will help you convince others that TDD is easy.
+
+After all, it can be successfully practiced on a very old computer.
+
+## The Commodore 64
+
+Even though it is **not produced for 25 years**!
+
+Even thought it is **1000 times slower than your phone**!
+
+It still is as **fun and exciting** as it was back then.
+
+There are more that 40 demos and **75-100 new games** released for this computer every year.
+
+If you grew up with this computer you already know why:)
+
+Otherwise I envy you.
+
+You have so much fun to discover!
+
+I want to invite you to try coding the Commodore 64 yourself.
+
+I can show that it's even more easy and fun as TDD:)
+
+And since you like RubyTapas I have a treat for you!
+
+## 64bites
+
+### It's like RubyTapas - but about Commodore 64 :)
+
+64bites is a series of short video lessons that can teach you how to program The Commodore 64!
+
+Each episode takes just 5 minutes to watch, so it can easily fit your busy schedule. Videos come with full transcript, source code, and exercises. Each one focused on explaining a single thing in depth.
+
+In other words, each video is a tasty bite of C64 knowledge that brings you closer to finally writing that game and demo. The series starts literally from basics of BASIC but quickly transitions into the assembly, where the real fun happens.
+
+If you ever desired to create games or demos for this fantastic machine. I can help you get started.
+
+## Get the first nine episodes for free!
+
+As a true fan of RubyTapas you can download the Season 1 package for free.
+
+<%= image_tag "seasons/001.jpg", alt: "Season 1 poster" %>
+
+Season 1 is usually worth $19.99 and contains 
+
+- first nine episodes (50+ minutes of DRM-free videos in total),
+- transcripts (7500+ words),
+- source code examples (450+ LOC) and
+- programming exercises for each episode.
+
+<br>
+
+<%= partial 'views/buy_season_button', locals: {url: "https://gum.co/64bites-season1/rubytapas", caption: "<i class='fa fa-gift'></i> Download Season 1 for free! <i class='fa fa-gift'></i>" } -%>
+
+## Get next nine episodes for 50% off!
+
+If you find the videos fun and want more, I can offer you the next nine episodes for half the price.
+
+<%= image_tag "seasons/002.jpg", alt: "Season 2 poster" %>
+
+<%= partial 'views/buy_season_button', locals: {url: "https://gum.co/64bites-season2/rubytapas", caption: "Get Season 2 for half the price!" } -%>
+
+<div class="row">
+  <div class="col-1-of-2">
+    <%= partial "views/testimonial", locals: { testimonial: data.testimonials[5] } %>
+  </div>
+  <div class="col-1-of-2">
+    <%= partial "views/testimonial", locals: { testimonial: data.testimonials[4] } %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-1-of-2">
+    <%= partial "views/testimonial", locals: { testimonial: data.testimonials[3] } %>
+  </div>
+  <div class="col-1-of-2">
+    <%= partial "views/testimonial", locals: { testimonial: data.testimonials[0] } %>
+  </div>
+</div>
+
+Enjoy!
+
+*Michał Taszycki*
+
+founder of the 64bites project.
+
+P.S. I've promised to tell you a whole story about pitfalls of testing the 64spec itself. Here's a [fun and short lighning talk](https://youtu.be/AbqByKfar8o?t=2m13s) I've given on this topic two years ago.
+
