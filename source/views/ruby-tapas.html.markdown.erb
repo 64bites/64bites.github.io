@@ -9,6 +9,9 @@ hide_menu: true
 
 I hope you enjoyed the video as much as I enjoyed creating it.
 
+<% episode = Struct.new(:show_notes_filename).new("516-tdd-is-easy-show-notes.zip") %>
+Here you can <%= link_to "download show notes", episode_show_notes_path(episode) %> (source code & transcript).
+
 I also hope it will help you convince others that TDD is easy.
 
 After all, it can be successfully practiced on a very old computer.
@@ -95,5 +98,5 @@ Happy Hacking!
 
 founder of the 64bites project.
 
-P.S. I've promised to tell you a whole story about pitfalls of testing the 64spec itself. Here's a [fun and short lighning talk](https://youtu.be/AbqByKfar8o?t=2m13s) I've given on this topic two years ago.
+P.S. I've promised to tell you the whole story about pitfalls of testing the 64spec itself. Here's a [fun and short lighning talk](https://youtu.be/AbqByKfar8o?t=2m13s) I've given on this topic two years ago.
 
