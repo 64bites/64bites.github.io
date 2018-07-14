@@ -19,7 +19,7 @@ title: "64Bites - Season"
     <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
     </div>
   </section>
-  <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=true&gift=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }"} %>
+  <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/bestdayofmylife?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> $10".html_safe} %>
 
   <%= partial "views/testimonials_section" %>
 

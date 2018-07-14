@@ -3,7 +3,7 @@
       <h3>just one Episode</h3>
     </div>
     <div class="price">
-      <span class="value"><%= episode.price.formatted %></span>
+      <span class="value"><s style="color: #9e8318"><%= episode.price.formatted %></s> $1.99</span>
     </div>
     <div class="features">
       <ul class="fa-ul">
@@ -18,10 +18,10 @@
 
     </div>
       <div class="price-per-episode">
-        Price per episode: <%= episode.price.formatted %>
+        Price per episode: <s style="color: #908e8a"><%= episode.price.formatted %></s> $1.99
     </div>
     <div class="call-to-action">
-      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true">Get Episode</a>
+      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/bestdayofmylife?wanted=true">Get Episode</a>
     </div>
     <% if show_alternative_cta %>
       <div class="more">

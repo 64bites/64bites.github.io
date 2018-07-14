@@ -15,9 +15,9 @@
              the first 250 characters -->
         <p><%= truncate(episode.description.gsub("<p></p>",''), length: 200) %> <%= link_to "Read more &rarr;", episode_path(episode) %></p>
         <% if episode.free? %>
-          <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
+          <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
         <% else %>
-          <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>?wanted=true">Buy this episode for just <%= episode.price.formatted %>!</a> 
+          <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/bestdayofmylife">Buy this episode for just <s style="color: #b6eab3;"><%= episode.price.formatted %></s> $1.99!</a> 
         <% end %>
       </div>
     </div>

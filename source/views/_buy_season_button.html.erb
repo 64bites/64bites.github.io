@@ -1,7 +1,7 @@
 <% single_product = false unless defined?(single_product) %>
 <% wanted = false unless defined?(wanted) %>
-<% url = "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=#{wanted.to_s}" unless defined?(url) %>
-<% caption = "Buy Season #{season.number} for just #{season.price.formatted}" unless defined?(caption) %>
+<% url = "https://gumroad.com/l/#{season.gumroad_product_id}/bestdayofmylife?wanted=#{wanted.to_s}" unless defined?(url) %>
+<% caption = "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{season.price.formatted}</s> $10".html_safe unless defined?(caption) %>
 <section class="buy">
   <div class="row">
   <div class="buy-button">

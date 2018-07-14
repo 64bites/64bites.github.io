@@ -71,7 +71,7 @@ main_image: episodes/014.png
     <% link_to season_path(season) do %>
       <%= image_tag(season.poster_path, class: "season__poster") %>
     <% end %>
-    <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}?wanted=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }"} %>
+    <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/bestdayofmylife?wanted=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> $10".html_safe} %>
   </div>
 </div>
 </section>
