@@ -61,7 +61,7 @@
 $(function() {
       var $clock = $("#flipclock");
       var now = moment().tz("Europe/Warsaw");
-      var deadline = moment.tz("2018-10-14T23:59:59Z", "Europe/Warsaw");
+      var deadline = moment.tz("2018-10-14 23:59:59", "Europe/Warsaw");
       var clock = $clock.FlipClock(deadline.diff(now, "seconds"),{
         countdown: true,
         clockFace: 'DailyCounter',
