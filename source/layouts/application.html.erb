@@ -29,9 +29,15 @@
   <body class="<%= page_classes %>">
   <section class="black_friday" style="text-align: center; color: white; background: #e88bc7;">
     <br>
-      <h1 style="width: 100%">🎉🍾 Michał is getting married!!! 🎉🍾</h1>
-      <p class="lead">All prices are 50% off!</p>
+      <h1 style="width: 100%">🎉🍾 Michał got married!!! 🎉🍾</h1>
+      <div style=" background: black;">
+        <br>
+      <h2>But the honeymoon is over ;)</h2>
       <br>
+      <div id="flipclock" style="width: 460px;"></div>
+      <p class="lead">All prices are <strong style="color:#FFDB50;">50% off</strong> until the end of the week!</p>
+      <br>
+    </div>
    </section>
     <% if(!current_page.data.hide_menu) %>
       <%= partial "layouts/header" %>
@@ -46,10 +52,21 @@
       <% end %>
     </main>
     <%= partial "layouts/footer" %>
-    <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application" %>
+    <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application", "flipclock", "moment-with-locales", "moment-timezone-with-data-2012-2022" %>
     <%= partial "layouts/segment_io" %> 
     <%= partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0} %>
     <%= partial "layouts/drip" %>
     <%= yield_content(:javascript) %>
+    <script>
+$(function() {
+      var $clock = $("#flipclock");
+      var now = moment().tz("Europe/Warsaw");
+      var deadline = moment("2018-10-14T23:59:59Z").tz("Europe/Warsaw");
+      var clock = $clock.FlipClock(deadline.diff(now, "seconds"),{
+        countdown: true,
+        clockFace: 'DailyCounter',
+      });
+    });
+    </script>
   </body>
 </html>
