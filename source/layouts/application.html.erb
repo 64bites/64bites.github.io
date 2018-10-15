@@ -27,18 +27,20 @@
     <%= partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" } %>
   </head>
   <body class="<%= page_classes %>">
-  <section class="black_friday" style="text-align: center; color: white; background: #e88bc7;">
-    <br>
-      <h1 style="width: 100%">🎉🍾 Michał got married!!! 🎉🍾</h1>
-      <div style=" background: black;">
+    <% if current_promotion.enabled? %>
+      <section class="black_friday" style="text-align: center; color: white; background: #e88bc7;">
         <br>
-      <h2>But the honeymoon is over ;)</h2>
-      <br>
-      <div id="flipclock" style="width: 460px;"></div>
-      <p class="lead">All prices are <strong style="color:#FFDB50;">50% off</strong> until the end of the week!</p>
-      <br>
-    </div>
-   </section>
+          <h1 style="width: 100%">🎉🍾 Michał got married!!! 🎉🍾</h1>
+          <div style=" background: black;">
+            <br>
+          <h2>But the honeymoon is over ;)</h2>
+          <br>
+          <div id="flipclock" style="width: 460px;"></div>
+          <p class="lead">All prices are <strong style="color:#FFDB50;">50% off</strong> until the end of the week!</p>
+          <br>
+        </div>
+      </section>
+    <% end %> 
     <% if(!current_page.data.hide_menu) %>
       <%= partial "layouts/header" %>
     <% end %>

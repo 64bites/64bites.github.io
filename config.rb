@@ -1,11 +1,12 @@
 require "extensions/views"
 require "lib/models/catalog"
+require "lib/models/promotion"
 
 activate :views
 activate :directory_indexes
 # Time.zone = "UTC"
 
-#activate :imageoptim do |imageoptim| 
+#activate :imageoptim do |imageoptim|
   #imageoptim.svgo = false
   #imageoptim.manifest = true
   #imageoptim.allow_lossy = true
@@ -105,14 +106,18 @@ helpers do
     partial("views/drip_basic_email_form")
   end
 
+  def current_promotion
+    Promotion.new(data.promotion)
+  end
+
   def episodes_catalog
     CATALOG
   end
-  
+
   def featured_episodes
     CATALOG.featured_episodes
   end
-  
+
   def host_with_port
     [host, optional_port].compact.join(':')
   end
@@ -167,8 +172,8 @@ end
 CATALOG.all_episodes.each do |episode|
   template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
   locals = {
-    episode: episode, 
-    main_image: episode.poster_path, 
+    episode: episode,
+    main_image: episode.poster_path,
     title: "64bites - Episode #{episode.formatted_title}",
     description: episode.short_description,
     og_type: "video.episode"
@@ -181,8 +186,8 @@ CATALOG.all_episodes.select(&:watchable?).each do |episode|
   puts episode.formatted_title
   puts "http://64bites.com" + episode_watch_path(episode) + "/"
   locals = {
-    episode: episode, 
-    main_image: episode.poster_path, 
+    episode: episode,
+    main_image: episode.poster_path,
     title: "64bites - Episode #{episode.formatted_title}",
     description: episode.short_description,
     og_type: "video.episode"
@@ -193,7 +198,7 @@ end
 CATALOG.released_seasons.each do |season|
   locals = {
     season: season,
-    main_image: season.poster_path, 
+    main_image: season.poster_path,
     title: "64bites - #{season.formatted_title}",
     description: season.description,
     og_type: "video.tv_show"

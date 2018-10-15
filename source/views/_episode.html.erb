@@ -17,7 +17,11 @@
         <% if episode.free? %>
           <a class="button episode-buy-button episode-buy-button--free" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>"> <i class="fa fa-gift"></i> Get This Episode For Free!</a> 
         <% else %>
-          <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/bestdayofmylife">Buy this episode for just <s style="color: #b6eab3;"><%= episode.price.formatted %></s> $1.99!</a> 
+          <% if current_promotion.enabled? %>  
+            <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Buy this episode for just <s style="color: #b6eab3;"><%= episode.price.formatted %></s> <%= current_promotion.episode_price.formatted %>!</a> 
+          <% else %>
+            <a class="button episode-buy-button episode-buy-button--paid" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/">Buy this episode for just <%= episode.price.formatted %></a> 
+          <% end %>
         <% end %>
       </div>
     </div>

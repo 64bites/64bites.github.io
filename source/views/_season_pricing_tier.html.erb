@@ -3,7 +3,11 @@
     <h3>with Season <%= season.number %></h3>
   </div>
   <div class="price">
-    <span class="value"><s style="color: #9e8318"><%= season.price.formatted %></s> $10</span>
+    <% if current_promotion.enabled? %>  
+      <span class="value"><s style="color: #9e8318"><%= season.price.formatted %></s> <%= current_promotion.season_price.formatted %></span>
+    <% else %>
+      <span class="value"><%= season.price.formatted %></span>
+    <% end %>
   </div>
   <div class="features">
     <ul class="fa-ul">
@@ -19,10 +23,18 @@
     </ul>
   </div>
   <div class="price-per-episode">
-    Price per episode: <s style="color: #908e8a"><abbr title="estimated">$2.22</abbr></s> <abbr title="estimated">$1.11</abbr>
+    <% if current_promotion.enabled? %>  
+      Price per episode: <s style="color: #908e8a"><abbr title="estimated">$2.22</abbr></s> <abbr title="estimated"><%= current_promotion.price_per_episode_in_season.formatted %></abbr>
+    <% else %>
+      Price per episode: <abbr title="estimated">$2.22</abbr>
+    <% end %>
   </div>
   <div class="call-to-action">
-    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/bestdayofmylife">Get Episode + Season</a>
+    <% if current_promotion.enabled? %>  
+    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get Episode + Season</a>
+    <% else %>
+      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/">Get Episode + Season</a>
+    <% end %>
   </div>
   <% if show_alternative_cta %>
   <div class="more">

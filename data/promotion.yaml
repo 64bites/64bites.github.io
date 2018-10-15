@@ -1,0 +1,6 @@
+---
+  enabled: false
+  coupon_code: barbarossa
+  season_price_in_dollars: 666.12
+  episode_price_in_dollars: 90.35
+  price_per_episode_in_season_in_dollars: 6.66

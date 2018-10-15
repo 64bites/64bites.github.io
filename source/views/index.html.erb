@@ -38,12 +38,14 @@ main_image: episodes/014.png
     </row>
    </section>
 
-   <div class="row">
-  <h2 class="u-margin-top-large u-centered-text">Why don't you see for yourself?</h2>
-  <p >Watch <strong>any</strong> of those videos <strong>now</strong> and learn something new in the next five minutes!</p>
-  <br>
-  </div>
-   <%= partial "views/featured_episodes" %>
+   <% if false %>
+     <div class="row">
+       <h2 class="u-margin-top-large u-centered-text">Why don't you see for yourself?</h2>
+       <p >Watch <strong>any</strong> of those videos <strong>now</strong> and learn something new in the next five minutes!</p>
+       <br>
+    </div>
+    <%= partial "views/featured_episodes" %>
+  <% end %>
   
    <section>
     <div class="row">
@@ -71,7 +73,11 @@ main_image: episodes/014.png
     <% link_to season_path(season) do %>
       <%= image_tag(season.poster_path, class: "season__poster") %>
     <% end %>
-    <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/bestdayofmylife?wanted=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> $10".html_safe} %>
+    <% if current_promotion.enabled? %>  
+      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{ current_promotion.season_price.formatted }".html_safe} %>
+    <% else %>
+      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
+    <% end %> 
   </div>
 </div>
 </section>
