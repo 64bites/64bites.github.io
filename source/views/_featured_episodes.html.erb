@@ -5,11 +5,19 @@
       <% classes << "featured-episode--best-one" if index == 1 %>
       <div class="col-1-of-3">
         <div class="<%= classes.join(" ") %>">
-          <%= partial "views/wistia_responsive_popup", locals: {episode: episode} %>
           <h4><%= episode.formatted_title %></h4>
+          <a data-fancybox data-type="iframe" data-src="https://player.vimeo.com/video/<%= episode.vimeo_id %>"  href="javascript:;">
+            <%= image_tag(episode.poster_path, class: "thumbnail") %>
+            <div class="featured-episode__play-button"></div>
+          </a>
         </div>
       </div>
     <% end %>
     </div>
   </section>
 
+
+<% content_for(:javascript) do %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+<% end %>
+  

@@ -1,40 +1,52 @@
-.featured-episodes {
-  /*@include outer-container;*/
-  &.featured-3 > .featured-episode{
-    /*@include span-columns(4);*/
+.featured-episode {
+  position: relative;
+  border-radius: .3rem;
+  overflow:hidden;
+  box-shadow: .5rem .5rem 1.0rem rgba($color-dark, .4);
+  background: $color-white;
+  h4 {
+    width: 100%;
+    text-align: center;
   }
-  &.featured-2 > .featured-episode {
-    /*@include span-columns(6);*/
+  transition: transform .2s;
+  z-index: 10;
+  &:hover {
+    transform: scale(1.2);
+    z-index: 20;
+    @include respond(sm) {
+      transform: scale(1);
+    }
   }
-  &.featured-1 > .featured-episode {
-    /*@include span-columns(6);*/
-    /*@include shift(3);*/
+  &--best-one {
+    transform: scale(1.1);
+    @include respond(sm) {
+      transform: scale(1);
+    }
   }
-  .featured-episode {
-    position: relative;
-    border-radius: .3rem;
-    overflow:hidden;
-    box-shadow: .5rem .5rem 1.0rem rgba($color-dark, .4);
-    background: $color-white;
-    h4 {
-      width: 100%;
-      text-align: center;
-    }
-    transition: transform .2s;
-    z-index: 10;
-    &:hover {
-      transform: scale(1.2);
-      z-index: 20;
-      @include respond(sm) {
-        transform: scale(1);
-      }
-    }
-    &--best-one {
-      transform: scale(1.1);
-      @include respond(sm) {
-        transform: scale(1);
-      }
-    }
+
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    height: 74px;
+
+    border-color: transparent transparent transparent rgba($color-white, 0.7);
+    transition: 100ms all ease;
+    will-change: border-width;
+    cursor: pointer;
+
+    // play state
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+    transition: all 0.2s;
+  }
+
+  &:hover #{&}__play-button {
+    border-color: transparent transparent transparent $color-green;
+    height: 80px;
+    border-width: 40px 0 40px 65px;
+    box-shadow: 0 0 8px 0 rgba($color-green, 0.2);
   }
 }
-

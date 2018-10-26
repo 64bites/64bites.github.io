@@ -8,7 +8,9 @@ hide_menu: true
   <br>
   <br>
   <h2>Watch the video</h2>
-  <%= partial "views/wistia_video", locals: { wistia_id: episode.wistia_id, kissmetrics_data: episode.title } %>
+  <div class="embed-container">
+  <iframe src="https://player.vimeo.com/video/<%= episode.vimeo_id %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
 
   <h2>Download show notes</h2>
   <p>Click on the button below to get the full transcript, source code and programming exercises.</p>

@@ -1,5 +1,5 @@
 class Episode
-  attr_reader :number, :title, :publication_time, :wistia_id, :description, :slug
+  attr_reader :number, :title, :publication_time, :vimeo_id, :wistia_id, :description, :slug
   def initialize(episode_data, number, slug)
     @number = number
     @title = episode_data.fetch("title")
@@ -9,6 +9,7 @@ class Episode
     @is_published = episode_data.fetch("is_published")
     @publication_time = episode_data.fetch("publication_time")
     @wistia_id = episode_data.fetch("wistia_id")
+    @vimeo_id = episode_data["vimeo_id"]
     @description = episode_data.fetch("description")
     @slug = slug
     @poster_ext = episode_data.fetch("poster_ext", "png")
@@ -26,7 +27,7 @@ class Episode
   def url_part
     @episode_data.fetch("url_part")
   end
-  
+
   def show_notes_filename
     slug+ "-show-notes.zip"
   end
@@ -52,7 +53,7 @@ class Episode
   end
 
   attr_reader :price, :gumroad_product_id, :poster_ext
-  
+
   private
 
   def build_slug

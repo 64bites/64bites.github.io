@@ -24,6 +24,44 @@
     <meta property="og:description" content="<%= truncate(page_property(locals, "description") || current_page.data.summary || "", length: 200)%>">
     <meta name="google-site-verification" content="Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE">
     <meta name="coverage" content="Worldwide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css" type="text/css" media="screen" />
+    <style>
+
+.embed-container {
+  position: relative;
+  padding-bottom: 62.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    .fancybox-slide--iframe .fancybox-content{
+        margin: 0!important;
+        max-width: 80%;
+        width: 80%;
+        padding-top: 50%; 
+        height: 0 !important;
+    }
+
+    .fancybox-slide--iframe .fancybox-iframe{ 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0;
+            background: black;
+
+    }
+}    </style>
     <%= partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" } %>
   </head>
   <body class="<%= page_classes %>">
