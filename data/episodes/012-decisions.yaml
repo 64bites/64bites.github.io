@@ -5,9 +5,9 @@ price: 0.0
 gumroad_product_id: 64bites-ep012
 is_published: true
 publication_time: 2015-08-12
-actual_release_date: 2015-08-12
 wistia_id: suafi2665k
-poster_ext: jpg
+vimeo_id: '296208981'
+poster_ext: png
 url_part: dcOI6Vak
 description: Did you know you can use the carry flag to signify an overflow in unsigned
   integer operations. But wait, there's more. We also have other flags like V, or
