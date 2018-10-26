@@ -5,9 +5,9 @@ price: 0.0
 gumroad_product_id: 64bites-ep002
 is_published: true
 publication_time: 2015-06-03
-actual_release_date: 2015-06-03
 wistia_id: z1yl0wrn93
-poster_ext: jpg
+vimeo_id: '296208448'
+poster_ext: png
 url_part: cE9oJbdw
 description: In which we'll learn how to execute BASIC commands. We will define and
   use variables, convert between different types and display them on the screen. Along
