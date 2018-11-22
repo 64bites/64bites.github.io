@@ -66,16 +66,12 @@
   </head>
   <body class="<%= page_classes %>">
     <% if current_promotion.enabled? %>
-      <section class="black_friday" style="text-align: center; color: white; background: #e88bc7;">
+      <section class="black_friday" style="text-align: center; color: white; background: black;">
         <br>
-          <h1 style="width: 100%">🎉🍾 Michał got married!!! 🎉🍾</h1>
+          <h1 style="width: 100%">Black Friday</h1>
           <div style=" background: black;">
-            <br>
-          <h2>But the honeymoon is over ;)</h2>
-          <br>
           <div id="flipclock" style="width: 460px;"></div>
-          <p class="lead">All prices are <strong style="color:#FFDB50;">50% off</strong> until the end of the week!</p>
-          <br>
+          <p class="lead" style="padding-bottom:20px;">All prices are <strong style="color:#FFDB50;">40% off</strong> until the end of November!</p>
         </div>
       </section>
     <% end %> 
@@ -99,9 +95,22 @@
     <%= yield_content(:javascript) %>
     <script>
 $(function() {
-      var $clock = $("#flipclock");
-      var now = moment().tz("Europe/Warsaw");
-      var deadline = moment.tz("2018-10-14 23:59:59", "Europe/Warsaw");
+    var $clock = $("#flipclock");
+    var timezone = "Europe/Warsaw";
+    var deadline = "2018-11-30 23:59:59";
+    var clientTimezone = moment.tz.guess();
+    var currentDate = moment.tz(moment(), clientTimezone);
+    var futureDate = moment.tz(deadline, timezone);
+    var secondsLeft = Math.round(Math.max(futureDate-currentDate, 0) / 1000);
+    var daysLeft = Math.floor(secondsLeft / (60*60*24));
+    var isDaily = daysLeft >= 1;
+    var width = isDaily ? "460px" : "340px";
+    $clock.width(width);
+    var clock = $clock.FlipClock(secondsLeft, {
+      clockFace: isDaily ? 'DailyCounter' : 'HourlyCounter',
+      countdown: true
+    });
+      
       var clock = $clock.FlipClock(deadline.diff(now, "seconds"),{
         countdown: true,
         clockFace: 'DailyCounter',
