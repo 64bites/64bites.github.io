@@ -1,0 +1,1 @@
+In this episode we'll learn how to save and verify BASIC programs on both C64 and VIC-20.
