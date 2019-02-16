@@ -68,10 +68,10 @@
     <% if current_promotion.enabled? %>
       <section class="black_friday" style="text-align: center; color: white; background: black;">
         <br>
-          <h1 style="width: 100%">Black Friday</h1>
+          <h1 style="width: 100%">Thanks for the webinar</h1>
           <div style=" background: black;">
           <div id="flipclock" style="width: 460px;"></div>
-          <p class="lead" style="padding-bottom:20px;"><%= link_to "All seasons", "seasons/all" %> are <strong style="color:#FFDB50;">40% off</strong> until the end of November!</p>
+          <p class="lead" style="padding-bottom:20px;"><%= link_to "All seasons", "/seasons/all" %> are <strong style="color:#FFDB50;">40% off</strong> until the end of the weekend!</p>
           
         </div>
       </section>
@@ -98,7 +98,7 @@
 $(function() {
     var $clock = $("#flipclock");
     var timezone = "Europe/Warsaw";
-    var deadline = "2018-11-30 23:59:59";
+    var deadline = "2019-02-17 23:59:59";
     var clientTimezone = moment.tz.guess();
     var currentDate = moment.tz(moment(), clientTimezone);
     var futureDate = moment.tz(deadline, timezone);
@@ -118,6 +118,5 @@ $(function() {
       });
     });
     </script>
-    <script src="//static.leadpages.net/leadbars/current/embed.js" data-bar="8r4T5zxKnfs38fPZr6kgAF" data-bar-domain="creative-mind.lpages.co" async defer></script>
   </body>
 </html>
