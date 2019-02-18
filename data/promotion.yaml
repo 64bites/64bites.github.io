@@ -1,5 +1,5 @@
 ---
-  enabled: true
+  enabled: false
   coupon_code: stableraster
   season_price_in_dollars: 11.99
   episode_price_in_dollars: 2.39
