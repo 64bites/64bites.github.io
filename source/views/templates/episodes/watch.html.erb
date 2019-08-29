@@ -17,4 +17,62 @@ hide_menu: true
   <p>This way you follow along while watching the episode.</p>
   <p>You will not only understand what is happening but also code everything yourself!</p>
   <%= link_to "Download show notes", episode_show_notes_path(episode), class: "button" %>
+
+  <% season = episodes_catalog.find_season_by_episode(episode) %>
+  <% episodes = episodes_catalog.all_episodes_in_season(season) %>
+
+  <section class="season">
+    <div class="row">
+      <p>By the way. This episode is part of a Season <%= season.number %>. So you can get it in a bundle with 8 other episodes.</p>
+      <p>You can read more about that below</p>
+    <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
+    <%= image_tag(season.poster_path, class: "season__poster") %>
+    </div>
+    </section>
+    <section class="features">
+      <div class="row">
+      <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
+      </div>
+    </section>
+    <% if current_promotion.enabled? %>  
+    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{current_promotion.season_price.formatted}".html_safe} %>
+  <% else %>
+    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true&gift=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
+  <% end %>
+
+    <section class="episodes">
+    <h2>All Episodes in this Season</h2>
+  <% episodes.each do |episode| %>
+    <div class="episode">
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="episode__poster">
+            <%= image_tag(episode.poster_path, class: "thumbnail") %>
+        </div>
+      </div>
+      <div class="col-2-of-3">
+        <div class="episode__info">
+          <h2>Episode <%= episode.formatted_title %></h2>
+          <%= episode.description %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <% remaining_episodes_count = 9 - episodes.count %>
+  <% if remaining_episodes_count > 0 %>
+    <div class="row">
+    <% if remaining_episodes_count == 1 %>
+      <p><strong>One remaining episode will be released next week.</strong><br>If you buy the season now, you will get the video as soon as it is out without paying anything extra.</p>
+    <% else %>
+      <p><strong><%= remaining_episodes_count %> remaining episodes will be released in following weeks.</strong><br>If you buy the season now, you will get videos as soon as they are out without paying anything extra.</p>
+    <% end %>
+    </div>
+  <% end %>
+</section>
+<% if current_promotion.enabled? %>  
+    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{current_promotion.season_price.formatted}".html_safe} %>
+  <% else %>
+    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true&gift=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
+  <% end %>
+
 <% end %>
