@@ -1,13 +1,13 @@
 ---
-  enabled: false
+  enabled: true
   color: white
-  background: "#3e0168"
-  title: "🎂 Happy #c64month! 🎉"
-  how_long: ", until the end of August."
+  background: "#000000"
+  title: "🎉 Black Friday! 🎉"
+  how_long: ", until Sunday midnight."
   timezone: "Europe/Warsaw"
-  deadline: "2019-08-31 23:59:00"
-  coupon_code: c64month19
-  percent: 30
-  season_price_in_dollars: 13.99
-  episode_price_in_dollars: 2.79
-  price_per_episode_in_season_in_dollars: 1.55
+  deadline: "2019-12-01 23:59:00"
+  coupon_code: bf19
+  percent: 50
+  season_price_in_dollars: 10
+  episode_price_in_dollars: 1.99
+  price_per_episode_in_season_in_dollars: 1.11
