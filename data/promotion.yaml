@@ -1,13 +1,13 @@
 ---
   enabled: true
   color: white
-  background: "#000000"
-  title: "🎉 Black Friday! 🎉"
-  how_long: ", until Sunday midnight."
+  background: "#59bb4d"
+  title: "🤖 Cyber Monday! 🤖"
+  how_long: ", until Friday midnight."
   timezone: "Europe/Warsaw"
-  deadline: "2019-12-01 23:59:00"
-  coupon_code: bf19
-  percent: 50
-  season_price_in_dollars: 10
-  episode_price_in_dollars: 1.99
-  price_per_episode_in_season_in_dollars: 1.11
+  deadline: "2019-12-06 23:59:00"
+  coupon_code: cm19
+  percent: 40
+  season_price_in_dollars: 11.99
+  episode_price_in_dollars: 2.39
+  price_per_episode_in_season_in_dollars: 1.33
