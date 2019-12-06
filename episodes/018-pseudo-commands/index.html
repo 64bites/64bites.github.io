@@ -1,0 +1,85 @@
+<!DOCTYPE html> <html> <head> <meta charset=utf-8> <meta http-equiv=x-ua-compatible content="ie=edge,chrome=1"> <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no"> <title>64bites - Episode #018 - Pseudo Commands</title> <meta name=description content="Today we'll learn about .pseudocommand directive in KickAssembler. It allows us to make more robust macros that can work with different addressing modes and behave like a built in assembly instruct..."> <link href="../../assets/stylesheets/application.css" rel=stylesheet /> <link rel=canonical href="http://64bites.com/episodes/018-pseudo-commands/"> <link href="../../assets/images/favicon.ico" rel=icon type="image/ico"/> <link rel=apple-touch-icon href="favicon-76.png"> <link rel=apple-touch-icon sizes=120x120 href:"favicon-120.png"> <link rel=apple-touch-icon sizes=152x152 href="favicon-152.png"> <link rel=apple-touch-icon sizes=180x180 href="favicon-180.png"> <meta name="twitter:card" content=summary_large_image> <meta name="twitter:site" content="@64_bites"> <meta name="twitter:creator" content="@mehowte"> <meta property="og:image" content="http://64bites.com/assets/images/episodes/018.jpg"> <meta property="og:locale" content=en_US> <meta property="og:url" content="http://64bites.com/episodes/018-pseudo-commands/"> <meta property="og:title" content="64bites - Episode #018 - Pseudo Commands"> <meta property="og:type" content=website> <meta property="og:description" content="Today we'll learn about .pseudocommand directive in KickAssembler. It allows us to make more robust macros that can work with different addressing modes and behave like a built in assembly instruct..."> <meta name=google-site-verification content=Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE> <meta name=coverage content=Worldwide> <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css" media=screen /> <style>
+
+.embed-container {
+  position: relative;
+  padding-bottom: 62.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+    .fancybox-slide--iframe .fancybox-content{
+        margin: 0!important;
+        max-width: 80%;
+        width: 80%;
+        padding-top: 50%; 
+        height: 0 !important;
+    }
+
+    .fancybox-slide--iframe .fancybox-iframe{ 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0;
+            background: black;
+
+    }
+}    </style> <script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '722589087875219');
+fbq('track', 'PageView');
+</script> <noscript><img height=1 width=1 style="display:none" src="https://www.facebook.com/tr?id=722589087875219&ev=PageView&noscript=1"/></noscript> </head> <body class="episodes episodes_018-pseudo-commands episodes_018-pseudo-commands_index"> <header class=header> <div class=row> <a class=header__logo href="/"></a> <div class=navigation-bar> <ul> <li><a class="" href="/seasons/all">Seasons</a></li> <li><a class="" href="/episodes/all">Episodes</a></li> <li><a class="" href="/blog">Blog</a></li> <li><a class="" href="https://www.facebook.com/groups/64bitesVIP">Forums</a></li> <li><a class="" href="/64spec">Open Source</a></li> </ul> </div> </div> </header> <main> <section class=pitch> <div class=row> <h1 style="width: 100%">The easiest way to start programming <em>Commodore&nbsp;64</em></h1> <p class=lead><em>Learn</em> BASIC and 6502 Assembly with bite-sized video tutorials.<br>Watch your first episode <em>today</em>!</p> </div> </section> <section class=latest-episode> <h2>Episode #018 - Pseudo Commands</h2> <div class=episode> <div class=row> <div class=col-2-of-3> <div class=episode__info> <p>Today we'll learn about .pseudocommand directive in KickAssembler. It allows us to make more robust macros that can work with different addressing modes and behave like a built in assembly instructions.</p> </div> </div> <div class=col-1-of-3> <div class=episode__poster> <img class=thumbnail src="../../assets/images/episodes/018.jpg"/> <div class=ribbon-wrapper> <div class="ribbon ribbon-paid"><i class="fa fa-dollar"></i> PAID</div> </div> </div> </div> </div> </div> </section> <section class="pricing-tiers two"> <div class=row> <h2>Watch this Video Today</h2> <div class=col-1-of-2> <div class="tier left"> <div class=title> <h3>just one Episode</h3> </div> <div class=price> <span class=value>$3.99</span> </div> <div class=features> <ul class=fa-ul> <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li> <li><i class="fa-li fa fa-check"></i>Online streaming</li> <li><i class="fa-li fa fa-check"></i>DRM-free download</li> <li><i class="fa-li fa fa-check"></i>Full Transcript</li> <li><i class="fa-li fa fa-check"></i>Source Code</li> <li><i class="fa-li fa fa-check"></i>Exercises</li> <li><i class="fa-li fa fa-check"></i>One-time payment</li> </ul> </div> <div class=price-per-episode> Price per episode: $3.99 </div> <div class=call-to-action> <a class=button data-gumroad-single-product=true href="https://gumroad.com/l/64bites-ep018/">Get Episode</a> </div> </div> </div> <div class=col-1-of-2> <div class="tier suggested"> <div class=title> <h3>with Season 2</h3> </div> <div class=price> <span class=value>$19.99</span> </div> <div class=features> <ul class=fa-ul> <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li> <li><i class="fa-li fa fa-check"></i>Online streaming</li> <li><i class="fa-li fa fa-check"></i>DRM-free download</li> <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li> <li><i class="fa-li fa fa-check"></i>Full Transcripts</li> <li><i class="fa-li fa fa-check"></i>Source Codes</li> <li><i class="fa-li fa fa-check"></i>Exercises</li> <li><i class="fa-li fa fa-check"></i><strong>More cost-efficient</strong></li> <li><i class="fa-li fa fa-check"></i>One-time payment</li> </ul> </div> <div class=price-per-episode> Price per episode: <abbr title=estimated>$2.22</abbr> </div> <div class=call-to-action> <a class=button data-gumroad-single-product=true href="https://gumroad.com/l/64bites-season2/">Get Episode + Season</a> </div> </div> </div> </section> <section class=testimonials> <h2>See what others are saying!</h2> <div class=row> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>I learned assembly the hard way, with only limited documentation. Although part of the fun is in discovering all these things yourself, I think such screencasts could have helped me in getting up to speed faster. They do contain some nice bits of information :)</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/paul-koller.jpg"/> <div class=credentials> <h4>- Paul Koller</h4> <p>Game Developer, Creator of C64anabalt, Super Bread Box and Micro Hexagon</p> </div> </div> </div> </div> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>64bites brings me closer to understanding a computer I learned to love long ago, and still do. More than anything, it is really fun to follow the lessons and I always look forward to the next episode with great anticipation. It is the best thing since chocolate.</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/sebastian-kostka.jpg"/> <div class=credentials> <h4>- Sebastian Kostka</h4> <p>Online Marketing Wizard at MeMyselfAndUs</p> </div> </div> </div> </div> </div> <div class=row> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>I enjoyed both narration and realisation.<br>Actually, I was really shocked to have so much fun watching a programming screencast!</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/robert-lapinski.jpg"/> <div class=credentials> <h4>- Robert Lapinski</h4> <p>CEO of Idea Head, Mastermind behind the Pixel Magazine</p> </div> </div> </div> </div> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>How much time did you spend playing games on your Commodore c64? 64bites is more than 8-bit childhood memories, its a way to keep your beloved C64 alive, let's make our own game with it.</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/andrzej-sliwa.jpg"/> <div class=credentials> <h4>- Andrzej Śliwa</h4> <p>Polyglot Programmer, Lead Developer at bonusbox GmbH</p> </div> </div> </div> </div> </div> <div class=row> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>This is really cool. I don't know exactly how popular it will end up being, but there is always room online for things like this.</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/peter-cooper.jpg"/> <div class=credentials> <h4>- Peter Cooper</h4> <p>Founder at Cooper Press, Chair of O'Reilly Fluent Conference</p> </div> </div> </div> </div> <div class=col-1-of-2> <div class=testimonial> <div class=" bubble"> <blockquote>Having watched a few episodes, I reiterate my original position: sooooooo coool. And Michal have really done a top-notch job on writing, production, audio, everything.</blockquote> </div> <div class=author> <img class=avatar src="../../assets/images/testimonials/avdi-grimm.jpg"/> <div class=credentials> <h4>- Avdi Grimm</h4> <p>Creator of the best selling programming screencast series - RubyTapas</p> </div> </div> </div> </div> </div> </section> </main> <footer class=footer> <span> Copyright © 2014-2019 Creative Mind - Michal Taszycki </span> </footer> <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script><script src="../../assets/javascripts/application.js"></script><script src="../../assets/javascripts/flipclock.js"></script><script src="../../assets/javascripts/moment-with-locales.js"></script><script src="../../assets/javascripts/moment-timezone-with-data-2012-2022.js"></script> <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+      analytics.load("3z8xJ01MQLwMsgpwWuPmw2BTxor55hoB");
+      analytics.page()
+      }}();
+    </script> <script src="//platform.twitter.com/oct.js"></script> <script>twttr.conversion.trackPid('nthnq', { tw_sale_amount: '0', tw_order_quantity: '0' });</script> <noscript> <img height=1 width=1 style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=nthnq&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/> <img height=1 width=1 style="display:none;" alt="" src="//t.co/i/adsct?txn_id=nthnq&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"/> </noscript> <script>
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {}; 
+  _dcs.account = '8833932';
+  
+  (function() {
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true; 
+    dc.src = '//tag.getdrip.com/8833932.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(dc, s);
+  })();
+</script> <script src="https://gumroad.com/js/gumroad.js"></script> <script>
+$(function() {
+    var $clock = $("#flipclock");
+    var timezone = "Europe/Warsaw";
+    var deadline = "2019-12-06 23:59:00";
+    var clientTimezone = moment.tz.guess();
+    var currentDate = moment.tz(moment(), clientTimezone);
+    var futureDate = moment.tz(deadline, timezone);
+    var secondsLeft = Math.round(Math.max(futureDate-currentDate, 0) / 1000);
+    var daysLeft = Math.floor(secondsLeft / (60*60*24));
+    var isDaily = daysLeft >= 1;
+    var width = isDaily ? "460px" : "340px";
+    $clock.width(width);
+    var clock = $clock.FlipClock(secondsLeft, {
+      clockFace: isDaily ? 'DailyCounter' : 'HourlyCounter',
+      countdown: true
+    });
+      
+      var clock = $clock.FlipClock(deadline.diff(now, "seconds"),{
+        countdown: true,
+        clockFace: 'DailyCounter',
+      });
+    });
+    </script> </body> </html>

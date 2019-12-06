@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /c64commpendium2/
+Disallow: /newsletter-thank-you/
