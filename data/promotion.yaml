@@ -1,13 +1,13 @@
 ---
-  enabled: false
+  enabled: true
   color: white
-  background: "#59bb4d"
-  title: "🤖 Cyber Monday! 🤖"
-  how_long: ", until Friday midnight."
+  background: "#4d2f75"
+  title: "☣️🦠 Stay at home with C64 🦠☣️"
+  how_long: ", until end of March."
   timezone: "Europe/Warsaw"
-  deadline: "2019-12-06 23:59:00"
-  coupon_code: cm19
-  percent: 40
-  season_price_in_dollars: 11.99
-  episode_price_in_dollars: 2.39
-  price_per_episode_in_season_in_dollars: 1.33
+  deadline: "2020-03-31 23:59:00"
+  coupon_code: stayathome
+  percent: 30
+  season_price_in_dollars: 13.99
+  episode_price_in_dollars: 2.79
+  price_per_episode_in_season_in_dollars: 1.55
