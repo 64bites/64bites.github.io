@@ -3,9 +3,9 @@
   color: white
   background: "#4d2f75"
   title: "☣️🦠 #stayathome with C64 🦠☣️"
-  how_long: ", until end of April."
+  how_long: ", until end of June."
   timezone: "Europe/Warsaw"
-  deadline: "2020-04-30 23:59:00"
+  deadline: "2020-06-30 23:59:00"
   coupon_code: stayathome
   percent: 30
   season_price_in_dollars: 13.99
