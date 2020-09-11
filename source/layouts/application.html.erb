@@ -90,7 +90,6 @@
     </main>
     <%= partial "layouts/footer" %>
     <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application", "flipclock", "moment-with-locales", "moment-timezone-with-data-2012-2022" %>
-    <%= partial "layouts/segment_io" %> 
     <%= partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0} %>
     <%= partial "layouts/drip" %>
     <%= yield_content(:javascript) %>
