@@ -80,7 +80,7 @@ main_image: episodes/014.png
 </div>
 </section>
 <%= partial "views/testimonials_section" %>
-
+<%#
 <section class="newsletter">
   <div class="row">
   <h2>Want to try it out for free?</h2>
@@ -88,11 +88,13 @@ main_image: episodes/014.png
   <a href="https://www.getdrip.com/forms/18339237/submissions/new" data-drip-show-form="18339237" class="show-newsletter-subscription button">Sounds Good!</a>
   </div>
 </section>
-
+%>
 <% content_for(:javascript) do %>
   <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 <% end %>
-<% content_for(:javascript) do %>
+
+<%# content_for(:javascript) do %>
+<%#
   <script type="text/javascript">
   $("body").on("click", ".show-newsletter-subscription", function(e) {
       e.preventDefault();
@@ -101,6 +103,7 @@ main_image: episodes/014.png
       console.log(formId);
       _dcq.push(["showForm", { id:formId }]);
   });
-  </script>
-<% end %>
+  </script> 
+%>
+<%# end %>
 
