@@ -18,8 +18,10 @@
     %meta{:property => "og:description", :content => current_article.summary(250)}
     %meta{name:"google-site-verification", content:"Yaz0CxBUbKaWP3BWbjlc_JEq0LhifBVnTBzYuXtYQBE"}
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
-    = partial "layouts/facebook_pixel", locals: {event: current_page.data.facebook_pixel_event || "PageView" }
+    = partial "layouts/gtm_head"
+
   %body{class: page_classes}
+    = partial "layouts/gtm_body"
     .container
       = partial "layouts/header"
       %main
@@ -28,12 +30,5 @@
         %hr
       = partial "layouts/footer"
     = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application", "highlight", "syntax-highlighting"
-    :javascript
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-      analytics.load("3z8xJ01MQLwMsgpwWuPmw2BTxor55hoB");
-      analytics.page()
-      }}();
-    = partial "layouts/twitter_conversion_tracking", locals: {pid: current_page.data.twitter_conv_pid || "nthnq", sale_amount: current_page.data.twitter_conv_sale_amount || 0, order_quantity: current_page.data.twitter_conv_order_quantity || 0}
     = partial "layouts/gumroad_script"
-    = partial "layouts/drip"
     = yield_content(:javascript)
