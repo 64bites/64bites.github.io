@@ -1,13 +1,13 @@
 ---
-  enabled: false
+  enabled: true
   color: white
-  background: "#4d2f75"
-  title: "☣️🦠 Happy #c64month. #stayathome with C64 🦠☣️"
-  how_long: ", until end of August."
+  background: "#000000"
+  title: "Enjoy the BLACK FRIDAY discount. Code something cool with C64"
+  how_long: ", until end of the weekend."
   timezone: "Europe/Warsaw"
-  deadline: "2020-08-31 23:59:00"
-  coupon_code: stayathome
-  percent: 30
-  season_price_in_dollars: 13.99
-  episode_price_in_dollars: 2.79
-  price_per_episode_in_season_in_dollars: 1.55
+  deadline: "2020-11-29 23:59:00"
+  coupon_code: bf2020
+  percent: 50
+  season_price_in_dollars: 9.99
+  episode_price_in_dollars: 1.99
+  price_per_episode_in_season_in_dollars: 1.11
