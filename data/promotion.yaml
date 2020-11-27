@@ -2,7 +2,7 @@
   enabled: true
   color: white
   background: "#000000"
-  title: "Enjoy the BLACK FRIDAY discount. Code something cool with C64"
+  title: "Enjoy the BLACK FRIDAY discount. Code something cool for C64"
   how_long: ", until end of the weekend."
   timezone: "Europe/Warsaw"
   deadline: "2020-11-29 23:59:00"
