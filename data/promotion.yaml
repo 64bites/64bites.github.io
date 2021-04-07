@@ -1,13 +1,14 @@
 ---
-  enabled: false
+  enabled: true
   color: white
-  background: "#000000"
-  title: "Enjoy the CYBER MONDAY discount. Code something cool for C64"
-  how_long: ", until end of the week."
+  background: "#4b1063"
+  title: "Happy #GumroadDay discount. Code something cool for C64"
+  how_long: ", but only for one day!"
   timezone: "Europe/Warsaw"
-  deadline: "2020-12-06 23:59:00"
-  coupon_code: cf2020
-  percent: 40
-  season_price_in_dollars: 11.99
-  episode_price_in_dollars: 2.39
-  price_per_episode_in_season_in_dollars: 1.33
+  deadline: "2021-04-08 06:00:00"
+  coupon_code: gumroadday2021
+  percent: 50
+  season_price_in_dollars: 9.99
+  episode_price_in_dollars: 2
+  price_per_episode_in_season_in_dollars: 0.83
+  
