@@ -1,12 +1,12 @@
 ---
-  enabled: false
+  enabled: true
   color: white
-  background: "#4b1063"
-  title: "Happy #GumroadDay! Code something cool for C64"
-  how_long: ", but only for one day!"
+  background: "#000000"
+  title: "Enjoy your black friday! Code something cool for C64"
+  how_long: " until the end of the weekend!"
   timezone: "Europe/Warsaw"
-  deadline: "2021-04-08 06:00:00"
-  coupon_code: gumroadday2021
+  deadline: "2021-11-28 23:59:59"
+  coupon_code: bf2021
   percent: 50
   season_price_in_dollars: 9.99
   episode_price_in_dollars: 2
