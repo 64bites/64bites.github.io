@@ -2,13 +2,13 @@
   enabled: true
   color: white
   background: "#000000"
-  title: "Enjoy your black friday! Code something cool for C64"
-  how_long: " until the end of the weekend!"
+  title: "<span class='chrome'>CYBER</span> Monday, Tuesday and Wednesday! 😅"
+  how_long: " until December 1st, 2021!"
   timezone: "Europe/Warsaw"
-  deadline: "2021-11-28 23:59:59"
-  coupon_code: bf2021
-  percent: 50
-  season_price_in_dollars: 9.99
-  episode_price_in_dollars: 2
-  price_per_episode_in_season_in_dollars: 0.83
+  deadline: "2021-12-28 23:59:59"
+  coupon_code: cm2021
+  percent: 40
+  season_price_in_dollars: 11.99
+  episode_price_in_dollars: 2.39
+  price_per_episode_in_season_in_dollars: 1.33
   
