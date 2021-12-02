@@ -1,0 +1,36 @@
+<div class="tier <%= tier_class %>">
+  <div class="title">
+    <h3>with All Seasons</h3>
+  </div>
+  <% episode_price = current_promotion.enabled? ? episode.price.discount_by(current_promotion.percent) : episode.price %>
+  <% normal_price = episode_price.multiply_by(108.0) %>
+  <% discounted_price = current_promotion.enabled? ? all_seasons.price.discount_by(current_promotion.percent) : all_seasons.price %>
+  <% actual_episode_price = discounted_price.divide_by(108.0) %>
+  <div class="price">
+      <span class="value"><s style="color: #997f19"><%= normal_price.formatted %></s> <%= discounted_price.formatted %></span>
+  </div>
+  <div class="features">
+    <ul class="fa-ul">
+      <li><i class="fa-li fa fa-check"></i>Immediate access to <strong>108 episodes</strong></li>
+      <li><i class="fa-li fa fa-check"></i>Online streaming</li>
+      <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
+      <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
+      <li><i class="fa-li fa fa-check"></i>Source Codes</li>
+      <li><i class="fa-li fa fa-check"></i>Exercises</li>
+      <li><i class="fa-li fa fa-check"></i><strong>The most cost-efficient</strong></li>
+      <li><i class="fa-li fa fa-check"></i>One-time payment</li>
+      <li><i class="fa-li fa fa-check"></i>You get <strong>all lessons</strong> for <strong>the lowest price</strong>.</li>
+      
+    </ul>
+  </div>
+  <div class="price-per-episode">
+      Price per episode: <s style="color: #908e8a"><%= episode_price.formatted %></abbr></s> <abbr title="estimated"><%= actual_episode_price.formatted %></abbr>
+  </div>
+  <div class="call-to-action">
+    <% if current_promotion.enabled? %>  
+    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= all_seasons.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get Episode + Season</a>
+    <% else %>
+      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= all_seasons.gumroad_product_id %>/">Get Episode + Season</a>
+    <% end %>
+  </div>
+</div>

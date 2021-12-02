@@ -14,7 +14,8 @@ section.pricing-tiers {
     }
     &.suggested {
       transform: translate(-5rem,-2rem);
-      width: 110%;
+      width: 135%;
+      z-index: 1000;
 
       @include respond(sm) {
         transform: translate(0, 0);
@@ -40,6 +41,7 @@ section.pricing-tiers {
     }
     &.suggested .price {
       padding: 1.7em;
+      background: lighten($color-text-primary, 15%);
     }
     .price {
       background: $color-text-primary;

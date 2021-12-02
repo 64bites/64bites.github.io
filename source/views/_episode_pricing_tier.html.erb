@@ -2,16 +2,18 @@
     <div class="title">
       <h3>just one Episode</h3>
     </div>
+    <% normal_price = episode.price %>
+    <% discounted_price = current_promotion.enabled? ? episode.price.discount_by(current_promotion.percent) : normal_price %>
     <div class="price">
-      <% if current_promotion.enabled? %>  
-        <span class="value"><s style="color: #9e8318"><%= episode.price.formatted %></s> <%= current_promotion.episode_price.formatted %></span>
+      <% if normal_price != discounted_price %>  
+        <span class="value"><s style="color: #9e8318"><%= normal_price.formatted %></s> <%= discounted_price.formatted %></span>
       <% else %>
-        <span class="value"><%= episode.price.formatted %></span>
+        <span class="value"><%= normal_price.formatted %></span>
       <% end %>
     </div>
     <div class="features">
       <ul class="fa-ul">
-        <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
+        <li><i class="fa-li fa fa-check"></i>Immediate access to <strong>one</strong> episode</li>
         <li><i class="fa-li fa fa-check"></i>Online streaming</li>
         <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
         <li><i class="fa-li fa fa-check"></i>Full Transcript</li>
@@ -22,10 +24,10 @@
 
     </div>
       <div class="price-per-episode">
-        <% if current_promotion.enabled? %>  
-          Price per episode: <s style="color: #908e8a"><%= episode.price.formatted %></s> <%= current_promotion.episode_price.formatted %>
+        <% if normal_price != discounted_price %>  
+          Price per episode: <s style="color: #908e8a"><%= normal_price.formatted %></s> <%= discounted_price.formatted %>
         <% else %>
-          Price per episode: <%= episode.price.formatted %>
+          Price per episode: <%= normal_price.formatted %>
         <% end %>
     </div>
     <div class="call-to-action">

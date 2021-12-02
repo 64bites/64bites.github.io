@@ -7,17 +7,22 @@ title: 64 bites - Paid Episode
 <% end %>
 <% if defined?(episode) %>
   <% season = episodes_catalog.find_season_by_episode(episode) %>
+  <% all_seasons = episodes_catalog.find_all_seasons_bundle(episode) %>
 
   <%= partial "views/episode_section", locals: { episode: episode } %>
   <section class="pricing-tiers two">
     <div class="row">
     <h2>Watch this Video Today</h2>
-      <div class="col-1-of-2">
+      <div class="col-1-of-3">
         <%= partial "views/episode_pricing_tier", locals: {tier_class: "left", episode: episode, show_alternative_cta: false} %>
       </div> 
-      <div class="col-1-of-2">
-        <%= partial "views/season_pricing_tier", locals: {tier_class: "suggested", season: season, show_alternative_cta: false} %>
-      <%#</div> %>
+       <div class="col-1-of-3">
+      <%= partial "views/all_seasons_pricing_tier", locals: {tier_class: "suggested", all_seasons: all_seasons, episode: episode} %>
+    </div> 
+      <div class="col-1-of-3">
+        <%= partial "views/season_pricing_tier", locals: {tier_class: "right", season: season, episode: episode, show_alternative_cta: false} %>
+      </div>
+   
     </div>
   </section>
 

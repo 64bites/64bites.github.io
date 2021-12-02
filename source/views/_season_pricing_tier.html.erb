@@ -2,19 +2,18 @@
   <div class="title">
     <h3>with Season <%= season.number %></h3>
   </div>
+  <% episode_price = current_promotion.enabled? ? episode.price.discount_by(current_promotion.percent) : episode.price %>
+  <% normal_price = episode_price.multiply_by(9.0) %>
+  <% discounted_price = current_promotion.enabled? ? season.price.discount_by(current_promotion.percent) : season.price %>
+  <% actual_episode_price = discounted_price.divide_by(9.0) %>
   <div class="price">
-    <% if current_promotion.enabled? %>  
-      <span class="value"><s style="color: #9e8318"><%= season.price.formatted %></s> <%= current_promotion.season_price.formatted %></span>
-    <% else %>
-      <span class="value"><%= season.price.formatted %></span>
-    <% end %>
+      <span class="value"><s style="color: #9e8318"><%= normal_price.formatted %></s> <%= discounted_price.formatted %></span>
   </div>
   <div class="features">
     <ul class="fa-ul">
-      <li><i class="fa-li fa fa-check"></i>Immediate access to the episode</li>
+      <li><i class="fa-li fa fa-check"></i>Immediate access to <strong>9</strong> episodes</li>
       <li><i class="fa-li fa fa-check"></i>Online streaming</li>
       <li><i class="fa-li fa fa-check"></i>DRM-free download</li>
-      <li><i class="fa-li fa fa-check"></i><strong>8 Other Videos!</strong></li>
       <li><i class="fa-li fa fa-check"></i>Full Transcripts</li>
       <li><i class="fa-li fa fa-check"></i>Source Codes</li>
       <li><i class="fa-li fa fa-check"></i>Exercises</li>
@@ -23,11 +22,7 @@
     </ul>
   </div>
   <div class="price-per-episode">
-    <% if current_promotion.enabled? %>  
-      Price per episode: <s style="color: #908e8a"><abbr title="estimated">$2.22</abbr></s> <abbr title="estimated"><%= current_promotion.price_per_episode_in_season.formatted %></abbr>
-    <% else %>
-      Price per episode: <abbr title="estimated">$2.22</abbr>
-    <% end %>
+    Price per episode: <s style="color: #908e8a"><%= episode_price.formatted %></abbr></s> <abbr title="estimated"><%= actual_episode_price.formatted %></abbr>
   </div>
   <div class="call-to-action">
     <% if current_promotion.enabled? %>  
