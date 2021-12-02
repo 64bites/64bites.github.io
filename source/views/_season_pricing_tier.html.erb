@@ -26,9 +26,9 @@
   </div>
   <div class="call-to-action">
     <% if current_promotion.enabled? %>  
-    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get Episode + Season</a>
+    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get 9 episodes</a>
     <% else %>
-      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/">Get Episode + Season</a>
+      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/">Get 9 episodes</a>
     <% end %>
   </div>
   <% if show_alternative_cta %>

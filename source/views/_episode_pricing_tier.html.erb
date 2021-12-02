@@ -32,9 +32,9 @@
     </div>
     <div class="call-to-action">
       <% if current_promotion.enabled? %>  
-      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get Episode</a>
+      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get one episode</a>
       <% else %>
-        <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/">Get Episode</a>
+        <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= episode.gumroad_product_id %>/">Get one episode</a>
       <% end %>
     </div>
     <% if show_alternative_cta %>
