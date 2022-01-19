@@ -1,9 +1,9 @@
 <div class="tier <%= tier_class %>">
   <div class="title">
     <h3>with All Seasons</h3>
-  </div>
-  <% episode_price = current_promotion.enabled? ? episode.price.discount_by(current_promotion.percent) : episode.price %>
-  <% normal_price = episode_price.multiply_by(108.0) %>
+  </div> 
+  <% episode_price = current_promotion.enabled? ? globals.episode_price.discount_by(current_promotion.percent) : globals.episode_price %>
+   <% normal_price = episode_price.multiply_by(108.0) %>
   <% discounted_price = current_promotion.enabled? ? all_seasons.price.discount_by(current_promotion.percent) : all_seasons.price %>
   <% actual_episode_price = discounted_price.divide_by(108.0) %>
   <div class="price">

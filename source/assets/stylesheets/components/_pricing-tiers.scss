@@ -13,6 +13,16 @@ section.pricing-tiers {
       color: $color-blue;
     }
     &.suggested {
+            &.left {
+      transform: translate(0rem,-2rem);
+      width: 112%;
+    }
+     &.right {
+      transform: translate(-5rem,-2rem);
+      width: 110%;
+    }
+
+
       transform: translate(-5rem,-2rem);
       width: 135%;
       z-index: 1000;

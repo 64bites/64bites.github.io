@@ -1,6 +1,7 @@
 require "extensions/views"
 require "lib/models/catalog"
 require "lib/models/promotion"
+require "lib/models/globals"
 
 activate :views
 activate :directory_indexes
@@ -108,6 +109,10 @@ helpers do
 
   def current_promotion
     Promotion.new(data.promotion)
+  end
+
+  def globals
+    Globals.new(data.globals)
   end
 
   def episodes_catalog

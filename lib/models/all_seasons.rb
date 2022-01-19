@@ -9,6 +9,10 @@ class AllSeasons
 
     attr_reader :gumroad_product_id, :price
 
+    def poster_path
+      "all_seasons.jpg"
+    end
+
     protected
 
     attr_reader :price_in_dollars

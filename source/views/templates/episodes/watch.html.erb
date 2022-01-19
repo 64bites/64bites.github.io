@@ -20,11 +20,44 @@ hide_menu: true
 
   <% season = episodes_catalog.find_season_by_episode(episode) %>
   <% episodes = episodes_catalog.all_episodes_in_season(season) %>
+  <% all_seasons = episodes_catalog.find_all_seasons_bundle(episode) %>
 
-  <section class="season">
-    <div class="row">
-      <p>By the way. This episode is part of a Season <%= season.number %>. So you can get it in a bundle with 8 other episodes.</p>
+  <br><br>
+      <h2>Want more?</h2>
+      <p>By the way. There are <strong>108 episodes</strong> like this one in total. They are bundled in <strong>12 Seasons.</strong><br>
+      This episode is part of a <strong>Season <%= season.number %></strong>.</p>
+      <p>If you enjoy the series and want to get them for <strong>the best price</strong><br>you can buy <strong>separate seasons</strong> or even better - <strong>Get all of them in one go</strong>. </p>
       <p>You can read more about that below</p>
+      <br>
+
+<section class="pricing-tiers two">
+      <div class="row">
+        <h2>Get this Episode in a bundle </h2>
+         <div class="col-1-of-2">
+        <%= partial "views/all_seasons_pricing_tier", locals: {tier_class: "left suggested", all_seasons: all_seasons, episode: episode} %>
+      </div> 
+        <div class="col-1-of-2">
+          <%= partial "views/season_pricing_tier", locals: {tier_class: "right", season: season, episode: episode, show_alternative_cta: false} %>
+        </div>
+      </div>
+    </section>
+
+    <section class="season">
+<div class="row">
+
+  <section class="all_seasons">
+<div class="row">
+
+  <h2>The first 12 seasons (all of them)</h2>
+  <%= image_tag(all_seasons.poster_path, class: "season__poster") %>
+  </div>
+  </section>
+  <section class="features">
+    <div class="row">
+    <%= partial "views/all_seasons_pitch" %>
+    </div>
+    <br>
+  </section>
     <h2>Season <%= season.number %> - <small><%= season.title %></small></h2>
     <%= image_tag(season.poster_path, class: "season__poster") %>
     </div>
@@ -34,12 +67,8 @@ hide_menu: true
       <%= partial "views/seasons/pitch_#{season.formatted_number}" %>
       </div>
     </section>
-    <% if current_promotion.enabled? %>  
-    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{current_promotion.season_price.formatted}".html_safe} %>
-  <% else %>
-    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true&gift=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
-  <% end %>
 
+    
     <section class="episodes">
     <h2>All Episodes in this Season</h2>
   <% episodes.each do |episode| %>
@@ -69,10 +98,18 @@ hide_menu: true
     </div>
   <% end %>
 </section>
-<% if current_promotion.enabled? %>  
-    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true&gift=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{current_promotion.season_price.formatted}".html_safe} %>
-  <% else %>
-    <%= partial "views/buy_season_button", locals: {single_product: true, url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true&gift=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
-  <% end %>
+  <section class="pricing-tiers two">
+      <div class="row">
+        <h2>Get this Episode in a bundle </h2>
+         <div class="col-1-of-2">
+        <%= partial "views/all_seasons_pricing_tier", locals: {tier_class: "left ", all_seasons: all_seasons, episode: episode} %>
+      </div> 
+        <div class="col-1-of-2">
+          <%= partial "views/season_pricing_tier", locals: {tier_class: "right suggested", season: season, episode: episode, show_alternative_cta: false} %>
+        </div>
+      </div>
+    </section>
+
+    <%= partial "views/testimonials_section" %>
 
 <% end %>
