@@ -1,0 +1,11 @@
+<% single_product = false unless defined?(single_product) %>
+<% wanted = false unless defined?(wanted) %>
+
+<section class="buy">
+  <div class="row">
+    <div class="buy-button">
+      <a class="button" data-gumroad-single-product="<%= single_product.to_s %>" href="<%= url %>"><%= caption %></a>
+      <p>Includes <strong>12 seasons</strong>, <strong>108 videos</strong>, <strong>detailed transcripts</strong>, <strong>source code examples</strong> and <strong>exercises</strong>.</p>
+    </div>
+  </div>
+</section>

@@ -103,10 +103,10 @@ hide_menu: true
       <div class="row">
         <h2>Get this Episode in a bundle </h2>
          <div class="col-1-of-2">
-        <%= partial "views/all_seasons_pricing_tier", locals: {tier_class: "left ", all_seasons: all_seasons, episode: episode} %>
+        <%= partial "views/all_seasons_pricing_tier", locals: {tier_class: "left suggested", all_seasons: all_seasons, episode: episode} %>
       </div> 
         <div class="col-1-of-2">
-          <%= partial "views/season_pricing_tier", locals: {tier_class: "right suggested", season: season, episode: episode, show_alternative_cta: false} %>
+          <%= partial "views/season_pricing_tier", locals: {tier_class: "right ", season: season, episode: episode, show_alternative_cta: false} %>
         </div>
       </div>
     </section>
