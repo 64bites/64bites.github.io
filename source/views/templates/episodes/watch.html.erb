@@ -68,36 +68,8 @@ hide_menu: true
       </div>
     </section>
 
+    <%= partial "views/episodes_list", {locals: {episodes: episodes}} -%>
     
-    <section class="episodes">
-    <h2>All Episodes in this Season</h2>
-  <% episodes.each do |episode| %>
-    <div class="episode">
-      <div class="row">
-        <div class="col-1-of-3">
-          <div class="episode__poster">
-            <%= image_tag(episode.poster_path, class: "thumbnail") %>
-        </div>
-      </div>
-      <div class="col-2-of-3">
-        <div class="episode__info">
-          <h2>Episode <%= episode.formatted_title %></h2>
-          <%= episode.description %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  <% remaining_episodes_count = 9 - episodes.count %>
-  <% if remaining_episodes_count > 0 %>
-    <div class="row">
-    <% if remaining_episodes_count == 1 %>
-      <p><strong>One remaining episode will be released next week.</strong><br>If you buy the season now, you will get the video as soon as it is out without paying anything extra.</p>
-    <% else %>
-      <p><strong><%= remaining_episodes_count %> remaining episodes will be released in following weeks.</strong><br>If you buy the season now, you will get videos as soon as they are out without paying anything extra.</p>
-    <% end %>
-    </div>
-  <% end %>
-</section>
 <%= partial "views/testimonials_section" %>
   <section class="pricing-tiers two">
       <div class="row">

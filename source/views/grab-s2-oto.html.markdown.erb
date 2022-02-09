@@ -8,8 +8,9 @@ hide_menu: true
 ## Get Season 2 - Foundations of Assembly for just $9.99 (that's 50% off)!
 
 <%= image_tag "seasons/002.jpg", alt: "Season 2 poster" %>
-
-<%= partial 'views/buy_season_button', locals: {url: "https://gum.co/64bites-season2/s1-and-s2-ota-28347", caption: "Get Season 2 for just $9.99! (instead of <s>$19.99</s>)" } -%>
+<% button_url = "https://gum.co/64bites-season2/s2-ota-9vuf55o" %>
+<% button_caption = "Get Season 2 - Foundations of Assembly for just $9.99 (that's 50% off)" %>
+<%= partial 'views/buy_season_button', locals: {url: button_url, caption: button_caption } -%>
 
 Learn foundations - arithmetics, comparisons, logic, jumping and subroutines.
 
@@ -30,7 +31,13 @@ But first **master the foundations**.
 
 **For half the price!**
 
+<%= partial "views/testimonials_section" -%>
+<% season = episodes_catalog.find_season(2) %>
+<% episodes = episodes_catalog.all_episodes_in_season(season) %>
+  
+<%= partial "views/episodes_list", {locals: {episodes: episodes}} -%>
 
+<%= partial 'views/buy_season_button', locals: {url: button_url, caption: button_caption } -%>
 <% content_for :javascript do %>
   <script async type="text/javascript">(function(){var url=new URL(window.location.href),cem=url.searchParams.get("email"),btmsid=url.searchParams.get("btmsid"),s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];s1.referrerPolicy='no-referrer-when-downgrade';s1.async=true;s1.src='https://app.betimes.pl/countdown/346803717919551/loader.js?email='+cem+'&btmsid='+btmsid;s1.charset='UTF-8';s0.parentNode.insertBefore(s1,s0);})();</script>
 <% end %>
