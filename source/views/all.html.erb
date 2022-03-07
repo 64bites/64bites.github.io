@@ -1,7 +1,7 @@
 ---
 layout: false
 ---
-<% url = "https://64bites.gumroad.com/l/64bites-twelve-seasons" %>
+<% url = "https://64bites.gumroad.com/l/64bites-twelve-seasons#{current_promotion.enabled? ? "/#{current_promotion.coupon_code}" : ""}" %>
 <html>
   <head>
   <meta http-equiv="expires" content="0">

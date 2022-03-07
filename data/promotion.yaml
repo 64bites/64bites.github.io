@@ -1,16 +1,15 @@
 ---
-  enabled: false
-  color: white
-  background: "#000000"
-  title: "<span class='chrome'>CYBER</span> Monday, Tuesday and Wednesday! 😅"
-  how_long: " until December 1st, 2021!"
-  timezone: "Europe/Warsaw"
-  deadline: "2021-12-01 23:59:59"
-  coupon_code: cm2021
-  percent: 40
-  season_price_in_dollars: 11.99
-  all_seasons_price_in_dollars: 119.4
-  episode_price_in_dollars: 2.39
-  price_per_episode_in_season_in_dollars: 1.33
-  price_per_episode_in_all_seasons_in_dollars: 1.11
-  
+enabled: true
+color: white
+background: "#46060a"
+title: "Prices reduced to <strong style='color:#FFDB50;'>64%</strong>! 🤯"
+how_long: ""
+timezone: "Europe/Warsaw"
+deadline: false
+coupon_code: 64-2022
+percent: 36
+season_price_in_dollars: 12.79
+all_seasons_price_in_dollars: 127.36
+episode_price_in_dollars: 2.55
+price_per_episode_in_season_in_dollars: 1.42
+price_per_episode_in_all_seasons_in_dollars: 1.18

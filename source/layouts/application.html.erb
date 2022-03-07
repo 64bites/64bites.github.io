@@ -71,9 +71,13 @@
         <br>
         <h1 style="width: 100%"><%= current_promotion.title %></h1>
         <div style=" background: <%= current_promotion.background %>;">
-          <div id="flipclock" style="width: 460px;"></div>
-          <p class="lead" style="padding-bottom:20px;"><%= link_to "All seasons", "/seasons/all#start" %> are <strong style="color:#FFDB50;"><%= current_promotion.percent %>% off</strong><%= current_promotion.how_long %></p>
-          
+          <% if current_promotion.deadline %>
+            <div id="flipclock" style="width: 460px;"></div>
+          <% end %>
+          <p class="lead" style="padding-bottom:20px;">  
+            <!--<%= link_to "All seasons", "/seasons/all#start" %> are <strong style="color:#FFDB50;"><%= current_promotion.percent %>% off</strong><%= current_promotion.how_long %>.-->
+            Browse <%= link_to "single episodes", "/episodes/all" %>, <%= link_to "whole seasons", "/seasons/all#start" %> or get <%= link_to "everything at once", "/all/?promo=#{current_promotion.coupon_code }" %>
+          </p>
         </div>
       </section>
     <% end %> 
