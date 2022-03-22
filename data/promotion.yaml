@@ -1,11 +1,11 @@
 ---
 enabled: true
 color: white
-background: "#46060a"
+background: "#000000"
 title: "Prices reduced to <strong style='color:#FFDB50;'>64%</strong>! 🤯"
 how_long: ""
 timezone: "Europe/Warsaw"
-deadline: false
+deadline: "2022-03-25T21:00:00"
 coupon_code: 64-2022
 percent: 36
 season_price_in_dollars: 12.79
