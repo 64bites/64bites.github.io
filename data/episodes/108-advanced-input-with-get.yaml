@@ -6,5 +6,6 @@ gumroad_product_id: 64bites-ep108
 is_published: true
 publication_time: 2017-06-14
 wistia_id:
-description: ''
+description: 'BASIC INPUT command works great for prototypes and small programs.
+If you care about user experience you need to create you own input routine with the GET command.'
 poster_ext: png
