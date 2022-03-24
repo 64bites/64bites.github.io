@@ -66,7 +66,7 @@
   </head>
   <body class="<%= page_classes %>">
     <%= partial "layouts/gtm_body" %>
-    <% if current_promotion.enabled? %>
+    <% if current_promotion.enabled? && !current_page.data.hide_menu %>
       <section class="black_friday" style="text-align: center; color: <%= current_promotion.color %>; background: <%= current_promotion.background %>;">
         <br>
         <h1 style="width: 100%"><%= current_promotion.title %></h1>
