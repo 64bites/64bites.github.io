@@ -2,14 +2,14 @@
 enabled: true
 color: white
 background: "#000000"
-title: "Prices reduced to <strong style='color:#FFDB50;'>64%</strong>! 🤯"
-how_long: ""
+title: "Complete your collection. <br>With <strong style='color:#FFDB50;'>35%</strong> discount! 🤯"
+how_long: "sdf"
 timezone: "Europe/Warsaw"
-deadline: "2022-03-25T21:00:00"
-coupon_code: 64-2022
-percent: 36
-season_price_in_dollars: 12.79
-all_seasons_price_in_dollars: 127.36
-episode_price_in_dollars: 2.55
-price_per_episode_in_season_in_dollars: 1.42
-price_per_episode_in_all_seasons_in_dollars: 1.18
+deadline: false #"2022-03-25T21:00:00"
+coupon_code: 35-off
+percent: 35
+season_price_in_dollars: 12.99
+all_seasons_price_in_dollars: 129.35
+episode_price_in_dollars: 2.59
+price_per_episode_in_season_in_dollars: 1.44
+price_per_episode_in_all_seasons_in_dollars: 1.20

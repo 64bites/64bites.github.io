@@ -72,9 +72,9 @@ main_image: episodes/014.png
       <%= image_tag(season.poster_path, class: "season__poster") %>
     <% end %>
     <% if current_promotion.enabled? %>  
-      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=true", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{ current_promotion.season_price.formatted }".html_safe} %>
+      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}", caption: "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{ season.price.formatted }</s> #{ current_promotion.season_price.formatted }".html_safe} %>
     <% else %>
-      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=true", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
+      <%= partial "views/buy_season_button", locals: {url: "https://gumroad.com/l/#{season.gumroad_product_id}/", caption: "Buy Season #{season.number} for just #{ season.price.formatted }".html_safe} %>
     <% end %> 
   </div>
 </div>
