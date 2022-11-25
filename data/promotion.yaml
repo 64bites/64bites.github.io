@@ -1,8 +1,8 @@
 ---
-enabled: false
+enabled: true
 color: white
 background: "#000000"
-title: "Complete your collection. <br>With <strong style='color:#FFDB50;'>35%</strong> discount! 🤯"
+title: "Complete your collection. <br>With <strong style='color:#FFDB50;'>30%</strong> discount! 🤯"
 how_long: "sdf"
 timezone: "Europe/Warsaw"
 deadline: "2022-11-30T23:59:59"
