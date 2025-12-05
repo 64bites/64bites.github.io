@@ -2,14 +2,14 @@
 enabled: true
 color: white
 background: "#000000"
-title: "Complete your collection. <br>With <strong style='color:#FFDB50;'>30%</strong> discount! 🤯"
+title: "Complete your collection. <br>With <strong style='color:#FFDB50;'>60%</strong> discount! 🤯"
 how_long: "sdf"
 timezone: "Europe/Warsaw"
-deadline: "2022-11-30T23:59:59"
-coupon_code: bfcf2022
-percent: 30
-season_price_in_dollars: 13.99
-all_seasons_price_in_dollars: 139.30
-episode_price_in_dollars: 2.79
-price_per_episode_in_season_in_dollars: 1.55
-price_per_episode_in_all_seasons_in_dollars: 1.29
+deadline: "2025-12-05T23:59:00"
+coupon_code: BLACKFRIDAY2025
+percent: 60
+season_price_in_dollars: 8
+all_seasons_price_in_dollars: 79.60
+episode_price_in_dollars: 1.60
+price_per_episode_in_season_in_dollars: 0.89
+price_per_episode_in_all_seasons_in_dollars: 0.74

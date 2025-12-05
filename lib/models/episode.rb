@@ -21,7 +21,7 @@ class Episode
   end
 
   def watchable?
-    @wistia_id.present? && @episode_data.has_key?("url_part")
+    @vimeo_id.present? && @episode_data.has_key?("url_part")
   end
 
   def url_part
