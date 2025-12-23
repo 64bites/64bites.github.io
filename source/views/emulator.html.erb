@@ -1,0 +1,58 @@
+---
+layout: false
+---
+
+<html>
+  <head>
+    <title>Commodore 64 Emulator - 64 Bites</title>
+        <%= stylesheet_link_tag "application" %>
+        <style>
+        #x64-canvas {
+            width: 75%;
+            margin: 0 auto;
+        }
+            </style>
+  </head>
+  <body style="position: relative; display: grid; place-items: center;">
+  <header class="header">
+  <div class="row">
+  <a class="header__logo" href="/"></a>
+  </div>
+</header>
+
+  <span id="loading" style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); color: #fff;">Loading</span>
+<canvas id="x64-canvas" style="width: 100%; border: 0px none;"></canvas>
+  </body>
+  <script type="text/javascript">
+  
+  console.log("Starting up x64...");
+    function postRun() {
+    document.getElementById("loading").style.visibility = "hidden";
+    console.log("POST RUN");
+  }
+    function audioDetected() {
+    return (typeof Audio === 'function' && new Audio().mozSetup === 'function') ||
+      (typeof AudioContext === 'function') ||
+      (typeof webkitAudioContext === 'function');
+  }
+  var keymapBase64 = "IyBWSUNFIGhvdGtleSBtYXBwaW5nIGZpbGUKIwojIEEgaG90a2V5IG1hcCBpcyByZWFkIGluIGFzIGEgcGF0Y2ggdG8gdGhlIGN1cnJlbnQgbWFwLgojCiMgRmlsZSBmb3JtYXQ6CiMgLSBjb21tZW50IGxpbmVzIHN0YXJ0IHdpdGggJyMnCiMgLSBrZXl3b3JkIGxpbmVzIHN0YXJ0IHdpdGggJyFrZXl3b3JkJwojIC0gbm9ybWFsIGxpbmUgaGFzICdrZXludW0gcGF0aCZ0byZtZW51aXRlbScKIwojIEtleXdvcmRzIGFuZCB0aGVpciBsaW5lcyBhcmU6CiMgJyFDTEVBUicgICAgY2xlYXIgYWxsIG1hcHBpbmdzCiMKCiMhQ0xFQVIKCjEwOSBTb3VuZCBzZXR0aW5ncyZTb3VuZAozMDAgTWFjaGluZSBzZXR0aW5ncyZKb3lzdGljayBzZXR0aW5ncyZTd2FwIGpveXN0aWNrIHBvcnRzCjEwODAgRHJpdmUmQXR0YWNoIGRpc2sgaW1hZ2UgdG8gZHJpdmUgOAoxMTIxIEF1dG9zdGFydCBpbWFnZQoxMTIyIFN0YXR1c2JhcgoxMTI4IE1vbml0b3ImU3RhcnQgbW9uaXRvcgoxMTMwIE1hY2hpbmUgc2V0dGluZ3MmSm95c3RpY2sgc2V0dGluZ3MmU3dhcCBqb3lzdGljayBwb3J0cwoxMTMzIE1hY2hpbmUgc2V0dGluZ3MmTW91c2UgZW11bGF0aW9uJkdyYWIgbW91c2UgZXZlbnRzCjExMzYgUGF1c2UKMTE0MyBTcGVlZCBzZXR0aW5ncyZXYXJwIG1vZGUKMTI1MyBBdXRvc3RhcnQgaW1hZ2UKMTMxNCBSZXNldCZTb2Z0CjEzMTcgUmVzZXQmSGFyZAoxNjQyIE1hY2hpbmUgc2V0dGluZ3MmSm95c3RpY2sgc2V0dGluZ3MmQWxsb3cga2V5c2V0IGpveXN0aWNrCjE2NTMgTWFjaGluZSBzZXR0aW5ncyZKb3lzdGljayBzZXR0aW5ncyZTd2FwIHVzZXJwb3J0IGpveXN0aWNrIHBvcnRzCjMxODIgRHJpdmUmRmxpcGxpc3Qgc2V0dGluZ3MmQXR0YWNoIHByZXZpb3VzIGltYWdlIGluIGZsaXBsaXN0Cg==";
+  function loadFile(fileName, contentsBase64) {
+    console.log("Loading file: " + fileName);
+    FS.createDataFile('/', fileName, atob(contentsBase64), true, true);
+
+  }
+  var canvas = document.getElementById('x64-canvas');
+  
+  var Module = {
+    preRun: [],
+    postRun: [postRun],
+    arguments: [
+      //"-menukey", 999999, 
+      '+sound',
+    '-VICIIfilter', 0],
+    canvas,
+  }
+
+  </script> 
+  <%= javascript_include_tag "x64" %>
+</html>
