@@ -1,15 +1,15 @@
 ---
 title: Counting Cycles
-free: false
 price: 3.99
 gumroad_product_id: 64bites-ep094
 is_published: true
 publication_time: 2017-03-08
-wistia_id: 
-vimeo_id: '296363950'
+wistia_id:
+vimeo_id: "296363950"
 poster_ext: jpg
 url_part: 6vcT2xyA
-description: "Aren't you tired of counting cycles in your routines by hand?\n\nLooking
+description:
+  "Aren't you tired of counting cycles in your routines by hand?\n\nLooking
   up specifications of every single instruction gets old soon.\n\nIt's especially
   hard if your code contains branches and loops.\n\nNot to mention page crossing.
   \n\nWouldn't it be great to have the cycle-count computed automatically?\n\nIn this

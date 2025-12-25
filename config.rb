@@ -175,7 +175,7 @@ end
 
 
 CATALOG.all_episodes.each do |episode|
-  template = episode.free? ? "/views/templates/episodes/show-free.html" : "/views/templates/episodes/show-paid.html"
+  template = "/views/templates/episodes/show-paid.html"
   locals = {
     episode: episode,
     main_image: episode.poster_path,

@@ -3,7 +3,6 @@ class Episode
   def initialize(episode_data, number, slug)
     @number = number
     @title = episode_data.fetch("title")
-    @is_free = episode_data.fetch("free")
     @gumroad_product_id = episode_data.fetch("gumroad_product_id")
     @price = Price.new(episode_data.fetch("price"))
     @is_published = episode_data.fetch("is_published")
@@ -14,10 +13,6 @@ class Episode
     @slug = slug
     @poster_ext = episode_data.fetch("poster_ext", "png")
     @episode_data = episode_data
-  end
-
-  def free?
-    @is_free
   end
 
   def watchable?

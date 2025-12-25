@@ -9,14 +9,5 @@
     <% link_to episode_path(episode) do %>
       <%= image_tag(episode.poster_path, class: "thumbnail") %>
     <% end %>
-    <div class="ribbon-wrapper">
-      <% if episodes_catalog.latest_episode?(episode) %>
-        <div class="ribbon ribbon-new"><i class="fa fa-star"></i> NEW</div>
-      <% elsif episode.free? %>
-        <div class="ribbon ribbon-free"><i class="fa fa-gift"></i> FREE</div>
-      <% else %>
-        <div class="ribbon ribbon-paid"><i class="fa fa-dollar"></i> PAID</div>
-      <% end %>
-    </div>
   </div>
 </div>

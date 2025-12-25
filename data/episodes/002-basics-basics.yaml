@@ -1,15 +1,15 @@
 ---
 title: BASIC's Basics
-free: true
-price: 0.0
+price: 3.99
 gumroad_product_id: 64bites-ep002
 is_published: true
 publication_time: 2015-06-03
 wistia_id: z1yl0wrn93
-vimeo_id: '296208448'
+vimeo_id: "296208448"
 poster_ext: png
 url_part: cE9oJbdw
-description: In which we'll learn how to execute BASIC commands. We will define and
+description:
+  In which we'll learn how to execute BASIC commands. We will define and
   use variables, convert between different types and display them on the screen. Along
   the way we will find out why floats in BASIC are faster than integers. And finally,
   we'll discover obscure uses of the PRINT command.

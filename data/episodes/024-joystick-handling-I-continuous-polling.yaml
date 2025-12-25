@@ -1,15 +1,15 @@
 ---
 title: Joystick Handling
-free: true
-price: 0.0
+price: 3.99
 gumroad_product_id: 64bites-ep024
 is_published: true
 publication_time: 2015-11-04
 wistia_id: z0c6x6aozq
-vimeo_id: '296258434'
+vimeo_id: "296258434"
 poster_ext: png
 url_part: kHHwhE-J
-description: When writing games and graphical programs we need some way of interacting
+description:
+  When writing games and graphical programs we need some way of interacting
   with things presented on the screen.<br>Commodore 64 has a built-in support for
   two joysticks that are perfect for dynamic games and interactive GUI applications.
   Today we'll learn how to use them.

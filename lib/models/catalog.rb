@@ -46,14 +46,10 @@ class Catalog
     end
   end
 
-  def free_episodes
-    all_episodes.select(&:free?)
-  end
-
   def featured_episodes
     featured_episodes_data.map do |episode_number|
       find_episode(episode_number)
-    end.select(&:free?)
+    end
   end
 
   def latest_episode

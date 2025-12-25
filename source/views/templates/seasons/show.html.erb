@@ -7,7 +7,6 @@ title: "64Bites - Season"
 <% end %>
 <% if defined?(season) %>
   <% episodes = episodes_catalog.all_episodes_in_season(season) %>
-  <% free_episodes = episodes.select(&:free?) %>
 <section class="season">
   <div class="row">
   <h1>Season <%= season.number %> - <small><%= season.title %></small></h1>
