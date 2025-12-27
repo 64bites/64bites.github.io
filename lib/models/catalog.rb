@@ -1,15 +1,13 @@
 require_relative 'episode'
 require_relative 'season'
-require_relative 'subscription'
 require_relative 'all_seasons'
 
 class Catalog
   EPISODES_PER_SEASON = 9
-  def initialize(episodes_data, featured_episodes_data, seasons_data, subscription_data, all_seasons_data)
+  def initialize(episodes_data, featured_episodes_data, seasons_data, all_seasons_data)
     @episodes_data = episodes_data
     @featured_episodes_data = featured_episodes_data
     @seasons_data = seasons_data
-    @subscription_data = subscription_data
     @all_seasons_data = all_seasons_data
   end
 
@@ -97,14 +95,6 @@ class Catalog
 
   def unreleased_seasons
     all_seasons.reject(&:released?)
-  end
-
-  def subscription
-    Subscription.new(
-      subscription_data["monthly_price_in_dollars"],
-      subscription_data["annual_price_in_dollars"],
-      subscription_data["gumroad_product_id"],
-    )
   end
 
   def all_seasons

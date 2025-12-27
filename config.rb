@@ -69,7 +69,7 @@ activate :deploy do |deploy|
   deploy.branch   = 'master'
 end
 
-CATALOG = Catalog.new(data.episodes, data.featured_episodes, data.seasons, data.subscription, data.all_seasons)
+CATALOG = Catalog.new(data.episodes, data.featured_episodes, data.seasons, data.all_seasons)
 
 helpers do
   def nav_link(link_text, page_url, options = {})
