@@ -66,21 +66,6 @@
   </head>
   <body class="<%= page_classes %>">
     <%= partial "layouts/gtm_body" %>
-    <% if current_promotion.enabled? %>
-      <section class="black_friday" style="text-align: center; color: <%= current_promotion.color %>; background: <%= current_promotion.background %>;">
-        <br>
-        <h1 style="width: 100%"><%= current_promotion.title %></h1>
-        <div style=" background: <%= current_promotion.background %>;">
-          <% if current_promotion.deadline %>
-            <div id="flipclock" style="width: 460px;"></div>
-          <% end %>
-          <p class="lead" style="padding-bottom:20px;">  
-            <!--<%= link_to "All seasons", "/seasons/all#start" %> are <strong style="color:#FFDB50;"><%= current_promotion.percent %>% off</strong><%= current_promotion.how_long %>.-->
-            Browse <%= link_to "single episodes", "/episodes/all" %>, <%= link_to "whole seasons", "/seasons/all#start" %> or get <%= link_to "everything at once", "/all/?promo=#{current_promotion.coupon_code }" %>
-          </p>
-        </div>
-      </section>
-    <% end %> 
     <% if(!current_page.data.hide_menu) %>
       <%= partial "layouts/header" %>
     <% end %>
@@ -94,33 +79,8 @@
       <% end %>
     </main>
     <%= partial "layouts/footer" %>
-    <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application", "flipclock", "moment-with-locales", "moment-timezone-with-data-2012-2022" %>
+    <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", %>
     <%= yield_content(:javascript) %>
-    <script>
-$(function() {
-    var $clock = $("#flipclock");
-    var timezone = "<%= current_promotion.timezone %>";
-    var deadline = "<%= current_promotion.deadline %>";
-    var clientTimezone = moment.tz.guess();
-    var currentDate = moment.tz(moment(), clientTimezone);
-    var futureDate = moment.tz(deadline, timezone);
-    var secondsLeft = Math.round(Math.max(futureDate-currentDate, 0) / 1000);
-    var daysLeft = Math.floor(secondsLeft / (60*60*24));
-    var isDaily = daysLeft >= 1;
-    var width = isDaily ? "460px" : "340px";
-    $clock.width(width);
-    var clock = $clock.FlipClock(secondsLeft, {
-      clockFace: isDaily ? 'DailyCounter' : 'HourlyCounter',
-      countdown: true
-    });
-      
-      var clock = $clock.FlipClock(deadline.diff(now, "seconds"),{
-        countdown: true,
-        clockFace: 'DailyCounter',
-      });
-    });
-    </script>
-    <%# <script src="https://embed.lpcontent.net/leadbars/current/embed.js" data-bar="zKywLx2GcmthQgMsPdNH2b" data-bar-domain="creative-mind.lpages.co" async defer></script> %>
     <%= partial "layouts/bento_script" %>
   </body>
 </html>

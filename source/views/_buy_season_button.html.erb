@@ -1,13 +1,8 @@
 <% single_product = false unless defined?(single_product) %>
 <% wanted = false unless defined?(wanted) %>
 
-<% if current_promotion.enabled? %>  
-  <% url = "https://gumroad.com/l/#{season.gumroad_product_id}/#{current_promotion.coupon_code}?wanted=#{wanted.to_s}" unless defined?(url) %>
-  <% caption = "Buy Season #{season.number} for just <s style=\"color: #b6eab3;\">#{season.price.formatted}</s> #{current_promotion.season_price}".html_safe unless defined?(caption) %>
-<% else %>
-  <% url = "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=#{wanted.to_s}" unless defined?(url) %>
-  <% caption = "Buy Season #{season.number} for just #{season.price.formatted}".html_safe unless defined?(caption) %>
-<% end %>
+<% url = "https://gumroad.com/l/#{season.gumroad_product_id}/?wanted=#{wanted.to_s}" unless defined?(url) %>
+<% caption = "Buy Season #{season.number} for just #{season.price.formatted}".html_safe unless defined?(caption) %>
 <section class="buy">
   <div class="row">
     <div class="buy-button">

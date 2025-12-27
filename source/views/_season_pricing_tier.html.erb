@@ -2,9 +2,9 @@
   <div class="title">
     <h3>with Season <%= season.number %></h3>
   </div>
-  <% episode_price = current_promotion.enabled? ? globals.episode_price.discount_by(current_promotion.percent) : globals.episode_price %>
+  <% episode_price = globals.episode_price %>
   <% normal_price = episode_price.multiply_by(9.0) %>
-  <% discounted_price = current_promotion.enabled? ? season.price.discount_by(current_promotion.percent) : season.price %>
+  <% discounted_price = season.price %>
   <% actual_episode_price = discounted_price.divide_by(9.0) %>
   <div class="price">
       <span class="value"><s style="color: #9e8318"><%= normal_price.formatted %></s> <%= discounted_price.formatted %></span>
@@ -25,11 +25,7 @@
     Price per episode: <s style="color: #908e8a"><%= episode_price.formatted %></abbr></s> <abbr title="estimated"><%= actual_episode_price.formatted %></abbr>
   </div>
   <div class="call-to-action">
-    <% if current_promotion.enabled? %>  
-    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/<%= current_promotion.coupon_code %>">Get 9 episodes</a>
-    <% else %>
-      <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/">Get 9 episodes</a>
-    <% end %>
+    <a class="button" data-gumroad-single-product="true" href="https://gumroad.com/l/<%= season.gumroad_product_id %>/">Get 9 episodes</a>
   </div>
   <% if show_alternative_cta %>
   <div class="more">

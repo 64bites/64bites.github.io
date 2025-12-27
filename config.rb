@@ -1,6 +1,5 @@
 require "extensions/views"
 require "lib/models/catalog"
-require "lib/models/promotion"
 require "lib/models/globals"
 
 activate :views
@@ -105,10 +104,6 @@ helpers do
 
   def render_default_drip_form
     partial("views/drip_basic_email_form")
-  end
-
-  def current_promotion
-    Promotion.new(data.promotion)
   end
 
   def globals
