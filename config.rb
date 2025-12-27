@@ -102,10 +102,6 @@ helpers do
     "/episodes/show-notes/#{episode.show_notes_filename}"
   end
 
-  def render_default_drip_form
-    partial("views/drip_basic_email_form")
-  end
-
   def globals
     Globals.new(data.globals)
   end
